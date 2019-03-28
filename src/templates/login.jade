@@ -1,0 +1,21 @@
+---
+title: Login
+---
+extends layouts/_layout
+block content
+  .login
+    form.login__step#login
+      img(src="img/logo.png", alt="")
+      h2 Sign in to SNL
+      .login__step__input
+        input(type="text" id="email-id" name="email" required)
+        label(for="email-id") Email ID
+      .login__step__input.login__step__input--last
+        input(type="password" id="password" name="password" required)
+        label(for="password") Password
+      a(href="#forgot__password").login__step__forgot Forgot Password?
+      .login__step__submit
+        input(type="submit" value="Sign in").btn.btn-primary
+    form.login__step#forgot__password
+      
+    form.login__step.login__step-three#forgot__password_email_send

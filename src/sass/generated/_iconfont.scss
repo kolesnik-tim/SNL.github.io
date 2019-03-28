@@ -9,7 +9,8 @@
   font-style: normal;
 }
 
-$icon-facebook: "\EA01";
+$icon-left-arrow: "\EA01";
+$icon-right-arrow: "\EA02";
 
 
 %icon {
@@ -28,4 +29,5 @@ $icon-facebook: "\EA01";
   display: inline-block;
 }
 
-.icon-facebook:before { content: $icon-facebook; }
+.icon-left-arrow:before { content: $icon-left-arrow; }
+.icon-right-arrow:before { content: $icon-right-arrow; }

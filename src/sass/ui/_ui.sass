@@ -1,7 +1,7 @@
 html
 body
-  font-family: 'Open Sans', sans-serif
-  font-size: 18px
+  font-family: 'Eina03', sans-serif
+  font-size: 14px
   box-sizing: border-box
   position: relative
 .container
@@ -31,3 +31,34 @@ textarea
 		display: none !important
 
 
+.btn
+  border-radius: 20px
+  padding: 12px 30px
+  +tr
+  display: inline-flex
+  font-size: 14px
+  font-weight: bold
+  line-height: 1
+  &-primary
+    background: $bright-light-blue
+    color: $white
+    border: 1px solid $bright-light-blue
+    &:hover
+      background: $white
+      color: $bright-light-blue
+    
+
+
+
+
+
+
+
+
+.pages
+  padding-top: 30px
+  ul
+    padding-top: 20px
+    a
+      font-size: 18px
+      padding: 5px 0

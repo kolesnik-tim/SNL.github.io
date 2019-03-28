@@ -1,4 +1,4 @@
-import '../lib/selectize.min.js';
+// import '../lib/selectize.min.js';
 // import '../lib/maskedinput.js';
 // import modal from 'jquery-modal';
 
@@ -12,3 +12,10 @@ import '../lib/selectize.min.js';
 //   });
 //   return false;
 // });
+
+
+$('.login__step__forgot').on('click', function() {
+  let link = $(this).attr('href');
+  $(this).closest('.login__step').fadeOut();
+  $(link).fadeIn();
+});

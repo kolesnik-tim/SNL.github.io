@@ -1,0 +1,73 @@
+.login
+  background-image: linear-gradient(to bottom, #e1f7fe, #f8feff)
+  height: 100vh
+  +center
+  position: relative
+  #login
+    display: block
+  &__step
+    width: 450px
+    border-radius: 10px
+    box-shadow: 0px 3.5px 20px 0 rgba(0, 0, 0, 0.06)
+    background-color: #ffffff
+    position: absolute
+    left: 50%
+    transform: translate(-50%)
+    text-align: center
+    padding: 40px 50px
+    display: none
+    img
+      width: 52px
+      padding-bottom: 25px
+    h2
+      font-size: 30px
+      font-weight: normal
+      color: $black-1
+      padding-bottom: 75px
+    &__input
+      margin-bottom: 30px
+      position: relative
+      input
+        width: 100%
+        border-bottom: 1px solid $very-light-pink
+        font-size: 14px
+        font-weight: normal
+        color: $black-1
+        padding-bottom: 10px
+        background: none
+        &:focus 
+          & + label
+            opacity: 0
+        &:valid
+          & + label
+            opacity: 0
+      label
+        font-size: 14px
+        font-weight: normal
+        color: $black-1
+        position: absolute
+        left: 0
+        bottom: 10px
+        +tr
+        &:before
+          content: ''
+          position: absolute
+          right: -10px
+          top: 5px
+          width: 6px
+          height: 6px
+          background-color: $orangey-red
+          border-radius: 100%
+      &--last
+        margin-bottom: 20px
+    a
+      font-size: 12px
+      font-weight: normal
+      color: $black-1
+      text-align: right
+      display: block
+      padding-bottom: 35px
+      &:hover
+        color: $bright-light-blue
+    &__submit
+      text-align: left
