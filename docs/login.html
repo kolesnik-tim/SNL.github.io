@@ -23,8 +23,16 @@
           <div class="login__step__input login__step__input--last"><input type="password" id="password" name="password" required><label for="password">Password</label></div><a href="#forgot__password" class="login__step__forgot">Forgot Password?</a>
           <div class="login__step__submit"><input type="submit" value="Sign in" class="btn btn-primary"></div>
         </form>
-        <form id="forgot__password" class="login__step"></form>
-        <form id="forgot__password_email_send" class="login__step login__step-three"></form>
+        <form id="forgot__password" class="login__step"><img src="img/logo.png" alt="">
+          <h2>Retrieve Password</h2>
+          <div class="login__step__input login__step__input--last"><input type="text" id="retrieve-email-id" name="email" required><label for="retrieve-email-id">Email ID</label></div>
+          <p>Enter your email and to receive instructions</p>
+          <div class="login__step__submit"><input type="submit" value="Send me" class="btn btn-primary login__step__retrieve"></div><a href="#login" class="login__step__back login__step__forgot"><i class="icon icon-left-arrow"></i>Back to login </a>
+        </form>
+        <form id="forgot__password_email_send" class="login__step login__step-three"><img src="img/logo.png" alt="">
+          <h2>Retrieve Password</h2>
+          <h3>Success, You will be sent a link which you can use to change your password.</h3><a href="#login" class="login__step__back login__step__forgot"><i class="icon icon-left-arrow"></i>Back to login </a>
+        </form>
       </div>
       <!--BEGIN footer-->
       <footer class="footer"></footer>

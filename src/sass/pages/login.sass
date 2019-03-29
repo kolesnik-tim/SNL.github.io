@@ -3,10 +3,11 @@
   height: 100vh
   +center
   position: relative
-  #login
+  #login, #password
     display: block
   &__step
-    width: 450px
+    max-width: 450px
+    width: 100%
     border-radius: 10px
     box-shadow: 0px 3.5px 20px 0 rgba(0, 0, 0, 0.06)
     background-color: #ffffff
@@ -16,6 +17,16 @@
     text-align: center
     padding: 40px 50px
     display: none
+    +r(767)
+      margin: 10px
+      padding: 15px 20px
+      position: absolute
+      left: 0
+      transform: none
+      max-width: 100%
+      width: calc(100% - 20px)
+    +rh(500)
+      top: 0
     img
       width: 52px
       padding-bottom: 25px
@@ -24,6 +35,8 @@
       font-weight: normal
       color: $black-1
       padding-bottom: 75px
+      +r(767)
+        font-size: 27px
     &__input
       margin-bottom: 30px
       position: relative
@@ -41,6 +54,10 @@
         &:valid
           & + label
             opacity: 0
+        &.error
+          border-bottom: 1px solid $orangey-red
+          & + label
+            color: $orangey-red
       label
         font-size: 14px
         font-weight: normal
@@ -60,7 +77,7 @@
           border-radius: 100%
       &--last
         margin-bottom: 20px
-    a
+    &__forgot
       font-size: 12px
       font-weight: normal
       color: $black-1
@@ -69,5 +86,69 @@
       padding-bottom: 35px
       &:hover
         color: $bright-light-blue
+    p
+      font-size: 12px
+      font-weight: normal
+      color: rgba(37, 37, 37, 0.7)
+      text-align: left
+      display: block
+      padding-bottom: 35px
+      margin-top: -10px
     &__submit
       text-align: left
+    &__back
+      font-size: 14px
+      font-weight: normal
+      text-align: left
+      color: $black-1
+      +center-y
+      margin-top: 40px
+      padding-bottom: 0
+      i
+        margin-right: 10px
+    h3
+      font-size: 14px
+      font-weight: normal
+      color: $black-1
+      padding: 0 35px
+#forgot__password_email_send
+  h2
+    padding-bottom: 30px
+#password
+  h2
+    padding-bottom: 25px
+  p
+    text-align: center
+    padding-bottom: 5px
+  strong
+    font-size: 14px
+    font-weight: 600
+    text-align: center
+    color: $black-1
+    margin-bottom: 50px
+    display: block
+#password-changed
+  .icon-checked
+    color: $fresh-green
+    font-size: 46px
+    margin-bottom: 25px
+  h2
+    font-weight: normal
+    text-align: center
+    color: $tree-green
+    padding-bottom: 20px
+  h3
+    margin-bottom: 50px
+  a
+    font-size: 14px
+    font-weight: normal
+    color: $black-1
+    +center
+    &:hover
+      color: $tree-green
+    b
+      font-weight: 600
+      margin-left: 4px
+    i
+      padding-left: 15px
+      padding-top: 1px

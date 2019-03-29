@@ -17,5 +17,21 @@ block content
       .login__step__submit
         input(type="submit" value="Sign in").btn.btn-primary
     form.login__step#forgot__password
-      
+      img(src="img/logo.png", alt="")
+      h2 Retrieve Password
+      .login__step__input.login__step__input--last
+        input(type="text" id="retrieve-email-id" name="email" required)
+        label(for="retrieve-email-id") Email ID
+      p Enter your email and to receive instructions
+      .login__step__submit
+        input(type="submit" value="Send me").btn.btn-primary.login__step__retrieve
+      a(href="#login").login__step__back.login__step__forgot
+        i.icon.icon-left-arrow
+        | Back to login 
     form.login__step.login__step-three#forgot__password_email_send
+      img(src="img/logo.png", alt="")
+      h2 Retrieve Password
+      h3 Success, You will be sent a link which you can use to change your password.
+      a(href="#login").login__step__back.login__step__forgot
+        i.icon.icon-left-arrow
+        | Back to login 
