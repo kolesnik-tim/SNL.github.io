@@ -209,6 +209,16 @@
       background: none
     tbody tr:last-child
       border-bottom: none
+      ul
+        +r(1260)
+          top: auto
+          bottom: 100px
+          &:before
+            content: ''
+            top: auto
+            bottom: -16px
+            border: 8px solid transparent
+            border-top: 8px solid $white
     td, th
       display: flex
       &:first-child
@@ -254,9 +264,12 @@
         +placeholder-color($dark)
         font-size: 12px
         font-weight: bold
+        width: 100%
         text-transform: uppercase
         color: rgba(19, 28, 46, 0.4)
         padding-left: 8px
+        &.is-active
+          +placeholder-color(rgba(19, 28, 46, 0.4))
     .table__datepicker
       position: relative
       input
@@ -326,16 +339,20 @@
         z-index: 10
         +r(1250)
           left: calc(50% - 15px)
+        +r(767)
+          left: calc(50% - 25px)
         &:before
           content: ''
           position: absolute
-          left: 50%
+          left: calc(50% - 1px)
           transform: translate(-50%)
           top: -15px
           border: 8px solid transparent
           border-bottom: 8px solid $white
           +r(1250)
             left: calc(50% + 12px)
+          +r(767)
+            left: calc(50% + 27px)
         a
           padding: 4px 13px
           display: flex
@@ -358,8 +375,6 @@
             font-size: 9px
             margin-right: 10px
             +tr
-          // &:hover
-          //   background: rgba($very-light-pink, 0.2)
         li:first-child
           a:hover
             background: $fresh-green

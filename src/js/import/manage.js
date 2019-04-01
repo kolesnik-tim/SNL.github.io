@@ -1,5 +1,16 @@
 import datepicker from 'air-datepicker';
 
+
+//input name-search
+$('#table__name-search').focus(function() {
+  $(this).addClass('is-active');
+  $(this).attr('placeholder', 'search name');
+});
+$('#table__name-search').focusout(function() {
+  $(this).removeClass('is-active');
+  $(this).attr('placeholder', 'name');
+});
+
 //drop-down open
 $('.drop-down--open').on('click', function(e) {
   e.preventDefault();
@@ -14,7 +25,7 @@ $(document).mouseup(function(e) {
 });
 
 
-//datepicker
+//datepicker en
 (function($) { $.fn.datepicker.language['en'] = {
   days: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
   daysShort: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
@@ -28,6 +39,8 @@ $(document).mouseup(function(e) {
   firstDay: 0
 }; })(jQuery);
 
+
+//datepicker init
 $('.datepicker-here').datepicker({
   language: 'en',
   minDate: new Date(),
