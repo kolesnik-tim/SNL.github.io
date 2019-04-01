@@ -1,7 +1,8 @@
 import datepicker from 'air-datepicker';
 
 //drop-down open
-$('.drop-down--open').on('click', function() {
+$('.drop-down--open').on('click', function(e) {
+  e.preventDefault();
   $(this).find('ul').fadeIn();
 });
 //document mouseup

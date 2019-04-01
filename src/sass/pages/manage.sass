@@ -2,7 +2,9 @@
   background: rgb(244, 245, 249)
   display: flex
   &__content
-    width: 100%
+    width: calc(100% - 70px)
+    +r(767)
+      width: calc(100% - 40px)
 
 
 
@@ -14,6 +16,8 @@
     +center-column
     justify-content: flex-start
     padding: 20px
+    +r(767)
+      padding: 10px 5px
     &__logo
       margin-bottom: 50px
 
@@ -25,14 +29,24 @@
     box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.1)
     background-color: $white
     padding: 25px 0
+    +r(767)
+      padding: 10px 0
     &__content
       +center-y
       justify-content: flex-end
+      +r(767)
+        flex-wrap: wrap
+        justify-content: center
     p
       font-size: 12px
       font-weight: normal
       color: rgba(41, 49, 52, 0.8)
       margin-right: 35px
+      +r(767)
+        width: 100%
+        text-align: center
+        margin-right: 0
+        margin-bottom: 10px
     ul
       display: none
       position: absolute
@@ -43,6 +57,7 @@
       box-shadow: 0px 1px 64px 0 rgba(0, 0, 0, 0.24)
       background-color: $white
       padding: 8px 0
+      z-index: 10
       &:before
         content: ''
         position: absolute
@@ -103,6 +118,8 @@
         width: 100px
         left: 50%
         transform: translate(-50%)
+        +r(1250)
+          left: calc(50% - 10px)
 
 
 
@@ -111,11 +128,20 @@
     display: flex
     justify-content: space-between
     padding-top: 35px
+    +r(767)
+      flex-direction: column
+      align-items: center
+      padding-top: 20px
     h1
       font-size: 30px
       font-weight: normal
       color: $dark
+      +r(767)
+        padding-bottom: 15px
+        font-size: 25px
     a
+      +r(767)
+        margin-bottom: 15px
       i
         margin-right: 12px
 
@@ -130,9 +156,12 @@
       border-radius: 10px
       box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.1)
       background-color: $white
-      padding: 25px 35px
+      padding: 25px 30px
+      +r(1200)
+        padding: 25px 20px
       +center-y
       min-height: 106px
+      margin-bottom: 15px
       &__img
         margin-right: 25px
       &__text
@@ -155,9 +184,16 @@
     border-radius: 10px
     box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.1)
     background-color: $white
+    margin-bottom: 100px
+    +r(1250)
+      overflow-x: auto
+    +r(767)
+      margin-bottom: 30px
     &__content
       min-width: 1100px
       display: block
+      +r(767)
+        min-width: 900px
     table, tbody, thead
       width: 100%
       display: block
@@ -171,6 +207,8 @@
         background: rgba($very-light-pink, 0.2)
     thead tr:hover
       background: none
+    tbody tr:last-child
+      border-bottom: none
     td, th
       display: flex
       &:first-child
@@ -209,6 +247,8 @@
         color: $dark
         text-transform: uppercase
         margin-right: 10px
+        +r(767)
+          font-size: 10px
       input
         background: none
         +placeholder-color($dark)
@@ -235,6 +275,10 @@
         cursor: default
         &:last-child
           cursor: pointer
+        img
+          +r(767)
+            width: 45px
+            height: 45px
         i
           position: absolute
           left: 0
@@ -266,6 +310,8 @@
         font-size: 14px
         font-weight: normal
         color: $dark
+        +r(767)
+          font-size: 11px
       ul
         display: none
         position: absolute
@@ -278,6 +324,8 @@
         background-color: $white
         padding: 5px 0
         z-index: 10
+        +r(1250)
+          left: calc(50% - 15px)
         &:before
           content: ''
           position: absolute
@@ -286,6 +334,8 @@
           top: -15px
           border: 8px solid transparent
           border-bottom: 8px solid $white
+          +r(1250)
+            left: calc(50% + 12px)
         a
           padding: 4px 13px
           display: flex
