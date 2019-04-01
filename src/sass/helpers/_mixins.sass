@@ -328,6 +328,11 @@
   left: 50%
   transform: translate(-50%)
 
+=placeholder-color($color)
+  &::placeholder
+    color: $color
+
+
 =object-fit($fit: fill, $position: null)
 	-o-object-fit: $fit
 	object-fit: $fit

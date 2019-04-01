@@ -1,0 +1,178 @@
+---
+title: Manage
+---
+extends layouts/_layout
+block content
+  .manage
+    aside.manage__aside
+      a(href="#").manage__aside__logo
+        img(src="https://via.placeholder.com/30x30.png", alt="")
+      a(href="#").manage__aside__img
+        img(src="https://via.placeholder.com/30x25.png", alt="")
+    .manage__content
+      .manage__header
+        .container
+          .manage__header__content
+            p Thursday, 28 March 2019  10:47 am (IST)
+            .manage__header__notifications.drop-down--open
+              i.icon.icon-bell
+                span
+              b 23
+              ul
+                li
+                  a(href="#") Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                li
+                  a(href="#") Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            .manage__header__user.drop-down--open
+              span Vaishakh
+              i.icon.icon-down-arrow
+              ul
+                li
+                  a(href="#") Exit
+      .container
+        .manage__title
+          h1 Manage Event - 32
+          a(href="#").btn.btn-primary 
+            i.icon.icon-plus
+            | Create Event
+        ul.breadcrumbs
+          li
+            a(href="#") Dashboard
+          li
+            a(href="#") Manage Event
+        .manage__statistics
+          .row
+            .col-xs-3
+              .manage__statistics__block
+                .manage__statistics__block__img
+                  img(src="https://via.placeholder.com/43x43.png", alt="")
+                .manage__statistics__block__text
+                  p Active Events
+                  span 32
+            .col-xs-3
+              .manage__statistics__block
+                .manage__statistics__block__img
+                  img(src="https://via.placeholder.com/43x43.png", alt="")
+                .manage__statistics__block__text
+                  p Speakers
+                  span 8
+            .col-xs-3
+              .manage__statistics__block
+                .manage__statistics__block__img
+                  img(src="https://via.placeholder.com/43x43.png", alt="")
+                .manage__statistics__block__text
+                  p Total Registrations
+                  span 980
+            .col-xs-3
+              .manage__statistics__block
+                .manage__statistics__block__img
+                  img(src="https://via.placeholder.com/43x43.png", alt="")
+                .manage__statistics__block__text
+                  p Total Inquiry
+                  span 280
+        .manage__table
+          .manage__table__content
+            table.table
+              thead
+                tr
+                  th 
+                    span #
+                    a(href="#")
+                      i.icon.icon-sort-arrows
+                  th 
+                    a(href="#")
+                      i.icon.icon-search
+                    input(type="text" placeholder="Name")
+                  th 
+                    span Details
+                  th.table__datepicker
+                    span date
+                    input(type='text' class="datepicker-here" data-language='en')
+                    a(href="#")
+                      img(src="https://via.placeholder.com/15x15.png", alt="")
+                  th 
+                    span VENUE
+                  th 
+                    a(href="#")
+                      i.icon.icon-search
+                    input(type="text" placeholder="TRAINER")
+                  th
+                    span Images 
+                  th 
+                    span status
+                    a(href="#")
+                      i.icon.icon-sort-arrows
+                  th
+              tbody
+                tr.open
+                  td 
+                    p 01
+                  td 
+                    p Marketing Conferencee 2019
+                  td 
+                    p Lorem ipsum dolor sit amet, consectetur…
+                  td 
+                    p 15 Jun 2019 - 28 Jun 2019	
+                  td 
+                    p Bratislava, Slovakia
+                  td 
+                    p Rory Conway
+                  td 
+                    .table__gallery
+                      a(href="#")
+                        img(src="https://via.placeholder.com/50x50.png", alt="")
+                      a(href="#")
+                        img(src="https://via.placeholder.com/50x50.png", alt="")
+                      a(href="#")
+                        img(src="https://via.placeholder.com/50x50.png", alt="")
+                        i.icon.icon-more
+                  td 
+                    a(href="#").btn.btn-open Open
+                  td.table__drop-down.drop-down--open
+                    a(href="#").table__more
+                      i.icon.icon-more
+                    ul
+                      li
+                        a(href="#") 
+                          i.icon.icon-edit
+                          | Edit
+                      li
+                        a(href="#") 
+                          i.icon.icon-delete
+                          | Delete
+                tr
+                  td 
+                    p 02
+                  td 
+                    p Marketing Conferencee 2019
+                  td 
+                    p Lorem ipsum dolor sit amet, consectetur…
+                  td 
+                    p 15 Jun 2019 - 28 Jun 2019	
+                  td 
+                    p Bratislava, Slovakia
+                  td 
+                    p Rory Conway
+                  td 
+                    .table__gallery
+                      a(href="#")
+                        img(src="https://via.placeholder.com/50x50.png", alt="")
+                      a(href="#")
+                        img(src="https://via.placeholder.com/50x50.png", alt="")
+                      a(href="#")
+                        img(src="https://via.placeholder.com/50x50.png", alt="")
+                        i.icon.icon-more
+                  td 
+                    a(href="#").btn.btn-closed Closed
+                  td.table__drop-down.drop-down--open 
+                    a(href="#").table__more
+                      i.icon.icon-more
+                    ul
+                      li
+                        a(href="#") 
+                          i.icon.icon-edit
+                          | Edit
+                      li
+                        a(href="#") 
+                          i.icon.icon-delete
+                          | Delete

@@ -1,0 +1,329 @@
+.manage
+  background: rgb(244, 245, 249)
+  display: flex
+  &__content
+    width: 100%
+
+
+
+
+  &__aside
+    min-height: 100vh
+    box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.1)
+    background-color: $charcoal-grey
+    +center-column
+    justify-content: flex-start
+    padding: 20px
+    &__logo
+      margin-bottom: 50px
+
+
+
+
+
+  &__header
+    box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.1)
+    background-color: $white
+    padding: 25px 0
+    &__content
+      +center-y
+      justify-content: flex-end
+    p
+      font-size: 12px
+      font-weight: normal
+      color: rgba(41, 49, 52, 0.8)
+      margin-right: 35px
+    ul
+      display: none
+      position: absolute
+      left: -90px
+      width: 200px
+      top: 33px
+      border-radius: 10px
+      box-shadow: 0px 1px 64px 0 rgba(0, 0, 0, 0.24)
+      background-color: $white
+      padding: 8px 0
+      &:before
+        content: ''
+        position: absolute
+        left: 50%
+        transform: translate(-50%)
+        top: -15px
+        border: 8px solid transparent
+        border-bottom: 8px solid $white
+      a
+        padding: 8px 15px
+        display: block
+        color: $dark
+        font-size: 12px
+        &:hover
+          background: rgba($very-light-pink, 0.2)
+    &__notifications
+      +center
+      margin-right: 23px
+      cursor: pointer
+      position: relative
+      &:hover
+        i
+          color: $bright-light-blue
+      i
+        color: $dark
+        font-size: 20px
+        position: relative
+        +tr
+        span
+          position: absolute
+          right: 0
+          width: 10px
+          height: 10px
+          border-radius: 100%
+          border: solid 1.5px $white
+          background-color: $strawberry
+      b
+        margin-left: 6px
+        font-size: 11px
+        font-weight: bold
+        color: $strawberry
+    &__user
+      cursor: pointer
+      position: relative
+      &:hover
+        span, i
+          color: $bright-light-blue
+      span
+        font-size: 12px
+        font-weight: 600
+        color: $dark
+        +tr
+      i
+        font-size: 7px
+        padding-left: 5px
+        +tr
+      ul
+        width: 100px
+        left: 50%
+        transform: translate(-50%)
+
+
+
+
+  &__title
+    display: flex
+    justify-content: space-between
+    padding-top: 35px
+    h1
+      font-size: 30px
+      font-weight: normal
+      color: $dark
+    a
+      i
+        margin-right: 12px
+
+
+
+
+
+
+  &__statistics
+    padding: 30px 0
+    &__block
+      border-radius: 10px
+      box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.1)
+      background-color: $white
+      padding: 25px 35px
+      +center-y
+      min-height: 106px
+      &__img
+        margin-right: 25px
+      &__text
+        display: flex
+        flex-direction: column
+        p
+          font-size: 14px
+          font-weight: 600
+          color: $dark
+          margin-bottom: 5px
+        span
+          font-size: 30px
+          font-weight: bold
+          color: $charcoal-grey
+
+
+
+
+  &__table
+    border-radius: 10px
+    box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.1)
+    background-color: $white
+    &__content
+      min-width: 1100px
+      display: block
+    table, tbody, thead
+      width: 100%
+      display: block
+    tr
+      display: flex
+      align-items: center
+      padding: 0 10px
+      border-bottom: 1px solid $very-light-pink
+      +tr
+      &:hover
+        background: rgba($very-light-pink, 0.2)
+    thead tr:hover
+      background: none
+    td, th
+      display: flex
+      &:first-child
+        width: 6%
+      &:nth-child(2)
+        width: 16%
+      &:nth-child(3)
+        width: 15%
+      &:nth-child(4)
+        width: 11%
+      &:nth-child(5)
+        width: 8%
+      &:nth-child(6)
+        width: 11%
+      &:nth-child(7)
+        width: 18%
+      &:nth-child(8)
+        width: 10%
+      &:last-child
+        width: 5%
+    th
+      padding: 25px 12px
+      display: flex
+      align-items: center
+      a
+        &:hover
+          i
+            color: $bright-light-blue
+      i
+        font-size: 12px
+        color: $dark
+        +tr
+      span
+        font-size: 12px
+        font-weight: bold
+        color: $dark
+        text-transform: uppercase
+        margin-right: 10px
+      input
+        background: none
+        +placeholder-color($dark)
+        font-size: 12px
+        font-weight: bold
+        text-transform: uppercase
+        color: rgba(19, 28, 46, 0.4)
+        padding-left: 8px
+    .table__datepicker
+      position: relative
+      input
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        opacity: 0
+    .table__gallery
+      display: flex
+      a
+        margin-right: 5px
+        position: relative
+        +center
+        cursor: default
+        &:last-child
+          cursor: pointer
+        i
+          position: absolute
+          left: 0
+          top: 0
+          width: 100%
+          height: 100%
+          +center
+          color: $white
+          background: rgba($charcoal-grey, 0.3)
+          font-size: 22px
+          +tr
+        &:hover
+          i
+            color: $bright-light-blue
+            background: rgba($charcoal-grey, 0.5)
+    .table__more
+      i
+        font-size: 24px
+        color: $dark
+        +tr
+      &:hover
+        i
+          color: $bright-light-blue
+    td
+      padding: 25px 12px
+      text-align: left
+      position: relative
+      p
+        font-size: 14px
+        font-weight: normal
+        color: $dark
+      ul
+        display: none
+        position: absolute
+        left: calc(50% - 3px)
+        top: 30%
+        transform: translate(-50%, 50%)
+        width: 105px
+        border-radius: 7px
+        box-shadow: 0px 1px 64px 0 rgba(0, 0, 0, 0.24)
+        background-color: $white
+        padding: 5px 0
+        z-index: 10
+        &:before
+          content: ''
+          position: absolute
+          left: 50%
+          transform: translate(-50%)
+          top: -15px
+          border: 8px solid transparent
+          border-bottom: 8px solid $white
+        a
+          padding: 4px 13px
+          display: flex
+          align-items: center
+          font-size: 12px
+          font-weight: normal
+          font-style: normal
+          font-stretch: normal
+          line-height: 2.08
+          letter-spacing: normal
+          text-align: left
+          color: $dark
+          i
+            +center
+            width: 20px
+            height: 20px
+            color: $bright-light-blue
+            border-radius: 100%
+            border: 1px solid $dark
+            font-size: 9px
+            margin-right: 10px
+            +tr
+          // &:hover
+          //   background: rgba($very-light-pink, 0.2)
+        li:first-child
+          a:hover
+            background: $fresh-green
+            color: $white
+            i
+              color: $white
+              border-color: $white
+        li:last-child
+          a:hover
+            background: $strawberry
+            color: $white
+            i
+              color: $white
+              border-color: $white
+    tr.open
+      p
+        font-weight: 600

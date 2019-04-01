@@ -9,9 +9,17 @@
   font-style: normal;
 }
 
-$icon-checked: "\EA01";
-$icon-left-arrow: "\EA02";
-$icon-right-arrow: "\EA03";
+$icon-bell: "\EA01";
+$icon-checked: "\EA02";
+$icon-delete: "\EA03";
+$icon-down-arrow: "\EA04";
+$icon-edit: "\EA05";
+$icon-left-arrow: "\EA06";
+$icon-more: "\EA07";
+$icon-plus: "\EA08";
+$icon-right-arrow: "\EA09";
+$icon-search: "\EA0A";
+$icon-sort-arrows: "\EA0B";
 
 
 %icon {
@@ -30,6 +38,14 @@ $icon-right-arrow: "\EA03";
   display: inline-block;
 }
 
+.icon-bell:before { content: $icon-bell; }
 .icon-checked:before { content: $icon-checked; }
+.icon-delete:before { content: $icon-delete; }
+.icon-down-arrow:before { content: $icon-down-arrow; }
+.icon-edit:before { content: $icon-edit; }
 .icon-left-arrow:before { content: $icon-left-arrow; }
+.icon-more:before { content: $icon-more; }
+.icon-plus:before { content: $icon-plus; }
 .icon-right-arrow:before { content: $icon-right-arrow; }
+.icon-search:before { content: $icon-search; }
+.icon-sort-arrows:before { content: $icon-sort-arrows; }
