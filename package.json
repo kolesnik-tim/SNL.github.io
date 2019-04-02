@@ -71,6 +71,7 @@
     "lodash": "^4.3.0"
   },
   "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "air-datepicker": "^2.2.3"
   }
 }

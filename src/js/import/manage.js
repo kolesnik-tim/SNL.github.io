@@ -1,5 +1,11 @@
 import datepicker from 'air-datepicker';
+import fancybox from '@fancyapps/fancybox';
 
+
+//gallery fancybox
+$('.table__gallery a').fancybox({
+  loop: true
+});
 
 //input name-search
 $('#table__name-search').focus(function() {

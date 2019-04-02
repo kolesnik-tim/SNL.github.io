@@ -45,28 +45,28 @@ block content
             .col-md-3.col-sm-6.col-xs-12
               .manage__statistics__block
                 .manage__statistics__block__img
-                  img(src="https://via.placeholder.com/43x43.png", alt="")
+                  img(src="img/manage/active-events.png", alt="")
                 .manage__statistics__block__text
                   p Active Events
                   span 32
             .col-md-3.col-sm-6.col-xs-12
               .manage__statistics__block
                 .manage__statistics__block__img
-                  img(src="https://via.placeholder.com/43x43.png", alt="")
+                  img(src="img/manage/speakers.png", alt="")
                 .manage__statistics__block__text
                   p Speakers
                   span 8
             .col-md-3.col-sm-6.col-xs-12
               .manage__statistics__block
                 .manage__statistics__block__img
-                  img(src="https://via.placeholder.com/43x43.png", alt="")
+                  img(src="img/manage/total-registrations.png", alt="")
                 .manage__statistics__block__text
                   p Total Registrations
                   span 980
             .col-md-3.col-sm-6.col-xs-12
               .manage__statistics__block
                 .manage__statistics__block__img
-                  img(src="https://via.placeholder.com/43x43.png", alt="")
+                  img(src="img/manage/total-inquiry.png", alt="")
                 .manage__statistics__block__text
                   p Total Inquiry
                   span 280
@@ -89,7 +89,7 @@ block content
                     span date
                     input(type='text' class="datepicker-here" data-language='en')
                     a(href="#")
-                      img(src="https://via.placeholder.com/15x15.png", alt="")
+                      img(src="img/manage/calendar.png", alt="")
                   th 
                     span VENUE
                   th 
@@ -98,10 +98,15 @@ block content
                     input(type="text" placeholder="TRAINER")
                   th
                     span Images 
-                  th 
+                  th.table__drop-down.drop-down--open
                     span status
                     a(href="#")
                       i.icon.icon-sort-arrows
+                    ul
+                      li
+                        a(href="#").is-active Open
+                      li
+                        a(href="#") Closed
                   th
               tbody
                 tr.open
@@ -112,19 +117,20 @@ block content
                   td 
                     p Lorem ipsum dolor sit amet, consectetur…
                   td 
-                    p 15 Jun 2019 - 28 Jun 2019	
+                    a(href="#") 
+                      p 15 Jun 2019 - 28 Jun 2019	
                   td 
                     p Bratislava, Slovakia
                   td 
                     p Rory Conway
                   td 
                     .table__gallery
-                      a(href="#")
-                        img(src="https://via.placeholder.com/50x50.png", alt="")
-                      a(href="#")
-                        img(src="https://via.placeholder.com/50x50.png", alt="")
-                      a(href="#")
-                        img(src="https://via.placeholder.com/50x50.png", alt="")
+                      a(href="https://via.placeholder.com/550x250.png" data-fancybox="gallery")
+                        img(src="https://via.placeholder.com/50x50.png" alt="")
+                      a(href="https://via.placeholder.com/250x50.png" data-fancybox="gallery")
+                        img(src="https://via.placeholder.com/50x50.png" alt="")
+                      a(href="https://via.placeholder.com/350x50.png" data-fancybox="gallery")
+                        img(src="https://via.placeholder.com/50x50.png" alt="")
                         i.icon.icon-more
                   td 
                     a(href="#").btn.btn-open Open
@@ -148,19 +154,20 @@ block content
                   td 
                     p Lorem ipsum dolor sit amet, consectetur…
                   td 
-                    p 15 Jun 2019 - 28 Jun 2019	
+                    a(href="#") 
+                      p 15 Jun 2019 - 28 Jun 2019	
                   td 
                     p Bratislava, Slovakia
                   td 
                     p Rory Conway
                   td 
                     .table__gallery
-                      a(href="#")
-                        img(src="https://via.placeholder.com/50x50.png", alt="")
-                      a(href="#")
-                        img(src="https://via.placeholder.com/50x50.png", alt="")
-                      a(href="#")
-                        img(src="https://via.placeholder.com/50x50.png", alt="")
+                      a(href="https://via.placeholder.com/550x250.png" data-fancybox="gallery1")
+                        img(src="https://via.placeholder.com/50x50.png" alt="")
+                      a(href="https://via.placeholder.com/250x50.png" data-fancybox="gallery1")
+                        img(src="https://via.placeholder.com/50x50.png" alt="")
+                      a(href="https://via.placeholder.com/350x50.png" data-fancybox="gallery1")
+                        img(src="https://via.placeholder.com/50x50.png" alt="")
                         i.icon.icon-more
                   td 
                     a(href="#").btn.btn-open Open
@@ -184,19 +191,20 @@ block content
                   td 
                     p Lorem ipsum dolor sit amet, consectetur…
                   td 
-                    p 15 Jun 2019 - 28 Jun 2019	
+                    a(href="#") 
+                      p 15 Jun 2019 - 28 Jun 2019	
                   td 
                     p Bratislava, Slovakia
                   td 
                     p Rory Conway
                   td 
                     .table__gallery
-                      a(href="#")
-                        img(src="https://via.placeholder.com/50x50.png", alt="")
-                      a(href="#")
-                        img(src="https://via.placeholder.com/50x50.png", alt="")
-                      a(href="#")
-                        img(src="https://via.placeholder.com/50x50.png", alt="")
+                      a(href="https://via.placeholder.com/550x250.png" data-fancybox="gallery2")
+                        img(src="https://via.placeholder.com/50x50.png" alt="")
+                      a(href="https://via.placeholder.com/250x50.png" data-fancybox="gallery2")
+                        img(src="https://via.placeholder.com/50x50.png" alt="")
+                      a(href="https://via.placeholder.com/350x50.png" data-fancybox="gallery2")
+                        img(src="https://via.placeholder.com/50x50.png" alt="")
                         i.icon.icon-more
                   td 
                     a(href="#").btn.btn-closed Closed
@@ -220,19 +228,20 @@ block content
                   td 
                     p Lorem ipsum dolor sit amet, consectetur…
                   td 
-                    p 15 Jun 2019 - 28 Jun 2019	
+                    a(href="#") 
+                      p 15 Jun 2019 - 28 Jun 2019	
                   td 
                     p Bratislava, Slovakia
                   td 
                     p Rory Conway
                   td 
                     .table__gallery
-                      a(href="#")
-                        img(src="https://via.placeholder.com/50x50.png", alt="")
-                      a(href="#")
-                        img(src="https://via.placeholder.com/50x50.png", alt="")
-                      a(href="#")
-                        img(src="https://via.placeholder.com/50x50.png", alt="")
+                      a(href="https://via.placeholder.com/550x250.png" data-fancybox="gallery3")
+                        img(src="https://via.placeholder.com/50x50.png" alt="")
+                      a(href="https://via.placeholder.com/250x50.png" data-fancybox="gallery3")
+                        img(src="https://via.placeholder.com/50x50.png" alt="")
+                      a(href="https://via.placeholder.com/350x50.png" data-fancybox="gallery3")
+                        img(src="https://via.placeholder.com/50x50.png" alt="")
                         i.icon.icon-more
                   td 
                     a(href="#").btn.btn-closed Closed
@@ -256,19 +265,20 @@ block content
                   td 
                     p Lorem ipsum dolor sit amet, consectetur…
                   td 
-                    p 15 Jun 2019 - 28 Jun 2019	
+                    a(href="#") 
+                      p 15 Jun 2019 - 28 Jun 2019	
                   td 
                     p Bratislava, Slovakia
                   td 
                     p Rory Conway
                   td 
                     .table__gallery
-                      a(href="#")
-                        img(src="https://via.placeholder.com/50x50.png", alt="")
-                      a(href="#")
-                        img(src="https://via.placeholder.com/50x50.png", alt="")
-                      a(href="#")
-                        img(src="https://via.placeholder.com/50x50.png", alt="")
+                      a(href="https://via.placeholder.com/550x250.png" data-fancybox="gallery4")
+                        img(src="https://via.placeholder.com/50x50.png" alt="")
+                      a(href="https://via.placeholder.com/250x50.png" data-fancybox="gallery4")
+                        img(src="https://via.placeholder.com/50x50.png" alt="")
+                      a(href="https://via.placeholder.com/350x50.png" data-fancybox="gallery4")
+                        img(src="https://via.placeholder.com/50x50.png" alt="")
                         i.icon.icon-more
                   td 
                     a(href="#").btn.btn-closed Closed
@@ -292,19 +302,20 @@ block content
                   td 
                     p Lorem ipsum dolor sit amet, consectetur…
                   td 
-                    p 15 Jun 2019 - 28 Jun 2019	
+                    a(href="#") 
+                      p 15 Jun 2019 - 28 Jun 2019	
                   td 
                     p Bratislava, Slovakia
                   td 
                     p Rory Conway
                   td 
                     .table__gallery
-                      a(href="#")
-                        img(src="https://via.placeholder.com/50x50.png", alt="")
-                      a(href="#")
-                        img(src="https://via.placeholder.com/50x50.png", alt="")
-                      a(href="#")
-                        img(src="https://via.placeholder.com/50x50.png", alt="")
+                      a(href="https://via.placeholder.com/550x250.png" data-fancybox="gallery5")
+                        img(src="https://via.placeholder.com/50x50.png" alt="")
+                      a(href="https://via.placeholder.com/250x50.png" data-fancybox="gallery5")
+                        img(src="https://via.placeholder.com/50x50.png" alt="")
+                      a(href="https://via.placeholder.com/350x50.png" data-fancybox="gallery5")
+                        img(src="https://via.placeholder.com/50x50.png" alt="")
                         i.icon.icon-more
                   td 
                     a(href="#").btn.btn-closed Closed
@@ -328,19 +339,20 @@ block content
                   td 
                     p Lorem ipsum dolor sit amet, consectetur…
                   td 
-                    p 15 Jun 2019 - 28 Jun 2019	
+                    a(href="#") 
+                      p 15 Jun 2019 - 28 Jun 2019	
                   td 
                     p Bratislava, Slovakia
                   td 
                     p Rory Conway
                   td 
                     .table__gallery
-                      a(href="#")
-                        img(src="https://via.placeholder.com/50x50.png", alt="")
-                      a(href="#")
-                        img(src="https://via.placeholder.com/50x50.png", alt="")
-                      a(href="#")
-                        img(src="https://via.placeholder.com/50x50.png", alt="")
+                      a(href="https://via.placeholder.com/550x250.png" data-fancybox="gallery6")
+                        img(src="https://via.placeholder.com/50x50.png" alt="")
+                      a(href="https://via.placeholder.com/250x50.png" data-fancybox="gallery6")
+                        img(src="https://via.placeholder.com/50x50.png" alt="")
+                      a(href="https://via.placeholder.com/350x50.png" data-fancybox="gallery6")
+                        img(src="https://via.placeholder.com/50x50.png" alt="")
                         i.icon.icon-more
                   td 
                     a(href="#").btn.btn-closed Closed
