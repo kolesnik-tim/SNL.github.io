@@ -325,6 +325,8 @@
         cursor: pointer
         &.is-active
           font-weight: 600
+        &:hover
+          background: rgba(189,189,189,.2)
         i
           +center
           width: 20px
@@ -335,20 +337,6 @@
           font-size: 9px
           margin-right: 10px
           +tr
-      li:first-child
-        a:hover
-          background: $fresh-green
-          color: $white
-          i
-            color: $white
-            border-color: $white
-      li:last-child
-        a:hover
-          background: $strawberry
-          color: $white
-          i
-            color: $white
-            border-color: $white
     .table__datepicker
       position: relative
       input
