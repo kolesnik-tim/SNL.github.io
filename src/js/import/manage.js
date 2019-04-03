@@ -3,6 +3,7 @@ import fancybox from '@fancyapps/fancybox';
 import '../lib/selectize.min.js';
 
 
+
 //gallery fancybox
 $('.table__gallery a').fancybox({
   loop: true

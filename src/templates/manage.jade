@@ -371,7 +371,7 @@ block content
     .manage__create--bg
     .manage__create
       .manage__create__header
-        a(href="#").manage__create__close
+        a(href="#warning" rel="modal:open")
           i.icon.icon-angle-pointing
           | Create Event
       form.manage__create__content
@@ -410,13 +410,6 @@ block content
               a(href="#")
                 img(src="img/manage/calendar.png", alt="")
           .manage__form__image
-            //- .manage__form__image__block(style="background-image: url('https://via.placeholder.com/150x150.png')")
-            //-   input(type="file" id="file-5" name="file")
-            //-   span#output-5.output
-            //-   p
-            //-     a(href="#").delete
-            //-       i.icon.icon-delete
-            //-       | Delete
             .manage__form__image__block.manage__form__image__block--add
               input(type="file" id="file" name="file")
               span#output.output

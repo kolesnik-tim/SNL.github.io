@@ -19,3 +19,37 @@
       &:after
         right: 0
         transform: rotate(-45deg)
+.modal a.close-modal
+  display: none
+.blocker
+  padding: 0
+.warning
+  max-width: 400px
+  border-radius: 10px
+  border: solid 0 #000000
+  background-color: $white
+  box-shadow: none
+  padding: 25px 30px
+  h3
+    font-size: 18px
+    font-weight: bold
+    color: $charcoal-grey
+    margin-bottom: 10px
+  p
+    font-size: 14px
+    font-weight: normal
+    color: $charcoal-grey
+    margin-bottom: 33px
+  &__btn
+    +center
+    justify-content: flex-end
+    a
+      font-weight: normal
+      &:first-child
+        border: solid 1px $charcoal-grey
+        color: $charcoal-grey
+        background: none
+        margin-right: 10px
+        &:hover
+          background: $charcoal-grey
+          color: $white

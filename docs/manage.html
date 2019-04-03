@@ -321,7 +321,7 @@
         </div>
         <div class="manage__create--bg"></div>
         <div class="manage__create">
-          <div class="manage__create__header"><a href="#" class="manage__create__close"><i class="icon icon-angle-pointing"></i>Create Event</a></div>
+          <div class="manage__create__header"><a href="#warning" rel="modal:open"><i class="icon icon-angle-pointing"></i>Create Event</a></div>
           <form class="manage__create__content">
             <div class="manage__create__form manage__form">
               <div class="manage__form__title">
@@ -380,8 +380,11 @@
       <footer class="footer"></footer>
       <!--END footer-->
       <!--BEGIN pop-up-->
-      <div class="bg"></div>
-      <div class="pop-up"></div>
+      <div id="warning" class="modal warning">
+        <h3>Are you sure?</h3>
+        <p>Are you sure that you want to perform this action?</p>
+        <div class="warning__btn"><a href="#close" rel="modal:close" class="btn btn-primary">No</a><a href="#close" rel="modal:close" class="btn btn-primary manage__create__close">Yes</a></div>
+      </div>
       <!--END pop-up-->
     </div>
     <!--END out-->
