@@ -325,8 +325,8 @@
           <form class="manage__create__content">
             <div class="manage__create__form manage__form">
               <div class="manage__form__title">
-                <h3>Event Details</h3>
-                <p><span></span>Mandatory Fields</p>
+                <h3> <span>01</span>Event Details</h3>
+                <p>Mandatory Fields</p>
               </div>
               <div class="manage__form__input"><input type="text" id="event-name" name="event-name" required><label for="event-name">Event Name</label></div>
               <div class="manage__form__input select-country"><span class="point"></span><select id="select-country" required>
@@ -334,39 +334,43 @@
                   <option value="1">Angola</option>
                   <option value="2">România</option>
                 </select></div>
-              <div class="manage__form__input select-state"><span class="point"></span><select id="select-state" required>
-                  <option value="">Event Name</option>
-                  <option value="1">Angola2</option>
-                  <option value="2">România</option>
-                  <option value="3">România3</option>
-                  <option value="4">România</option>
-                </select></div>
               <div class="manage__form__datepicker">
                 <div class="manage__form__datepicker__block"><input type="text" id="event-start-date" data-language="en" class="datepicker-create_event"><label for="event-start-date">Event Start Date</label><a href="#"><img src="img/manage/calendar.png" alt=""></a></div>
                 <div class="manage__form__datepicker__block"><input type="text" id="event-end-date" data-language="en" class="datepicker-create_event"><label for="event-end-date">Event End Date</label><a href="#"><img src="img/manage/calendar.png" alt=""></a></div>
               </div>
               <div class="manage__form__image">
-                <div style="background-image: url('https://via.placeholder.com/150x150.png')" class="manage__form__image__block">
-                  <p><a href="#"> <i class="icon icon-delete"></i>Delete</a></p>
+                <div class="manage__form__image__block manage__form__image__block--add"><input type="file" id="file" name="file"><span id="output" class="output"></span>
+                  <p><a href="#"><i class="icon icon-plus"></i>Upload Image</a></p>
                 </div>
-                <div style="background-image: url('')" class="manage__form__image__block manage__form__image__block--add"><input type="file">
+                <div class="manage__form__image__block manage__form__image__block--add"><input type="file" id="file-2" name="file-2"><span id="output-2" class="output"></span>
                   <p><a href="#"> <i class="icon icon-plus"></i>Upload Image</a></p>
                 </div>
-                <div style="background-image: url('')" class="manage__form__image__block manage__form__image__block--add"> <input type="file">
+                <div class="manage__form__image__block manage__form__image__block--add"><input type="file" id="file-3" name="file"><span id="output-3" class="output"></span>
                   <p><a href="#"> <i class="icon icon-plus"></i>Upload Image</a></p>
                 </div>
               </div>
               <div class="manage__form__description"><textarea id="description-1" name="description-1" required></textarea><label for="description-1">Description</label></div>
+            </div>
+            <div class="manage__create__form manage__form">
               <div class="manage__form__title">
-                <h3>Trainer Details</h3>
+                <h3><span>02</span>Trainer Details</h3>
               </div>
-              <div class="manage__form__input"><input type="text" id="name" name="name" required><label for="name">Event Name</label></div>
-              <div class="manage__form__description"><textarea id="description-2" name="description-2" required></textarea><label for="description-2">Description</label></div>
+              <div class="manage__form__input"><input type="text" id="name" name="name" required><label for="name">Name</label></div>
+              <div class="manage__form__description"><textarea id="about-trainer" name="about-trainer" required></textarea><label for="about-trainer">About Trainer</label></div>
               <div class="manage__form__image">
-                <div style="background-image: url('')" class="manage__form__image__block manage__form__image__block--add"> <input type="file">
+                <div class="manage__form__image__block manage__form__image__block--add"><input type="file" id="file-4" name="file"><span id="output-4" class="output"></span>
                   <p><a href="#"> <i class="icon icon-plus"></i>Upload Image</a></p>
                 </div>
               </div>
+            </div>
+            <div class="manage__create__form manage__form">
+              <div class="manage__form__title">
+                <h3><span>03</span>Trainer Testimonials - 01</h3>
+              </div>
+              <div class="manage__form__input"><input type="text" id="name-trainer" name="name-trainer" required><label for="name-trainer">Name</label></div>
+              <div class="manage__form__input"><input type="text" id="designation" name="designation" required><label for="designation">Designation</label></div>
+              <div class="manage__form__description"><textarea id="testimonial" name="testimonial" required></textarea><label for="testimonial">Testimonial</label></div>
+              <div class="manage__form__btn"><a href="#" class="manage__form__btn__add-more"><i class="icon icon-plus"></i>Add more</a><a href="#" class="manage__form__btn__delete"><i class="icon icon-delete"></i>Delete</a></div>
             </div>
             <div class="manage__form__footer"><a href="#" class="btn btn-primary manage__create__close">cancel</a><input type="submit" value="create" class="btn btn-primary"></div>
           </form>

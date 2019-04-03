@@ -114,15 +114,181 @@ $('#select-country').selectize({
   },
 
 });
+//image-1
+function handleFileSelectSingle(evt) {
+  var file = evt.target.files; // FileList object
+
+  var f = file[0];
+
+  // Only process image files.
+  if (!f.type.match('image.*')) {
+    alert('Только изображения....');
+  }
+
+  var reader = new FileReader();
+
+  // Closure to capture the file information.
+  reader.onload = (function(theFile) {
+    return function(e) {
+      // Render thumbnail.
+      var span = document.createElement('span');
+      span.innerHTML = ['<img class="img-thumbnail" src="', e.target.result,
+        '" title="', escape(theFile.name), '"/>'].join('');
+      document.getElementById('output').innerHTML = '';
+      document.getElementById('output').insertBefore(span, null);
+    };
+  })(f);
+
+  // Read in the image file as a data URL.
+  reader.readAsDataURL(f);
+}
 
 
-$('#select-state').selectize({
-  maxItems: 10,
-  onChange: function(value) {
-    if($(value) === '') {
-      $('.select-state').find('.point').fadeIn();
-    } else{
-      $('.select-state').find('.point').fadeOut();
-    }
-  },
+document.getElementById('file').addEventListener('change', handleFileSelectSingle, false);
+
+
+
+
+
+
+//image
+//image-2
+function handleFileSelectSingle2(evt) {
+  var file = evt.target.files; // FileList object
+
+  var f = file[0];
+
+  // Only process image files.
+  if (!f.type.match('image.*')) {
+    alert('Только изображения....');
+  }
+
+  var reader = new FileReader();
+
+  // Closure to capture the file information.
+  reader.onload = (function(theFile) {
+    return function(e) {
+      // Render thumbnail.
+      var span = document.createElement('span');
+      span.innerHTML = ['<img class="img-thumbnail" src="', e.target.result,
+        '" title="', escape(theFile.name), '"/>'].join('');
+      document.getElementById('output-2').innerHTML = '';
+      document.getElementById('output-2').insertBefore(span, null);
+    };
+  })(f);
+
+  // Read in the image file as a data URL.
+  reader.readAsDataURL(f);
+}
+
+
+document.getElementById('file-2').addEventListener('change', handleFileSelectSingle2, false);
+
+
+
+// //image 3
+function handleFileSelectSingle3(evt) {
+  var file = evt.target.files; // FileList object
+
+  var f = file[0];
+
+  // Only process image files.
+  if (!f.type.match('image.*')) {
+    alert('Только изображения....');
+  }
+
+  var reader = new FileReader();
+
+  // Closure to capture the file information.
+  reader.onload = (function(theFile) {
+    return function(e) {
+      // Render thumbnail.
+      var span = document.createElement('span');
+      span.innerHTML = ['<img class="img-thumbnail" src="', e.target.result,
+        '" title="', escape(theFile.name), '"/>'].join('');
+      document.getElementById('output-3').innerHTML = '';
+      document.getElementById('output-3').insertBefore(span, null);
+    };
+  })(f);
+
+  // Read in the image file as a data URL.
+  reader.readAsDataURL(f);
+}
+
+
+document.getElementById('file-3').addEventListener('change', handleFileSelectSingle3, false);
+
+
+
+// //image 4
+function handleFileSelectSingle4(evt) {
+  var file = evt.target.files; // FileList object
+
+  var f = file[0];
+
+  // Only process image files.
+  if (!f.type.match('image.*')) {
+    alert('Только изображения....');
+  }
+
+  var reader = new FileReader();
+
+  // Closure to capture the file information.
+  reader.onload = (function(theFile) {
+    return function(e) {
+      // Render thumbnail.
+      var span = document.createElement('span');
+      span.innerHTML = ['<img class="img-thumbnail" src="', e.target.result,
+        '" title="', escape(theFile.name), '"/>'].join('');
+      document.getElementById('output-4').innerHTML = '';
+      document.getElementById('output-4').insertBefore(span, null);
+    };
+  })(f);
+
+  // Read in the image file as a data URL.
+  reader.readAsDataURL(f);
+}
+
+
+document.getElementById('file-4').addEventListener('change', handleFileSelectSingle4, false);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$('body').on('DOMSubtreeModified', '.output', function() {
+  if($(this).find('span').length >= 1) {
+    $(this).closest('.manage__form__image__block').removeClass('manage__form__image__block--add');
+    $(this).closest('.manage__form__image__block').find('a').html('<i class="icon icon-delete"></i>Delete');
+    $(this).closest('.manage__form__image__block').find('input').fadeOut();
+    $(this).closest('.manage__form__image__block').find('p a').addClass('delete');
+  }
 });
+$('.manage__form__image__block').click(function() {
+  $(this).find('input').fadeIn();
+  $(this).find('.output').html('');
+  $(this).find('a').html('<i class="icon icon-plus"></i>Upload Image');
+  $(this).find('a').removeClass('delete');
+  $(this).addClass('manage__form__image__block--add');
+});
+
+// $('#select-state').selectize({
+//   maxItems: 10,
+//   onChange: function(value) {
+//     if($(value) === '') {
+//       $('.select-state').find('.point').fadeIn();
+//     } else{
+//       $('.select-state').find('.point').fadeOut();
+//     }
+//   },
+// });
