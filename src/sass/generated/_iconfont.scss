@@ -9,17 +9,18 @@
   font-style: normal;
 }
 
-$icon-bell: "\EA01";
-$icon-checked: "\EA02";
-$icon-delete: "\EA03";
-$icon-down-arrow: "\EA04";
-$icon-edit: "\EA05";
-$icon-left-arrow: "\EA06";
-$icon-more: "\EA07";
-$icon-plus: "\EA08";
-$icon-right-arrow: "\EA09";
-$icon-search: "\EA0A";
-$icon-sort-arrows: "\EA0B";
+$icon-angle-pointing: "\EA01";
+$icon-bell: "\EA02";
+$icon-checked: "\EA03";
+$icon-delete: "\EA04";
+$icon-down-arrow: "\EA05";
+$icon-edit: "\EA06";
+$icon-left-arrow: "\EA07";
+$icon-more: "\EA08";
+$icon-plus: "\EA09";
+$icon-right-arrow: "\EA0A";
+$icon-search: "\EA0B";
+$icon-sort-arrows: "\EA0C";
 
 
 %icon {
@@ -38,6 +39,7 @@ $icon-sort-arrows: "\EA0B";
   display: inline-block;
 }
 
+.icon-angle-pointing:before { content: $icon-angle-pointing; }
 .icon-bell:before { content: $icon-bell; }
 .icon-checked:before { content: $icon-checked; }
 .icon-delete:before { content: $icon-delete; }

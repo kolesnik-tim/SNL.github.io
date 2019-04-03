@@ -322,6 +322,7 @@
         letter-spacing: normal
         text-align: left
         color: $dark
+        cursor: pointer
         &.is-active
           font-weight: 600
         i
@@ -411,3 +412,278 @@
     tr.open
       p
         font-weight: 600
+
+
+
+
+
+
+
+  &__create
+    position: fixed
+    right: -100%
+    top: 0
+    max-width: 700px
+    width: 100%
+    height: 100vh
+    background-color: #f2f2f2
+    box-shadow: -1.5px 2px 16px 0 rgba(2, 23, 56, 0.19)
+    transition: all 0.9s
+    +r(767)
+      max-width: 100%
+    &.is-active
+      right: 0
+    &--bg
+      background: rgba(#e0e0e0, 0.8)
+      position: fixed
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      display: none
+    &__header
+      width: 100%
+      padding: 33px
+      background: $white
+      border-bottom: 1px solid #e0e0e0
+      a
+        font-size: 25px
+        font-weight: 600
+        color: $dark
+        display: block
+        &:hover
+          color: $bright-light-blue
+          i
+            color: $dark
+        i
+          font-size: 19px
+          color: $bright-light-blue
+          margin-right: 33px
+          +tr
+    &__content
+      padding: 30px
+      overflow: scroll
+      height: calc(100vh - 172px)
+      +r(767)
+        padding: 15px
+  &__form
+    border-radius: 10px
+    box-shadow: 0px 1px 9px 0 rgba(0, 0, 0, 0.16)
+    background-color: $white
+    padding: 40px 50px
+    +r(767)
+      padding: 15px
+    &__title
+      +center
+      justify-content: space-between
+      h3
+        font-size: 18px
+        font-weight: bold
+        color: $dark
+      p
+        font-size: 12px
+        color: $orangey-red
+        display: inline-flex
+        align-items: center
+        span
+          width: 5px
+          height: 5px
+          border-radius: 100%
+          background: $orangey-red
+          display: block
+          margin-right: 5px
+    &__input, &__description
+      width: 100%
+      position: relative
+      padding-top: 40px
+      .selectize-input
+        box-shadow: none
+        border: none
+        border-bottom: 1px solid #cecece
+        padding: 10px 0
+        border-radius: 0
+        height: 40px
+      .selectize-input::after
+        display: none !important
+      .selectize-control.multi .selectize-input.has-items
+        padding: 10px 0 !important
+        height: auto
+      input, textarea
+        width: 100%
+        border-bottom: 1px solid #cecece
+        font-size: 14px
+        font-weight: normal
+        color: #616161
+        padding-bottom: 10px
+        background: none
+        &:focus 
+          & + label
+            opacity: 0
+        &:valid
+          & + label
+            opacity: 0
+      textarea
+        height: 204px
+        border-radius: 10px
+        border: solid 1px #909090
+        background-color: #f2f2f2
+        padding: 20px 30px
+      label
+        font-size: 14px
+        font-weight: normal
+        color: #616161
+        position: absolute
+        left: 0
+        bottom: 10px
+        +tr
+        &:before
+          content: ''
+          position: absolute
+          right: -10px
+          top: 5px
+          width: 6px
+          height: 6px
+          background-color: $orangey-red
+          border-radius: 100%
+      &.select-country, &.select-state
+        .point
+          position: absolute
+          left: 45px
+          z-index: 9
+          top: 55px
+          width: 6px
+          height: 6px
+          background-color: $orangey-red
+          border-radius: 100%
+      &.select-state
+        .point
+          left: 82px
+    &__description
+      margin-bottom: 40px
+      label
+        top: 60px
+        left: 30px
+        bottom: auto
+    &__datepicker
+      display: flex
+      padding-top: 40px
+      flex-wrap: wrap
+      &__block
+        position: relative
+        width: calc(50% - 15px)
+        +r(530)
+          width: 100%
+        &:last-child
+          margin-left: 30px
+          +r(530)
+            margin: 0
+            padding-top: 20px
+      input
+        width: 100%
+        border-bottom: 1px solid #cecece
+        font-size: 14px
+        font-weight: normal
+        color: #616161
+        padding-bottom: 10px
+        background: none
+      label
+        font-size: 14px
+        font-weight: normal
+        color: #616161
+        position: absolute
+        left: 0
+        bottom: 10px
+        +tr
+        &:before
+          content: ''
+          position: absolute
+          right: -10px
+          top: 5px
+          width: 6px
+          height: 6px
+          background-color: $orangey-red
+          border-radius: 100%
+      a
+        position: absolute
+        right: 0
+        width: 20px
+        img
+          width: 100%
+    &__image
+      +center
+      justify-content: space-between
+      margin-top: 40px
+      +r(530)
+        flex-direction: column
+      &__block
+        width: 150px
+        height: 150px
+        position: relative
+        border-radius: 10px
+        border: dashed 1px #a1a1a1
+        overflow: hidden
+        +r(530)
+          margin-bottom: 10px
+        input
+          width: 100%
+          height: 100%
+          position: absolute
+          left: 0
+          top: 0
+          opacity: 0
+          cursor: pointer
+        p
+          width: 100%
+          height: 100%
+          +center
+          background: rgba(0, 0, 0, 0.5)
+        a
+          +center-column
+          font-size: 14px
+          font-weight: normal
+          color: $white
+        i
+          width: 28px
+          height: 28px
+          +center
+          background: $orangey-red
+          color: $white
+          font-size: 18px
+          border-radius: 100%
+          margin-bottom: 7px
+        &--add
+          p
+            background: none
+          a
+            color: #616161
+          i
+            background: $bright-light-blue
+            font-size: 15px
+    &__footer
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+      padding: 20px 40px
+      background: $white
+      +center-y
+      justify-content: flex-end
+      border-top: 1px solid #cecece
+      a
+        margin-right: 10px
+        border: solid 0.5px $dark
+        background: none
+        color: $dark
+        font-size: 12px
+        text-transform: uppercase
+        &:hover
+          color: $white
+          background: $dark
+      input
+        border: solid 0.5px $dark
+        background: $dark
+        color: $white
+        font-size: 12px
+        text-transform: uppercase
+        &:hover
+          color: $dark

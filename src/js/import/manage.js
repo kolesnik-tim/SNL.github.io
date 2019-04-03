@@ -1,5 +1,6 @@
 import datepicker from 'air-datepicker';
 import fancybox from '@fancyapps/fancybox';
+import '../lib/selectize.min.js';
 
 
 //gallery fancybox
@@ -47,6 +48,7 @@ $(document).mouseup(function(e) {
 
 
 //datepicker init
+//table
 $('.datepicker-here').datepicker({
   language: 'en',
   minDate: new Date(),
@@ -57,4 +59,70 @@ $('.datepicker-here').datepicker({
   navTitles: {
     days: 'MM yyyy'
   }
+});
+
+
+//Create Event
+//open
+$('.create-event-add').on('click', function(e) {
+  e.preventDefault();
+  $('.manage__create').addClass('is-active');
+  $('.manage__create--bg').fadeIn();
+});
+//close
+$('.manage__create--bg, .manage__create__close').on('click', function(e) {
+  e.preventDefault();
+  $('.manage__create').removeClass('is-active');
+  $('.manage__create--bg').fadeOut();
+});
+
+
+
+
+$('.datepicker-create_event').on('focus', function() {
+  $(this).next('label').fadeOut();
+});
+$('.datepicker-create_event').on('focusout', function() {
+  let inputVal = $(this);
+  setTimeout(function() {
+    if(inputVal.val() === '') {
+      inputVal.next('label').fadeIn();
+    }
+  }, 500);
+});
+$('.datepicker-create_event').datepicker({
+  language: 'en',
+  minDate: new Date(),
+  position: 'bottom left',
+  moveToOtherMonthsOnSelect: true,
+  autoClose: true,
+  offset: 20,
+  navTitles: {
+    days: 'MM yyyy'
+  }
+});
+
+
+//selectize
+$('#select-country').selectize({
+  onChange: function(value) {
+    if($(value) === '') {
+      $('.select-country').find('.point').fadeIn();
+    } else{
+      $('.select-country').find('.point').fadeOut();
+    }
+  },
+
+});
+
+
+$('#select-state').selectize({
+  maxItems: 10,
+  onChange: function(value) {
+    if($(value) === '') {
+      $('.select-state').find('.point').fadeIn();
+    } else{
+      $('.select-state').find('.point').fadeOut();
+    }
+  },
 });

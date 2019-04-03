@@ -32,7 +32,7 @@ block content
       .container
         .manage__title
           h1 Manage Event - 32
-          a(href="#").btn.btn-primary 
+          a(href="#").btn.btn-primary.create-event-add
             i.icon.icon-plus
             | Create Event
         ul.breadcrumbs
@@ -368,3 +368,83 @@ block content
                         a(href="#") 
                           i.icon.icon-delete
                           | Delete
+    .manage__create--bg
+    .manage__create
+      .manage__create__header
+        a(href="#").manage__create__close
+          i.icon.icon-angle-pointing
+          | Create Event
+      form.manage__create__content
+        .manage__create__form.manage__form
+          .manage__form__title
+            h3 Event Details
+            p
+              span
+              | Mandatory Fields
+          .manage__form__input
+            input(type="text" id="event-name" name="event-name" required)
+            label(for="event-name") Event Name
+          .manage__form__input.select-country
+            span.point
+            select#select-country(required)
+              option(value="") Venue
+              option(value="1") Angola
+              option(value="2") România
+          .manage__form__input.select-state
+            span.point
+            select#select-state(required)
+              option(value="") Event Name
+              option(value="1") Angola2
+              option(value="2") România
+              option(value="3") România3
+              option(value="4") România
+          .manage__form__datepicker
+            .manage__form__datepicker__block
+              input(type='text' id="event-start-date" class="datepicker-create_event" data-language='en')
+              label(for="event-start-date") Event Start Date
+              a(href="#")
+                img(src="img/manage/calendar.png", alt="")
+            .manage__form__datepicker__block
+              input(type='text' id="event-end-date" class="datepicker-create_event" data-language='en')
+              label(for="event-end-date") Event End Date
+              a(href="#")
+                img(src="img/manage/calendar.png", alt="")
+          .manage__form__image
+            .manage__form__image__block(style="background-image: url('https://via.placeholder.com/150x150.png')")
+              p
+                a(href="#") 
+                  i.icon.icon-delete
+                  | Delete
+            .manage__form__image__block.manage__form__image__block--add(style="background-image: url('')")
+              input(type="file")
+              p
+                a(href="#") 
+                  i.icon.icon-plus
+                  | Upload Image
+            .manage__form__image__block.manage__form__image__block--add(style="background-image: url('')")  
+              input(type="file")
+              p
+                a(href="#") 
+                  i.icon.icon-plus
+                  | Upload Image
+          .manage__form__description
+            textarea(id="description-1" name="description-1" required)
+            label(for="description-1") Description
+          .manage__form__title
+            h3 Trainer Details
+          .manage__form__input
+            input(type="text" id="name" name="name" required)
+            label(for="name") Event Name
+          .manage__form__description
+            textarea(id="description-2" name="description-2" required)
+            label(for="description-2") Description
+          .manage__form__image
+            .manage__form__image__block.manage__form__image__block--add(style="background-image: url('')")  
+              input(type="file")
+              p
+                a(href="#") 
+                  i.icon.icon-plus
+                  | Upload Image
+        .manage__form__footer
+          a(href="#").btn.btn-primary.manage__create__close cancel
+          input(type="submit" value="create").btn.btn-primary
