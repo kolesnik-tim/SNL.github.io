@@ -95,7 +95,7 @@ textarea
 
 .datepicker
   border-radius: 10px
-  box-shadow: 0px 1px 64px 0 rgba(0, 0, 0, 0.24)
+  box-shadow: 0px 1px 5px 0 rgba(0, 0, 0, 0.24)
   background-color: $white
   border: none
   width: 315px
@@ -103,13 +103,20 @@ textarea
     width: 280px
 .datepicker--pointer
   border: none
+  top: -5px
   left: 55px !important
+  box-shadow: 0px 1px 5px 0 rgba(0, 0, 0, 0.24)
+  z-index: 1
 .datepicker--nav-title, .datepicker--day-name
   color: #34c9f6
 .datepicker--nav-action path
   stroke: #34c9f6
 .datepicker--nav
   border: none
+  position: relative
+  z-index: 2
+  border-radius: 10px
+  background: $white
 .datepicker--cell.-selected-
   border-radius: 100%
 .datepicker--cell-day

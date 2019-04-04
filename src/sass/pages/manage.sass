@@ -226,11 +226,11 @@
       display: flex
       position: relative
       &:first-child
-        width: 6%
+        width: 5%
       &:nth-child(2)
-        width: 16%
+        width: 14%
       &:nth-child(3)
-        width: 15%
+        width: 16%
       &:nth-child(4)
         width: 11%
       &:nth-child(5)
@@ -238,9 +238,11 @@
       &:nth-child(6)
         width: 11%
       &:nth-child(7)
-        width: 18%
-      &:nth-child(8)
         width: 10%
+      &:nth-child(8)
+        width: 11%
+      &:nth-child(9)
+        width: 9%
       &:last-child
         width: 5%
     th
@@ -311,7 +313,7 @@
         +r(767)
           left: calc(50% + 27px)
       a
-        padding: 4px 13px
+        padding: 2px 13px
         display: flex
         align-items: center
         font-size: 12px
@@ -326,7 +328,7 @@
         &.is-active
           font-weight: 600
         &:hover
-          background: rgba(189,189,189,.2)
+          font-weight: 600
         i
           +center
           width: 20px
@@ -337,6 +339,20 @@
           font-size: 9px
           margin-right: 10px
           +tr
+    th.table__drop-down
+      li 
+        a
+          &:before
+            content: ''
+            width: 9px
+            height: 9px
+            background-color: $fresh-green
+            border-radius: 100%
+            margin-right: 7px
+        &:last-child
+          a
+            &:before
+              background-color: $strawberry
     .table__datepicker
       position: relative
       input
@@ -354,8 +370,10 @@
         position: relative
         +center
         cursor: default
-        &:last-child
+        &:nth-child(2)
           cursor: pointer
+        &:nth-child(n+3)
+          display: none
         img
           +r(767)
             width: 45px
@@ -502,11 +520,15 @@
         box-shadow: none
         border: none
         border-bottom: 1px solid #cecece
-        padding: 10px 0
+        padding: 10px 0 5px
         border-radius: 0
-        height: 40px
+        height: 36px
       .selectize-input::after
         display: none !important
+        right: 0px !important
+      &.select-gear
+        .selectize-input::after
+          display: block !important
       .selectize-control.multi .selectize-input.has-items
         padding: 10px 0 !important
         height: auto

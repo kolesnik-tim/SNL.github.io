@@ -293,3 +293,7 @@ $('.manage__form__image__block').click(function() {
 //     }
 //   },
 // });
+
+$('#select-gear').selectize({
+  sortField: 'text'
+});

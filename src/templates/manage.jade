@@ -96,6 +96,10 @@ block content
                     a(href="#")
                       i.icon.icon-search
                     input(type="text" placeholder="TRAINER")
+                  th 
+                    a(href="#")
+                      i.icon.icon-search
+                    input(type="text" placeholder="Assignee")
                   th
                     span Images 
                   th.table__drop-down.drop-down--open
@@ -124,14 +128,18 @@ block content
                   td 
                     p Rory Conway
                   td 
+                    p Vaishakh
+                  td 
                     .table__gallery
-                      a(href="https://via.placeholder.com/550x250.png" data-fancybox="gallery")
-                        img(src="https://via.placeholder.com/50x50.png" alt="")
                       a(href="https://via.placeholder.com/250x50.png" data-fancybox="gallery")
                         img(src="https://via.placeholder.com/50x50.png" alt="")
                       a(href="https://via.placeholder.com/350x50.png" data-fancybox="gallery")
                         img(src="https://via.placeholder.com/50x50.png" alt="")
                         i.icon.icon-more
+                      a(href="https://via.placeholder.com/250x50.png" data-fancybox="gallery")
+                        img(src="https://via.placeholder.com/50x50.png" alt="")
+                      a(href="https://via.placeholder.com/250x50.png" data-fancybox="gallery")
+                        img(src="https://via.placeholder.com/50x50.png" alt="")
                   td 
                     a(href="#").btn.btn-open Open
                   td.table__drop-down.drop-down--open
@@ -161,9 +169,9 @@ block content
                   td 
                     p Rory Conway
                   td 
+                    p Vaishakh
+                  td 
                     .table__gallery
-                      a(href="https://via.placeholder.com/550x250.png" data-fancybox="gallery1")
-                        img(src="https://via.placeholder.com/50x50.png" alt="")
                       a(href="https://via.placeholder.com/250x50.png" data-fancybox="gallery1")
                         img(src="https://via.placeholder.com/50x50.png" alt="")
                       a(href="https://via.placeholder.com/350x50.png" data-fancybox="gallery1")
@@ -198,9 +206,9 @@ block content
                   td 
                     p Rory Conway
                   td 
+                    p Vaishakh
+                  td 
                     .table__gallery
-                      a(href="https://via.placeholder.com/550x250.png" data-fancybox="gallery2")
-                        img(src="https://via.placeholder.com/50x50.png" alt="")
                       a(href="https://via.placeholder.com/250x50.png" data-fancybox="gallery2")
                         img(src="https://via.placeholder.com/50x50.png" alt="")
                       a(href="https://via.placeholder.com/350x50.png" data-fancybox="gallery2")
@@ -235,9 +243,9 @@ block content
                   td 
                     p Rory Conway
                   td 
+                    p Vaishakh
+                  td 
                     .table__gallery
-                      a(href="https://via.placeholder.com/550x250.png" data-fancybox="gallery3")
-                        img(src="https://via.placeholder.com/50x50.png" alt="")
                       a(href="https://via.placeholder.com/250x50.png" data-fancybox="gallery3")
                         img(src="https://via.placeholder.com/50x50.png" alt="")
                       a(href="https://via.placeholder.com/350x50.png" data-fancybox="gallery3")
@@ -272,9 +280,9 @@ block content
                   td 
                     p Rory Conway
                   td 
+                    p Vaishakh
+                  td 
                     .table__gallery
-                      a(href="https://via.placeholder.com/550x250.png" data-fancybox="gallery4")
-                        img(src="https://via.placeholder.com/50x50.png" alt="")
                       a(href="https://via.placeholder.com/250x50.png" data-fancybox="gallery4")
                         img(src="https://via.placeholder.com/50x50.png" alt="")
                       a(href="https://via.placeholder.com/350x50.png" data-fancybox="gallery4")
@@ -309,9 +317,9 @@ block content
                   td 
                     p Rory Conway
                   td 
+                    p Vaishakh
+                  td 
                     .table__gallery
-                      a(href="https://via.placeholder.com/550x250.png" data-fancybox="gallery5")
-                        img(src="https://via.placeholder.com/50x50.png" alt="")
                       a(href="https://via.placeholder.com/250x50.png" data-fancybox="gallery5")
                         img(src="https://via.placeholder.com/50x50.png" alt="")
                       a(href="https://via.placeholder.com/350x50.png" data-fancybox="gallery5")
@@ -346,9 +354,9 @@ block content
                   td 
                     p Rory Conway
                   td 
+                    p Vaishakh
+                  td 
                     .table__gallery
-                      a(href="https://via.placeholder.com/550x250.png" data-fancybox="gallery6")
-                        img(src="https://via.placeholder.com/50x50.png" alt="")
                       a(href="https://via.placeholder.com/250x50.png" data-fancybox="gallery6")
                         img(src="https://via.placeholder.com/50x50.png" alt="")
                       a(href="https://via.placeholder.com/350x50.png" data-fancybox="gallery6")
@@ -368,6 +376,12 @@ block content
                         a(href="#") 
                           i.icon.icon-delete
                           | Delete
+
+
+
+
+
+
     .manage__create--bg
     .manage__create
       .manage__create__header
@@ -434,6 +448,12 @@ block content
           .manage__form__description
             textarea(id="description-1" name="description-1" required)
             label(for="description-1") Description
+          .manage__form__input.select-gear
+            select#select-gear
+              option(value="") Assign to a user
+              option(value="1") Vaishakh
+              option(value="2") Tim
+              option(value="3") Vaishakh
         .manage__create__form.manage__form
           .manage__form__title
             h3
