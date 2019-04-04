@@ -1,0 +1,317 @@
+---
+title: Manage
+---
+extends layouts/_layout
+block content
+  .manage-user
+    aside.manage__aside
+      a(href="#").manage__aside__logo
+        img(src="https://via.placeholder.com/30x30.png", alt="")
+      a(href="#").manage__aside__img
+        img(src="https://via.placeholder.com/30x25.png", alt="")
+    .manage__content
+      .manage__header
+        .container
+          .manage__header__content
+            p Thursday, 28 March 2019  10:47 am (IST)
+            .manage__header__notifications.drop-down--open
+              i.icon.icon-bell
+                span
+              b 23
+              ul
+                li
+                  a(href="#") Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                li
+                  a(href="#") Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            .manage__header__user.drop-down--open
+              span Vaishakh
+              i.icon.icon-down-arrow
+              ul
+                li
+                  a(href="#") Exit
+      .container
+        .manage__title
+          h1 Manager User - 32
+          a(href="#").btn.btn-primary.create-event-add
+            i.icon.icon-plus
+            | Create User
+        ul.breadcrumbs
+          li
+            a(href="#") Dashboard
+          li
+            a(href="#") Manage User
+        .manage__table.manage-user__table
+          .manage__table__content
+            table.table
+              thead
+                tr
+                  th 
+                    span #
+                    a(href="#")
+                      i.icon.icon-sort-arrows
+                  th 
+                    a(href="#")
+                      i.icon.icon-search
+                    input(type="text" name="username" placeholder="username")
+                  th 
+                    a(href="#")
+                      i.icon.icon-search
+                    input(type="text" name="display-name" placeholder="display name")
+                  th 
+                    a(href="#")
+                      i.icon.icon-search
+                    input(type="email" name="email" placeholder="email")
+                  th.table__drop-down.drop-down--open
+                    span Role
+                    a(href="#")
+                      i.icon.icon-sort-arrows
+                    ul
+                      li
+                        a(href="#").is-active Super Admin
+                      li
+                        a(href="#") Manager
+                      li
+                        a(href="#") Accountant
+                  th
+              tbody
+                tr
+                  td 
+                    p 01
+                  td 
+                    p Vaishakh
+                  td 
+                    p Vaishakh Pilatholi
+                  td 
+                    a(href="mailto:vpilatholi@gmail.com") 
+                      p vpilatholi@gmail.com
+                  td 
+                    p Super Admin
+                  td.table__drop-down.drop-down--open
+                    a(href="#").table__more
+                      i.icon.icon-more
+                    ul
+                      li
+                        a(href="#") 
+                          i.icon.icon-edit
+                          | Edit
+                      li
+                        a(href="#") 
+                          i.icon.icon-delete
+                          | Delete
+                tr
+                  td 
+                    p 02
+                  td 
+                    p Vaishakh
+                  td 
+                    p Vaishakh Pilatholi
+                  td 
+                    a(href="mailto:vpilatholi@gmail.com") 
+                      p vpilatholi@gmail.com
+                  td 
+                    p Super Admin
+                  td.table__drop-down.drop-down--open
+                    a(href="#").table__more
+                      i.icon.icon-more
+                    ul
+                      li
+                        a(href="#") 
+                          i.icon.icon-edit
+                          | Edit
+                      li
+                        a(href="#") 
+                          i.icon.icon-delete
+                          | Delete
+                tr
+                  td 
+                    p 03
+                  td 
+                    p Vaishakh
+                  td 
+                    p Vaishakh Pilatholi
+                  td 
+                    a(href="mailto:vpilatholi@gmail.com") 
+                      p vpilatholi@gmail.com
+                  td 
+                    p Super Admin
+                  td.table__drop-down.drop-down--open
+                    a(href="#").table__more
+                      i.icon.icon-more
+                    ul
+                      li
+                        a(href="#") 
+                          i.icon.icon-edit
+                          | Edit
+                      li
+                        a(href="#") 
+                          i.icon.icon-delete
+                          | Delete
+                tr
+                  td 
+                    p 04
+                  td 
+                    p Vaishakh
+                  td 
+                    p Vaishakh Pilatholi
+                  td 
+                    a(href="mailto:vpilatholi@gmail.com") 
+                      p vpilatholi@gmail.com
+                  td 
+                    p Super Admin
+                  td.table__drop-down.drop-down--open
+                    a(href="#").table__more
+                      i.icon.icon-more
+                    ul
+                      li
+                        a(href="#") 
+                          i.icon.icon-edit
+                          | Edit
+                      li
+                        a(href="#") 
+                          i.icon.icon-delete
+                          | Delete
+                tr
+                  td 
+                    p 05
+                  td 
+                    p Vaishakh
+                  td 
+                    p Vaishakh Pilatholi
+                  td 
+                    a(href="mailto:vpilatholi@gmail.com") 
+                      p vpilatholi@gmail.com
+                  td 
+                    p Super Admin
+                  td.table__drop-down.drop-down--open
+                    a(href="#").table__more
+                      i.icon.icon-more
+                    ul
+                      li
+                        a(href="#") 
+                          i.icon.icon-edit
+                          | Edit
+                      li
+                        a(href="#") 
+                          i.icon.icon-delete
+                          | Delete
+
+
+
+
+
+
+    a(href="#warning" rel="modal:open").manage__create--bg
+    .manage__create
+      .manage__create__header
+        a(href="#warning" rel="modal:open")
+          i.icon.icon-angle-pointing
+          | Create Event
+      form.manage__create__content
+        .manage__create__form.manage__form
+          .manage__form__title
+            h3 
+              span 01
+              | Event Details
+            p Mandatory Fields
+          .manage__form__input
+            input(type="text" id="event-name" name="event-name" required)
+            label(for="event-name") Event Name
+          .manage__form__input.select-country
+            span.point
+            select#select-country(required)
+              option(value="") Venue
+              option(value="1") Angola
+              option(value="2") România
+          //- .manage__form__input.select-state
+          //-   span.point
+          //-   select#select-state(required)
+          //-     option(value="") Event Name
+          //-     option(value="1") Angola2
+          //-     option(value="2") România
+          //-     option(value="3") România3
+          //-     option(value="4") România
+          .manage__form__datepicker
+            .manage__form__datepicker__block
+              input(type='text' id="event-start-date" class="datepicker-create_event" data-language='en')
+              label(for="event-start-date") Event Start Date
+              a(href="#")
+                img(src="img/manage/calendar.png", alt="")
+            .manage__form__datepicker__block
+              input(type='text' id="event-end-date" class="datepicker-create_event" data-language='en')
+              label(for="event-end-date") Event End Date
+              a(href="#")
+                img(src="img/manage/calendar.png", alt="")
+          .manage__form__image
+            .manage__form__image__block.manage__form__image__block--add
+              input(type="file" id="file" name="file")
+              span#output.output
+              p
+                a(href="#")
+                  i.icon.icon-plus
+                  | Upload Image
+            .manage__form__image__block.manage__form__image__block--add
+              input(type="file" id="file-2" name="file-2")
+              span#output-2.output
+              p
+                a(href="#") 
+                  i.icon.icon-plus
+                  | Upload Image
+            .manage__form__image__block.manage__form__image__block--add
+              input(type="file" id="file-3" name="file")
+              span#output-3.output
+              p
+                a(href="#") 
+                  i.icon.icon-plus
+                  | Upload Image
+          .manage__form__description
+            textarea(id="description-1" name="description-1" required)
+            label(for="description-1") Description
+          .manage__form__input.select-gear
+            select#select-gear
+              option(value="") Assign to a user
+              option(value="1") Vaishakh
+              option(value="2") Tim
+              option(value="3") Vaishakh
+        .manage__create__form.manage__form
+          .manage__form__title
+            h3
+              span 02
+              | Trainer Details
+          .manage__form__input
+            input(type="text" id="name" name="name" required)
+            label(for="name") Name
+          .manage__form__description
+            textarea(id="about-trainer" name="about-trainer" required)
+            label(for="about-trainer") About Trainer
+          .manage__form__image
+            .manage__form__image__block.manage__form__image__block--add
+              input(type="file" id="file-4" name="file")
+              span#output-4.output
+              p
+                a(href="#") 
+                  i.icon.icon-plus
+                  | Upload Image
+        .manage__create__form.manage__form
+          .manage__form__title
+            h3
+              span 03
+              | Trainer Testimonials - 01
+          .manage__form__input
+            input(type="text" id="name-trainer" name="name-trainer" required)
+            label(for="name-trainer") Name
+          .manage__form__input
+            input(type="text" id="designation" name="designation" required)
+            label(for="designation") Designation
+          .manage__form__description
+            textarea(id="testimonial" name="testimonial" required)
+            label(for="testimonial") Testimonial
+          .manage__form__btn
+            a(href="#").manage__form__btn__add-more
+              i.icon.icon-plus
+              | Add more
+            a(href="#").manage__form__btn__delete
+              i.icon.icon-delete
+              | Delete
+        .manage__form__footer
+          a(href="#warning" rel="modal:open").btn.btn-primary cancel
+          input(type="submit" value="create").btn.btn-primary
