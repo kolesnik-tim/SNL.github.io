@@ -98,6 +98,10 @@
         width: 100%
         &:nth-child(2n+1)
           background: #f2f2f2
+      th
+        p, label
+          +r(767)
+            font-size: 11px
       thead tr
         background: none !important
       td, th
@@ -105,8 +109,12 @@
         padding: 14px 0
         &:first-child
           width: 60%
+          +r(767)
+            width: 55%
         &:nth-child(2)
           width: 20%
+          +r(767)
+            width: 25%
         &:last-child
           width: 20%
       p, label
