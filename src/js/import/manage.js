@@ -71,7 +71,7 @@ $('.create-event-add').on('click', function(e) {
   $('.manage__create--bg').fadeIn();
 });
 //close
-$('.manage__create--bg, .manage__create__close').on('click', function(e) {
+$('.manage__create__close').on('click', function(e) {
   e.preventDefault();
   $('.manage__create').removeClass('is-active');
   $('.manage__create--bg').fadeOut();
