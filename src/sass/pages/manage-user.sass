@@ -33,7 +33,6 @@
           left: 49px
         +r(767)
           left: 28px
-
         a
           &:before
             display: none
@@ -41,331 +40,106 @@
 
 
 
-
-
-
-  // &__create
-  //   position: fixed
-  //   right: -100%
-  //   top: 0
-  //   max-width: 700px
-  //   width: 100%
-  //   height: 100vh
-  //   background-color: #f2f2f2
-  //   box-shadow: -1.5px 2px 16px 0 rgba(2, 23, 56, 0.19)
-  //   transition: all 0.9s
-  //   +r(767)
-  //     max-width: 100%
-  //   &.is-active
-  //     right: 0
-  //   &--bg
-  //     background: rgba(#e0e0e0, 0.8)
-  //     position: fixed
-  //     width: 100%
-  //     height: 100%
-  //     top: 0
-  //     left: 0
-  //     display: none
-  //   &__header
-  //     width: 100%
-  //     padding: 33px
-  //     background: $white
-  //     border-bottom: 1px solid #e0e0e0
-  //     a
-  //       font-size: 25px
-  //       font-weight: 600
-  //       color: $dark
-  //       display: block
-  //       &:hover
-  //         color: $bright-light-blue
-  //         i
-  //           color: $dark
-  //       i
-  //         font-size: 19px
-  //         color: $bright-light-blue
-  //         margin-right: 33px
-  //         +tr
-  //   &__content
-  //     padding: 30px
-  //     overflow: scroll
-  //     height: calc(100vh - 172px)
-  //     +r(767)
-  //       padding: 15px
-  // &__form
-  //   border-radius: 10px
-  //   box-shadow: 0px 1px 9px 0 rgba(0, 0, 0, 0.16)
-  //   background-color: $white
-  //   padding: 40px 50px
-  //   margin-bottom: 30px
-  //   +r(767)
-  //     padding: 15px
-  //   &__title
-  //     +center
-  //     justify-content: space-between
-  //     span
-  //       width: 30px
-  //       height: 30px
-  //       border: solid 1px $dark
-  //       +center
-  //       display: inline-flex
-  //       font-size: 12px
-  //       font-weight: bold
-  //       color: $charcoal-grey
-  //       border-radius: 100%
-  //       margin-right: 15px
-  //     h3
-  //       font-size: 18px
-  //       font-weight: bold
-  //       color: $dark
-  //       +center
-  //     p
-  //       font-size: 12px
-  //       color: $orangey-red
-  //       display: inline-flex
-  //       align-items: center
-  //       &:before
-  //         content: ''
-  //         width: 5px
-  //         height: 5px
-  //         border-radius: 100%
-  //         background: $orangey-red
-  //         display: block
-  //         margin-right: 5px
-  //   &__input, &__description
-  //     width: 100%
-  //     position: relative
-  //     padding-top: 30px
-  //     .selectize-input
-  //       box-shadow: none
-  //       border: none
-  //       border-bottom: 1px solid #cecece
-  //       padding: 10px 0 5px
-  //       border-radius: 0
-  //       height: 36px
-  //     .selectize-input::after
-  //       display: none !important
-  //       right: 0px !important
-  //     &.select-gear
-  //       .selectize-input::after
-  //         display: block !important
-  //     .selectize-control.multi .selectize-input.has-items
-  //       padding: 10px 0 !important
-  //       height: auto
-  //     input, textarea
-  //       width: 100%
-  //       border-bottom: 1px solid #cecece
-  //       font-size: 14px
-  //       font-weight: normal
-  //       color: #616161
-  //       padding-bottom: 10px
-  //       background: none
-  //       &:focus 
-  //         & + label
-  //           opacity: 0
-  //       &:valid
-  //         & + label
-  //           opacity: 0
-  //     textarea
-  //       height: 204px
-  //       border-radius: 10px
-  //       border: solid 1px #909090
-  //       background-color: #f2f2f2
-  //       padding: 20px 30px
-  //     label
-  //       font-size: 14px
-  //       font-weight: normal
-  //       color: #616161
-  //       position: absolute
-  //       left: 0
-  //       bottom: 10px
-  //       +tr
-  //       &:before
-  //         content: ''
-  //         position: absolute
-  //         right: -10px
-  //         top: 5px
-  //         width: 6px
-  //         height: 6px
-  //         background-color: $orangey-red
-  //         border-radius: 100%
-  //     &.select-country, &.select-state
-  //       .point
-  //         position: absolute
-  //         left: 45px
-  //         z-index: 9
-  //         top: 45px
-  //         width: 6px
-  //         height: 6px
-  //         background-color: $orangey-red
-  //         border-radius: 100%
-  //     &.select-state
-  //       .point
-  //         left: 82px
-  //   &__description
-  //     label
-  //       top: 50px
-  //       left: 30px
-  //       bottom: auto
-  //   &__datepicker
-  //     display: flex
-  //     padding-top: 40px
-  //     flex-wrap: wrap
-  //     &__block
-  //       position: relative
-  //       width: calc(50% - 15px)
-  //       +r(530)
-  //         width: 100%
-  //       &:last-child
-  //         margin-left: 30px
-  //         +r(530)
-  //           margin: 0
-  //           padding-top: 20px
-  //     input
-  //       width: 100%
-  //       border-bottom: 1px solid #cecece
-  //       font-size: 14px
-  //       font-weight: normal
-  //       color: #616161
-  //       padding-bottom: 10px
-  //       background: none
-  //     label
-  //       font-size: 14px
-  //       font-weight: normal
-  //       color: #616161
-  //       position: absolute
-  //       left: 0
-  //       bottom: 10px
-  //       +tr
-  //       &:before
-  //         content: ''
-  //         position: absolute
-  //         right: -10px
-  //         top: 5px
-  //         width: 6px
-  //         height: 6px
-  //         background-color: $orangey-red
-  //         border-radius: 100%
-  //     a
-  //       position: absolute
-  //       right: 0
-  //       width: 20px
-  //       img
-  //         width: 100%
-  //   &__image
-  //     +center
-  //     justify-content: space-between
-  //     margin-top: 40px
-  //     +r(530)
-  //       flex-direction: column
-  //     &__block
-  //       width: 150px
-  //       height: 150px
-  //       position: relative
-  //       border-radius: 10px
-  //       border: dashed 1px #a1a1a1
-  //       overflow: hidden
-  //       span.output
-  //         position: absolute
-  //         left: 50%
-  //         top: 50%
-  //         transform: translate(-50%, -50%)
-  //         width: 100%
-  //         height: 100%
-  //         +center
-  //         span
-  //           +center
-  //         img
-  //           width: 100%
-  //       +r(530)
-  //         margin-bottom: 10px
-  //       input
-  //         width: 100%
-  //         height: 100%
-  //         position: absolute
-  //         left: 0
-  //         top: 0
-  //         opacity: 0
-  //         cursor: pointer
-  //         z-index: 5
-  //       p
-  //         width: 100%
-  //         height: 100%
-  //         +center
-  //         background: rgba(0, 0, 0, 0.5)
-  //         position: relative
-  //         z-index: 4
-  //       a
-  //         +center-column
-  //         font-size: 14px
-  //         font-weight: normal
-  //         color: $white
-  //         &.delete
-  //           position: absolute
-  //           width: 100%
-  //           height: 100%
-  //       i
-  //         width: 28px
-  //         height: 28px
-  //         +center
-  //         background: $orangey-red
-  //         color: $white
-  //         font-size: 18px
-  //         border-radius: 100%
-  //         margin-bottom: 7px
-  //       &--add
-  //         p
-  //           background: none
-  //         a
-  //           color: #616161
-  //         i
-  //           background: $bright-light-blue
-  //           font-size: 15px
-  //   &__btn
-  //     display: flex
-  //     margin-top: 30px
-  //     a
-  //       font-size: 12px
-  //       font-weight: 600
-  //       +center
-  //       &:hover
-  //         text-decoration: underline
-  //       i
-  //         width: 20px
-  //         height: 20px
-  //         border-radius: 100%
-  //         color: $white
-  //         font-size: 10px
-  //         +center
-  //         margin-right: 8px
-  //     &__add-more
-  //       color: #3cc6f2
-  //       margin-right: 20px
-  //       i
-  //         background: #3cc6f2
-  //     &__delete
-  //       color: #ed4444
-  //       i
-  //         background: #ed4444
-  //   &__footer
-  //     position: absolute
-  //     bottom: 0
-  //     left: 0
-  //     width: 100%
-  //     padding: 20px 40px
-  //     background: $white
-  //     +center-y
-  //     justify-content: flex-end
-  //     border-top: 1px solid #cecece
-  //     a
-  //       margin-right: 10px
-  //       border: solid 0.5px $dark
-  //       background: none
-  //       color: $dark
-  //       font-size: 12px
-  //       text-transform: uppercase
-  //       &:hover
-  //         color: $white
-  //         background: $dark
-  //     input
-  //       font-size: 12px
-  //       text-transform: uppercase
+  &__create
+    .manage__form__radio
+      padding-top: 35px
+      h3
+        font-size: 14px
+        font-weight: 600
+        color: $charcoal-grey
+        padding-bottom: 20px
+      input
+        display: none
+        &:checked + label
+          color: #3cc6f2
+          &:before
+            border: 3px solid #3cc6f2
+            box-shadow: 0 0 0px 1px #3cc6f2
+      label
+        font-size: 14px
+        font-weight: normal
+        color: #616161
+        margin-right: 20px
+        position: relative
+        +center
+        display: inline-flex
+        +tr
+        +r(500)
+          margin-right: 10px
+        &:before
+          content: ''
+          width: 14px
+          height: 14px
+          opacity: 0.87
+          border: 3px solid transparent
+          box-shadow: 0 0 0px 1px #767676
+          margin-right: 10px
+          display: inline-block
+          border-radius: 100%
+          +tr
+          +r(500)
+            margin-right: 5px
+    .manage-user__create__form
+      padding-bottom: 0px
+      overflow: hidden
+    .manage__form__table
+      width: calc(100% + 100px)
+      margin-left: -50px
+      margin-top: 35px
+      display: block
+      table, tbody, thead
+        width: 100%
+        display: block
+      tr
+        display: flex
+        align-items: center
+        padding: 0 50px
+        +tr
+        width: 100%
+        &:nth-child(2n+1)
+          background: #f2f2f2
+      thead tr
+        background: none !important
+      td, th
+        display: flex
+        padding: 14px 0
+        &:first-child
+          width: 60%
+        &:nth-child(2)
+          width: 20%
+        &:last-child
+          width: 20%
+      p, label
+        font-size: 12px
+        font-weight: bold
+        text-transform: uppercase
+        color: $charcoal-grey
+      input
+        display: none
+        &:checked + label
+          &:before
+            background: #3cc6f2
+            border-color: #3cc6f2
+            color: $white
+      label
+        &:before
+          content: '\EA03'
+          width: 16px
+          height: 16px
+          opacity: 0.87
+          border: solid 1px #767676
+          font-family: "iconfont"
+          color: transparent
+          font-size: 10px
+          +center
+          display: inline-flex
+          margin-right: 9px
+          border-radius: 4px
+          +tr
+      td
+        p
+          font-size: 14px
+          font-weight: normal
+          text-transform: none
+          color: $charcoal-grey
+              

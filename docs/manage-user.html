@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Manage</title>
+    <title>Manage User</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
@@ -186,63 +186,60 @@
             </div>
           </div>
         </div><a href="#warning" rel="modal:open" class="manage__create--bg"></a>
-        <div class="manage__create">
-          <div class="manage__create__header"><a href="#warning" rel="modal:open"><i class="icon icon-angle-pointing"></i>Create Event</a></div>
+        <div class="manage__create manage-user__create">
+          <div class="manage__create__header"><a href="#warning" rel="modal:open"><i class="icon icon-angle-pointing"></i>Create User</a></div>
           <form class="manage__create__content">
             <div class="manage__create__form manage__form">
               <div class="manage__form__title">
-                <h3> <span>01</span>Event Details</h3>
+                <h3> <span>01</span>User Details</h3>
                 <p>Mandatory Fields</p>
               </div>
-              <div class="manage__form__input"><input type="text" id="event-name" name="event-name" required><label for="event-name">Event Name</label></div>
-              <div class="manage__form__input select-country"><span class="point"></span><select id="select-country" required>
-                  <option value="">Venue</option>
-                  <option value="1">Angola</option>
-                  <option value="2">România</option>
-                </select></div>
-              <div class="manage__form__datepicker">
-                <div class="manage__form__datepicker__block"><input type="text" id="event-start-date" data-language="en" class="datepicker-create_event"><label for="event-start-date">Event Start Date</label><a href="#"><img src="img/manage/calendar.png" alt=""></a></div>
-                <div class="manage__form__datepicker__block"><input type="text" id="event-end-date" data-language="en" class="datepicker-create_event"><label for="event-end-date">Event End Date</label><a href="#"><img src="img/manage/calendar.png" alt=""></a></div>
-              </div>
-              <div class="manage__form__image">
-                <div class="manage__form__image__block manage__form__image__block--add"><input type="file" id="file" name="file"><span id="output" class="output"></span>
-                  <p><a href="#"><i class="icon icon-plus"></i>Upload Image</a></p>
-                </div>
-                <div class="manage__form__image__block manage__form__image__block--add"><input type="file" id="file-2" name="file-2"><span id="output-2" class="output"></span>
-                  <p><a href="#"> <i class="icon icon-plus"></i>Upload Image</a></p>
-                </div>
-                <div class="manage__form__image__block manage__form__image__block--add"><input type="file" id="file-3" name="file"><span id="output-3" class="output"></span>
-                  <p><a href="#"> <i class="icon icon-plus"></i>Upload Image</a></p>
-                </div>
-              </div>
-              <div class="manage__form__description"><textarea id="description-1" name="description-1" required></textarea><label for="description-1">Description</label></div>
-              <div class="manage__form__input select-gear"><select id="select-gear">
-                  <option value="">Assign to a user</option>
-                  <option value="1">Vaishakh</option>
-                  <option value="2">Tim</option>
-                  <option value="3">Vaishakh</option>
-                </select></div>
-            </div>
-            <div class="manage__create__form manage__form">
-              <div class="manage__form__title">
-                <h3><span>02</span>Trainer Details</h3>
-              </div>
-              <div class="manage__form__input"><input type="text" id="name" name="name" required><label for="name">Name</label></div>
-              <div class="manage__form__description"><textarea id="about-trainer" name="about-trainer" required></textarea><label for="about-trainer">About Trainer</label></div>
-              <div class="manage__form__image">
-                <div class="manage__form__image__block manage__form__image__block--add"><input type="file" id="file-4" name="file"><span id="output-4" class="output"></span>
-                  <p><a href="#"> <i class="icon icon-plus"></i>Upload Image</a></p>
-                </div>
+              <div class="manage__form__input"><input type="text" id="display-name" name="display-name" required><label for="display-name">Display Name</label></div>
+              <div class="manage__form__input"><input type="text" id="username" name="username" required><label for="username">Username</label></div>
+              <div class="manage__form__input"><input type="password" id="password" name="password" required><label for="password">Password</label></div>
+              <div class="manage__form__input"><input type="email" id="email" name="email" required><label for="email">Email</label></div>
+              <div class="manage__form__radio">
+                <h3>Select Role</h3><input type="radio" name="role" id="role-1"><label for="role-1">Admin</label><input type="radio" name="role" id="role-2"><label for="role-2">Manager</label><input type="radio" name="role" id="role-3"><label for="role-3">Accountant</label>
               </div>
             </div>
-            <div class="manage__create__form manage__form">
+            <div class="manage__create__form manage__form manage-user__create__form">
               <div class="manage__form__title">
-                <h3><span>03</span>Trainer Testimonials - 01</h3>
+                <h3><span>02</span>Select User Privileges</h3>
               </div>
-              <div class="manage__form__input"><input type="text" id="name-trainer" name="name-trainer" required><label for="name-trainer">Name</label></div>
-              <div class="manage__form__input"><input type="text" id="designation" name="designation" required><label for="designation">Designation</label></div>
-              <div class="manage__form__description"><textarea id="testimonial" name="testimonial" required></textarea><label for="testimonial">Testimonial</label></div>
-              <div class="manage__form__btn"><a href="#" class="manage__form__btn__add-more"><i class="icon icon-plus"></i>Add more</a><a href="#" class="manage__form__btn__delete"><i class="icon icon-delete"></i>Delete</a></div>
+              <table class="manage__form__table">
+                <thead>
+                  <tr>
+                    <th>
+                      <p>features</p>
+                    </th>
+                    <th><input type="checkbox" id="select-privileges-view"><label for="select-privileges-view">View</label></th>
+                    <th><input type="checkbox" id="select-privileges-edit"><label for="select-privileges-edit">Edit</label></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <p>Dashboard</p>
+                    </td>
+                    <td><input type="checkbox" id="select-privileges-1-1" checked class="select-privileges-view"><label for="select-privileges-1-1"></label></td>
+                    <td><input type="checkbox" id="select-privileges-2-1" checked class="select-privileges-edit"><label for="select-privileges-2-1"></label></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>Manage Users</p>
+                    </td>
+                    <td><input type="checkbox" id="select-privileges-1-2" class="select-privileges-view"><label for="select-privileges-1-2"></label></td>
+                    <td><input type="checkbox" id="select-privileges-2-2" class="select-privileges-edit"><label for="select-privileges-2-2"></label></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>Manage Events</p>
+                    </td>
+                    <td><input type="checkbox" id="select-privileges-1-3" class="select-privileges-view"><label for="select-privileges-1-3"></label></td>
+                    <td><input type="checkbox" id="select-privileges-2-3" class="select-privileges-edit"><label for="select-privileges-2-3"></label></td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
             <div class="manage__form__footer"><a href="#warning" rel="modal:open" class="btn btn-primary">cancel</a><input type="submit" value="create" class="btn btn-primary"></div>
           </form>

@@ -1,5 +1,5 @@
 ---
-title: Manage
+title: Manage User
 ---
 extends layouts/_layout
 block content
@@ -201,117 +201,82 @@ block content
 
 
     a(href="#warning" rel="modal:open").manage__create--bg
-    .manage__create
+    .manage__create.manage-user__create
       .manage__create__header
         a(href="#warning" rel="modal:open")
           i.icon.icon-angle-pointing
-          | Create Event
+          | Create User
       form.manage__create__content
         .manage__create__form.manage__form
           .manage__form__title
             h3 
               span 01
-              | Event Details
+              | User Details
             p Mandatory Fields
           .manage__form__input
-            input(type="text" id="event-name" name="event-name" required)
-            label(for="event-name") Event Name
-          .manage__form__input.select-country
-            span.point
-            select#select-country(required)
-              option(value="") Venue
-              option(value="1") Angola
-              option(value="2") România
-          //- .manage__form__input.select-state
-          //-   span.point
-          //-   select#select-state(required)
-          //-     option(value="") Event Name
-          //-     option(value="1") Angola2
-          //-     option(value="2") România
-          //-     option(value="3") România3
-          //-     option(value="4") România
-          .manage__form__datepicker
-            .manage__form__datepicker__block
-              input(type='text' id="event-start-date" class="datepicker-create_event" data-language='en')
-              label(for="event-start-date") Event Start Date
-              a(href="#")
-                img(src="img/manage/calendar.png", alt="")
-            .manage__form__datepicker__block
-              input(type='text' id="event-end-date" class="datepicker-create_event" data-language='en')
-              label(for="event-end-date") Event End Date
-              a(href="#")
-                img(src="img/manage/calendar.png", alt="")
-          .manage__form__image
-            .manage__form__image__block.manage__form__image__block--add
-              input(type="file" id="file" name="file")
-              span#output.output
-              p
-                a(href="#")
-                  i.icon.icon-plus
-                  | Upload Image
-            .manage__form__image__block.manage__form__image__block--add
-              input(type="file" id="file-2" name="file-2")
-              span#output-2.output
-              p
-                a(href="#") 
-                  i.icon.icon-plus
-                  | Upload Image
-            .manage__form__image__block.manage__form__image__block--add
-              input(type="file" id="file-3" name="file")
-              span#output-3.output
-              p
-                a(href="#") 
-                  i.icon.icon-plus
-                  | Upload Image
-          .manage__form__description
-            textarea(id="description-1" name="description-1" required)
-            label(for="description-1") Description
-          .manage__form__input.select-gear
-            select#select-gear
-              option(value="") Assign to a user
-              option(value="1") Vaishakh
-              option(value="2") Tim
-              option(value="3") Vaishakh
-        .manage__create__form.manage__form
+            input(type="text" id="display-name" name="display-name" required)
+            label(for="display-name") Display Name
+          .manage__form__input
+            input(type="text" id="username" name="username" required)
+            label(for="username") Username
+          .manage__form__input
+            input(type="password" id="password" name="password" required)
+            label(for="password") Password
+          .manage__form__input
+            input(type="email" id="email" name="email" required)
+            label(for="email") Email
+          .manage__form__radio
+            h3 Select Role
+            input(type="radio" name="role" id="role-1")
+            label(for="role-1") Admin
+            input(type="radio" name="role" id="role-2")
+            label(for="role-2") Manager
+            input(type="radio" name="role" id="role-3")
+            label(for="role-3") Accountant
+        .manage__create__form.manage__form.manage-user__create__form
           .manage__form__title
             h3
               span 02
-              | Trainer Details
-          .manage__form__input
-            input(type="text" id="name" name="name" required)
-            label(for="name") Name
-          .manage__form__description
-            textarea(id="about-trainer" name="about-trainer" required)
-            label(for="about-trainer") About Trainer
-          .manage__form__image
-            .manage__form__image__block.manage__form__image__block--add
-              input(type="file" id="file-4" name="file")
-              span#output-4.output
-              p
-                a(href="#") 
-                  i.icon.icon-plus
-                  | Upload Image
-        .manage__create__form.manage__form
-          .manage__form__title
-            h3
-              span 03
-              | Trainer Testimonials - 01
-          .manage__form__input
-            input(type="text" id="name-trainer" name="name-trainer" required)
-            label(for="name-trainer") Name
-          .manage__form__input
-            input(type="text" id="designation" name="designation" required)
-            label(for="designation") Designation
-          .manage__form__description
-            textarea(id="testimonial" name="testimonial" required)
-            label(for="testimonial") Testimonial
-          .manage__form__btn
-            a(href="#").manage__form__btn__add-more
-              i.icon.icon-plus
-              | Add more
-            a(href="#").manage__form__btn__delete
-              i.icon.icon-delete
-              | Delete
+              | Select User Privileges
+          table.manage__form__table
+            thead
+              tr
+                th
+                  p features
+                th
+                  input(type="checkbox" id="select-privileges-view")
+                  label(for="select-privileges-view") View
+                th
+                  input(type="checkbox" id="select-privileges-edit")
+                  label(for="select-privileges-edit") Edit
+            tbody 
+              tr
+                td 
+                  p Dashboard
+                td
+                  input(type="checkbox" id="select-privileges-1-1" checked).select-privileges-view
+                  label(for="select-privileges-1-1")
+                td
+                  input(type="checkbox" id="select-privileges-2-1" checked).select-privileges-edit
+                  label(for="select-privileges-2-1")
+              tr
+                td 
+                  p Manage Users
+                td
+                  input(type="checkbox" id="select-privileges-1-2").select-privileges-view
+                  label(for="select-privileges-1-2")
+                td
+                  input(type="checkbox" id="select-privileges-2-2").select-privileges-edit
+                  label(for="select-privileges-2-2")
+              tr
+                td 
+                  p Manage Events
+                td
+                  input(type="checkbox" id="select-privileges-1-3").select-privileges-view
+                  label(for="select-privileges-1-3")
+                td
+                  input(type="checkbox" id="select-privileges-2-3").select-privileges-edit
+                  label(for="select-privileges-2-3")
         .manage__form__footer
           a(href="#warning" rel="modal:open").btn.btn-primary cancel
           input(type="submit" value="create").btn.btn-primary

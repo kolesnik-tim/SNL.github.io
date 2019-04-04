@@ -115,145 +115,148 @@ $('#select-country').selectize({
   },
 
 });
+
+if($('div').hasClass('manage__form__image')) {
+
 //image-1
-function handleFileSelectSingle(evt) {
-  var file = evt.target.files; // FileList object
+  function handleFileSelectSingle(evt) {
+    var file = evt.target.files; // FileList object
 
-  var f = file[0];
+    var f = file[0];
 
-  // Only process image files.
-  if (!f.type.match('image.*')) {
-    alert('Только изображения....');
+    // Only process image files.
+    if (!f.type.match('image.*')) {
+      alert('Только изображения....');
+    }
+
+    var reader = new FileReader();
+
+    // Closure to capture the file information.
+    reader.onload = (function(theFile) {
+      return function(e) {
+      // Render thumbnail.
+        var span = document.createElement('span');
+        span.innerHTML = ['<img class="img-thumbnail" src="', e.target.result,
+          '" title="', escape(theFile.name), '"/>'].join('');
+        document.getElementById('output').innerHTML = '';
+        document.getElementById('output').insertBefore(span, null);
+      };
+    })(f);
+
+    // Read in the image file as a data URL.
+    reader.readAsDataURL(f);
   }
 
-  var reader = new FileReader();
 
-  // Closure to capture the file information.
-  reader.onload = (function(theFile) {
-    return function(e) {
+  document.getElementById('file').addEventListener('change', handleFileSelectSingle, false);
+
+
+
+
+
+
+  //image
+  //image-2
+  function handleFileSelectSingle2(evt) {
+    var file = evt.target.files; // FileList object
+
+    var f = file[0];
+
+    // Only process image files.
+    if (!f.type.match('image.*')) {
+      alert('Только изображения....');
+    }
+
+    var reader = new FileReader();
+
+    // Closure to capture the file information.
+    reader.onload = (function(theFile) {
+      return function(e) {
       // Render thumbnail.
-      var span = document.createElement('span');
-      span.innerHTML = ['<img class="img-thumbnail" src="', e.target.result,
-        '" title="', escape(theFile.name), '"/>'].join('');
-      document.getElementById('output').innerHTML = '';
-      document.getElementById('output').insertBefore(span, null);
-    };
-  })(f);
+        var span = document.createElement('span');
+        span.innerHTML = ['<img class="img-thumbnail" src="', e.target.result,
+          '" title="', escape(theFile.name), '"/>'].join('');
+        document.getElementById('output-2').innerHTML = '';
+        document.getElementById('output-2').insertBefore(span, null);
+      };
+    })(f);
 
-  // Read in the image file as a data URL.
-  reader.readAsDataURL(f);
-}
-
-
-document.getElementById('file').addEventListener('change', handleFileSelectSingle, false);
-
-
-
-
-
-
-//image
-//image-2
-function handleFileSelectSingle2(evt) {
-  var file = evt.target.files; // FileList object
-
-  var f = file[0];
-
-  // Only process image files.
-  if (!f.type.match('image.*')) {
-    alert('Только изображения....');
+    // Read in the image file as a data URL.
+    reader.readAsDataURL(f);
   }
 
-  var reader = new FileReader();
 
-  // Closure to capture the file information.
-  reader.onload = (function(theFile) {
-    return function(e) {
+  document.getElementById('file-2').addEventListener('change', handleFileSelectSingle2, false);
+
+
+
+  // //image 3
+  function handleFileSelectSingle3(evt) {
+    var file = evt.target.files; // FileList object
+
+    var f = file[0];
+
+    // Only process image files.
+    if (!f.type.match('image.*')) {
+      alert('Только изображения....');
+    }
+
+    var reader = new FileReader();
+
+    // Closure to capture the file information.
+    reader.onload = (function(theFile) {
+      return function(e) {
       // Render thumbnail.
-      var span = document.createElement('span');
-      span.innerHTML = ['<img class="img-thumbnail" src="', e.target.result,
-        '" title="', escape(theFile.name), '"/>'].join('');
-      document.getElementById('output-2').innerHTML = '';
-      document.getElementById('output-2').insertBefore(span, null);
-    };
-  })(f);
+        var span = document.createElement('span');
+        span.innerHTML = ['<img class="img-thumbnail" src="', e.target.result,
+          '" title="', escape(theFile.name), '"/>'].join('');
+        document.getElementById('output-3').innerHTML = '';
+        document.getElementById('output-3').insertBefore(span, null);
+      };
+    })(f);
 
-  // Read in the image file as a data URL.
-  reader.readAsDataURL(f);
-}
-
-
-document.getElementById('file-2').addEventListener('change', handleFileSelectSingle2, false);
-
-
-
-// //image 3
-function handleFileSelectSingle3(evt) {
-  var file = evt.target.files; // FileList object
-
-  var f = file[0];
-
-  // Only process image files.
-  if (!f.type.match('image.*')) {
-    alert('Только изображения....');
+    // Read in the image file as a data URL.
+    reader.readAsDataURL(f);
   }
 
-  var reader = new FileReader();
 
-  // Closure to capture the file information.
-  reader.onload = (function(theFile) {
-    return function(e) {
+  document.getElementById('file-3').addEventListener('change', handleFileSelectSingle3, false);
+
+
+
+  // //image 4
+  function handleFileSelectSingle4(evt) {
+    var file = evt.target.files; // FileList object
+
+    var f = file[0];
+
+    // Only process image files.
+    if (!f.type.match('image.*')) {
+      alert('Только изображения....');
+    }
+
+    var reader = new FileReader();
+
+    // Closure to capture the file information.
+    reader.onload = (function(theFile) {
+      return function(e) {
       // Render thumbnail.
-      var span = document.createElement('span');
-      span.innerHTML = ['<img class="img-thumbnail" src="', e.target.result,
-        '" title="', escape(theFile.name), '"/>'].join('');
-      document.getElementById('output-3').innerHTML = '';
-      document.getElementById('output-3').insertBefore(span, null);
-    };
-  })(f);
+        var span = document.createElement('span');
+        span.innerHTML = ['<img class="img-thumbnail" src="', e.target.result,
+          '" title="', escape(theFile.name), '"/>'].join('');
+        document.getElementById('output-4').innerHTML = '';
+        document.getElementById('output-4').insertBefore(span, null);
+      };
+    })(f);
 
-  // Read in the image file as a data URL.
-  reader.readAsDataURL(f);
-}
-
-
-document.getElementById('file-3').addEventListener('change', handleFileSelectSingle3, false);
-
-
-
-// //image 4
-function handleFileSelectSingle4(evt) {
-  var file = evt.target.files; // FileList object
-
-  var f = file[0];
-
-  // Only process image files.
-  if (!f.type.match('image.*')) {
-    alert('Только изображения....');
+    // Read in the image file as a data URL.
+    reader.readAsDataURL(f);
   }
 
-  var reader = new FileReader();
 
-  // Closure to capture the file information.
-  reader.onload = (function(theFile) {
-    return function(e) {
-      // Render thumbnail.
-      var span = document.createElement('span');
-      span.innerHTML = ['<img class="img-thumbnail" src="', e.target.result,
-        '" title="', escape(theFile.name), '"/>'].join('');
-      document.getElementById('output-4').innerHTML = '';
-      document.getElementById('output-4').insertBefore(span, null);
-    };
-  })(f);
+  document.getElementById('file-4').addEventListener('change', handleFileSelectSingle4, false);
 
-  // Read in the image file as a data URL.
-  reader.readAsDataURL(f);
 }
-
-
-document.getElementById('file-4').addEventListener('change', handleFileSelectSingle4, false);
-
-
 
 
 
@@ -296,4 +299,43 @@ $('.manage__form__image__block').click(function() {
 
 $('#select-gear').selectize({
   sortField: 'text'
+});
+
+
+
+
+
+
+
+
+
+
+//manage-user
+//add check all View
+$('#select-privileges-view').click(function() {
+  $('.select-privileges-view:checkbox').not(this).prop('checked', this.checked);
+});
+$('.select-privileges-view').change(function() {
+  let lengthCheckBlock = $('.select-privileges-view:checked').length;
+  let lengthCheck = $('.select-privileges-view').length;
+  if(lengthCheck === lengthCheckBlock) {
+    $('#select-privileges-view').prop('checked', true);
+  } else{
+    $('#select-privileges-view').prop('checked', false);
+  }
+});
+
+
+//add check all Edit
+$('#select-privileges-edit').click(function() {
+  $('.select-privileges-edit:checkbox').not(this).prop('checked', this.checked);
+});
+$('.select-privileges-edit').change(function() {
+  let lengthCheckBlock = $('.select-privileges-edit:checked').length;
+  let lengthCheck = $('.select-privileges-edit').length;
+  if(lengthCheck === lengthCheckBlock) {
+    $('#select-privileges-edit').prop('checked', true);
+  } else{
+    $('#select-privileges-edit').prop('checked', false);
+  }
 });
