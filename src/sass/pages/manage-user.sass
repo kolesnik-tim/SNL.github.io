@@ -28,11 +28,18 @@
     th
       ul
         left: 62px
+        top: 10px
         width: 120px
+        &:before
+          left: calc(50% - 1px)
         +r(1250)
           left: 49px
+          &:before
+            left: calc(50% + 12px)
         +r(767)
           left: 28px
+          &:before
+            left: calc(50% + 27px)
         a
           &:before
             display: none

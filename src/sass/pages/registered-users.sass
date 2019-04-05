@@ -69,11 +69,18 @@
     th
       ul
         left: 62px
+        top: 10px
         width: 120px
+        &:before
+          left: calc(50% + 16px)
         +r(1250)
           left: 49px
+          &:before
+            left: calc(50% + 28px)
         +r(767)
           left: 28px
+          &:before
+            left: calc(50% + 40px)
         a
           &:before
             display: none

@@ -251,10 +251,16 @@
       align-items: center
       ul
         left: calc(50% + 18px)
+        &:before
+          left: calc(50% + 5px)
         +r(1250)
           left: calc(50% + 6px)
+          &:before
+            left: calc(50% + 18px)
         +r(767)
           left: calc(50% - 5px)
+          &:before
+            left: calc(50% + 31px)
       img
         width: 15px
       a
@@ -292,9 +298,8 @@
       transform: translate(-50%, 50%)
       width: 105px
       border-radius: 7px
-      box-shadow: 0px 1px 64px 0 rgba(0, 0, 0, 0.24)
+      box-shadow: 0px 1px 5px 0 rgba(0, 0, 0, 0.24)
       background-color: $white
-      padding: 5px 0
       z-index: 10
       +r(1250)
         left: calc(50% - 15px)
@@ -304,14 +309,26 @@
         content: ''
         position: absolute
         left: calc(50% - 1px)
-        transform: translate(-50%)
-        top: -15px
-        border: 8px solid transparent
-        border-bottom: 8px solid $white
+        transform: translate(-50%) rotate(45deg)
+        background: $white
+        width: 10px
+        height: 10px
+        top: -6px
+        box-shadow: 0px 1px 5px 0 rgba(0, 0, 0, 0.24)
+        z-index: 3
         +r(1250)
           left: calc(50% + 12px)
         +r(767)
           left: calc(50% + 27px)
+      li
+        position: relative
+        z-index: 5
+        background: $white
+        border-radius: 10px
+        &:first-child
+          padding-top: 5px
+        &:last-child
+          padding-bottom: 5px
       a
         padding: 2px 13px
         display: flex
