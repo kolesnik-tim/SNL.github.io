@@ -15,13 +15,14 @@ $icon-checked-1: "\EA03";
 $icon-checked: "\EA04";
 $icon-delete: "\EA05";
 $icon-down-arrow: "\EA06";
-$icon-edit: "\EA07";
-$icon-left-arrow: "\EA08";
-$icon-more: "\EA09";
-$icon-plus: "\EA0A";
-$icon-right-arrow: "\EA0B";
-$icon-search: "\EA0C";
-$icon-sort-arrows: "\EA0D";
+$icon-download: "\EA07";
+$icon-edit: "\EA08";
+$icon-left-arrow: "\EA09";
+$icon-more: "\EA0A";
+$icon-plus: "\EA0B";
+$icon-right-arrow: "\EA0C";
+$icon-search: "\EA0D";
+$icon-sort-arrows: "\EA0E";
 
 
 %icon {
@@ -46,6 +47,7 @@ $icon-sort-arrows: "\EA0D";
 .icon-checked:before { content: $icon-checked; }
 .icon-delete:before { content: $icon-delete; }
 .icon-down-arrow:before { content: $icon-down-arrow; }
+.icon-download:before { content: $icon-download; }
 .icon-edit:before { content: $icon-edit; }
 .icon-left-arrow:before { content: $icon-left-arrow; }
 .icon-more:before { content: $icon-more; }

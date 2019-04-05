@@ -1,0 +1,205 @@
+---
+title: Registered Users
+---
+extends layouts/_layout
+block content
+  .registered-users
+    aside.manage__aside
+      a(href="#").manage__aside__logo
+        img(src="https://via.placeholder.com/30x30.png", alt="")
+      a(href="#").manage__aside__img
+        img(src="https://via.placeholder.com/30x25.png", alt="")
+    .manage__content
+      .manage__header
+        .container
+          .manage__header__content
+            p Thursday, 28 March 2019  10:47 am (IST)
+            .manage__header__notifications.drop-down--open
+              i.icon.icon-bell
+                span
+              b 23
+              ul
+                li
+                  a(href="#") Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                li
+                  a(href="#") Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            .manage__header__user.drop-down--open
+              span Vaishakh
+              i.icon.icon-down-arrow
+              ul
+                li
+                  a(href="#") Exit
+      .container
+        .manage__title
+          h1 Registered Users - 32
+          a(href="#").manage__title__download Download as 
+            b Excel
+            i.icon.icon-download
+        ul.breadcrumbs
+          li
+            a(href="#") Dashboard
+          li
+            a(href="#") Registered Users
+        .manage__table.registered-users__table
+          .manage__table__content
+            table.table
+              thead
+                tr
+                  th 
+                    span #
+                    a(href="#")
+                      i.icon.icon-sort-arrows
+                  th 
+                    a(href="#")
+                      i.icon.icon-search
+                    input(type="text" name="name" placeholder="Name")
+                  th 
+                    a(href="#")
+                      i.icon.icon-search
+                    input(type="email" name="email" placeholder="email")
+                  th 
+                    a(href="#")
+                      i.icon.icon-search
+                    input(type="tel" name="mobile" placeholder="Mobile")
+                  th 
+                    a(href="#")
+                      i.icon.icon-search
+                    input(type="text" name="event" placeholder="Event")
+                  th.table__datepicker
+                    span date of registration
+                    input(type='text' class="datepicker-here" data-language='en')
+                    a(href="#")
+                      img(src="img/manage/calendar.png", alt="")
+                  th.table__drop-down.drop-down--open
+                    span invoice
+                    a(href="#")
+                      i.icon.icon-sort-arrows
+                    ul
+                      li
+                        a(href="#").is-active Pending
+                      li
+                        a(href="#") Send Now
+                      li
+                        a(href="#") Paid
+                  th
+              tbody
+                tr
+                  td 
+                    p 01
+                  td 
+                    p Vaishakh Pilatholi
+                  td 
+                    a(href="mailto:vpilatholi@gmail.com") 
+                      p vpilatholi@gmail.com
+                  td
+                    a(href="tel:2062221237") 
+                      p 206-222-1237
+                  td 
+                    p Marketing Conferencee
+                  td
+                    a(href="#") 
+                      p 15 Jun 2019
+                  td
+                    strong Pending
+                  td.table__drop-down.drop-down--open
+                    a(href="#").table__more
+                      i.icon.icon-more
+                    ul
+                      li
+                        a(href="#") 
+                          i.icon.icon-edit
+                          | Edit
+                      li
+                        a(href="#") 
+                          i.icon.icon-delete
+                          | Delete
+                tr
+                  td 
+                    p 02
+                  td 
+                    p Vaishakh Pilatholi
+                  td 
+                    a(href="mailto:vpilatholi@gmail.com") 
+                      p vpilatholi@gmail.com
+                  td
+                    a(href="tel:2062221237") 
+                      p 206-222-1237
+                  td 
+                    p Marketing Conferencee
+                  td
+                    a(href="#") 
+                      p 15 Jun 2019
+                  td
+                    a(href="#").btn.btn-secondary Send Now
+                  td.table__drop-down.drop-down--open
+                    a(href="#").table__more
+                      i.icon.icon-more
+                    ul
+                      li
+                        a(href="#") 
+                          i.icon.icon-edit
+                          | Edit
+                      li
+                        a(href="#") 
+                          i.icon.icon-delete
+                          | Delete
+                tr.paid
+                  td 
+                    p 03
+                  td 
+                    p Vaishakh Pilatholi
+                  td 
+                    a(href="mailto:vpilatholi@gmail.com") 
+                      p vpilatholi@gmail.com
+                  td
+                    a(href="tel:2062221237") 
+                      p 206-222-1237
+                  td 
+                    p Marketing Conferencee
+                  td
+                    a(href="#") 
+                      p 15 Jun 2019
+                  td
+                    b Paid
+                  td.table__drop-down.drop-down--open
+                    a(href="#").table__more
+                      i.icon.icon-more
+                    ul
+                      li
+                        a(href="#") 
+                          i.icon.icon-edit
+                          | Edit
+                      li
+                        a(href="#") 
+                          i.icon.icon-delete
+                          | Delete
+                tr
+                  td 
+                    p 04
+                  td 
+                    p Vaishakh Pilatholi
+                  td 
+                    a(href="mailto:vpilatholi@gmail.com") 
+                      p vpilatholi@gmail.com
+                  td
+                    a(href="tel:2062221237") 
+                      p 206-222-1237
+                  td 
+                    p Marketing Conferencee
+                  td
+                    a(href="#") 
+                      p 15 Jun 2019
+                  td
+                    a(href="#").btn.btn-secondary Send Now
+                  td.table__drop-down.drop-down--open
+                    a(href="#").table__more
+                      i.icon.icon-more
+                    ul
+                      li
+                        a(href="#") 
+                          i.icon.icon-edit
+                          | Edit
+                      li
+                        a(href="#") 
+                          i.icon.icon-delete
+                          | Delete

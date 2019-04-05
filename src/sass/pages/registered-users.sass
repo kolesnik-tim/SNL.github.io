@@ -1,0 +1,79 @@
+.registered-users
+  background: rgb(244, 245, 249)
+  display: flex
+  .manage__table
+    margin-top: 40px
+  .manage__title__download
+    font-size: 12px
+    font-weight: normal
+    color: $dark
+    position: relative
+    top: 30px
+    +r(767)
+      position: static
+    &:hover
+      color: $bright-light-blue
+    b
+      font-weight: 600
+    i
+      width: 25px
+      height: 25px
+      border-radius: 100%
+      background: $bright-light-blue
+      color: $white
+      +center
+      display: inline-flex
+      font-size: 11px
+      margin-left: 10px
+      margin-right: 0
+
+
+  &__table
+    .manage__table__content
+      min-width: 1050px
+      +r(767)
+        min-width: 900px
+    th.table__datepicker 
+      span
+        text-align: left
+        width: 100px
+    td
+      strong
+        color: $strawberry
+        font-weight: 600
+      b
+        color: $fresh-green
+        font-weight: 600
+    tr.paid
+      background-color: #f5fff1
+
+    td, th
+      display: flex
+      position: relative
+      &:first-child
+        width: 5%
+      &:nth-child(2)
+        width: 14%
+      &:nth-child(3)
+        width: 16%
+      &:nth-child(4)
+        width: 11%
+      &:nth-child(5)
+        width: 18%
+      &:nth-child(6)
+        width: 16%
+      &:nth-child(7)
+        width: 15%
+      &:last-child
+        width: 5%
+    th
+      ul
+        left: 62px
+        width: 120px
+        +r(1250)
+          left: 49px
+        +r(767)
+          left: 28px
+        a
+          &:before
+            display: none
