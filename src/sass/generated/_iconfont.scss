@@ -18,11 +18,13 @@ $icon-down-arrow: "\EA06";
 $icon-download: "\EA07";
 $icon-edit: "\EA08";
 $icon-left-arrow: "\EA09";
-$icon-more: "\EA0A";
-$icon-plus: "\EA0B";
-$icon-right-arrow: "\EA0C";
-$icon-search: "\EA0D";
-$icon-sort-arrows: "\EA0E";
+$icon-logout: "\EA0A";
+$icon-more: "\EA0B";
+$icon-plus: "\EA0C";
+$icon-right-arrow: "\EA0D";
+$icon-search: "\EA0E";
+$icon-settings: "\EA0F";
+$icon-sort-arrows: "\EA10";
 
 
 %icon {
@@ -50,8 +52,10 @@ $icon-sort-arrows: "\EA0E";
 .icon-download:before { content: $icon-download; }
 .icon-edit:before { content: $icon-edit; }
 .icon-left-arrow:before { content: $icon-left-arrow; }
+.icon-logout:before { content: $icon-logout; }
 .icon-more:before { content: $icon-more; }
 .icon-plus:before { content: $icon-plus; }
 .icon-right-arrow:before { content: $icon-right-arrow; }
 .icon-search:before { content: $icon-search; }
+.icon-settings:before { content: $icon-settings; }
 .icon-sort-arrows:before { content: $icon-sort-arrows; }

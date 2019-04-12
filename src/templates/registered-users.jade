@@ -4,31 +4,9 @@ title: Registered Users
 extends layouts/_layout
 block content
   .registered-users
-    aside.manage__aside
-      a(href="#").manage__aside__logo
-        img(src="https://via.placeholder.com/30x30.png", alt="")
-      a(href="#").manage__aside__img
-        img(src="https://via.placeholder.com/30x25.png", alt="")
+    include ./admin/_aside
     .manage__content
-      .manage__header
-        .container
-          .manage__header__content
-            p Thursday, 28 March 2019  10:47 am (IST)
-            .manage__header__notifications.drop-down--open
-              i.icon.icon-bell
-                span
-              b 23
-              ul
-                li
-                  a(href="#") Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                li
-                  a(href="#") Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            .manage__header__user.drop-down--open
-              span Vaishakh
-              i.icon.icon-down-arrow
-              ul
-                li
-                  a(href="#") Exit
+      include ./admin/_header
       .container
         .manage__title
           h1 Registered Users - 32
