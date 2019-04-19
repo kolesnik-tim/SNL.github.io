@@ -1,31 +1,61 @@
 .header
-  .menu-open
-    position: absolute
-    left: 20px
-    top: 65px
-    width: 30px
-    height: 30px
-    display: none
-    z-index: 99
-    +r(1100)
-      display: block
-    +r(767)
-      top: 55%
-      transform: translate(0, -50%)
-    span
-      width: 30px
-      height: 2px
-      margin-top: 10px
-      background: $white
-      display: block
-      &:before, &:after
-        content: ''
-        width: 30px
-        height: 2px
-        background: $white
-        position: absolute
-        left: 0
-      &:before
-        top: 0
-      &:after
-        bottom: 8px
+  position: absolute
+  top: 0
+  width: 100%
+  padding:  15px 0
+  display: none
+  // .menu-open
+  //   position: absolute
+  //   left: 20px
+  //   top: 65px
+  //   width: 30px
+  //   height: 30px
+  //   display: none
+  //   z-index: 99
+  //   +r(1100)
+  //     display: block
+  //   +r(767)
+  //     top: 55%
+  //     transform: translate(0, -50%)
+  //   span
+  //     width: 30px
+  //     height: 2px
+  //     margin-top: 10px
+  //     background: $white
+  //     display: block
+  //     &:before, &:after
+  //       content: ''
+  //       width: 30px
+  //       height: 2px
+  //       background: $white
+  //       position: absolute
+  //       left: 0
+  //     &:before
+  //       top: 0
+  //     &:after
+  //       bottom: 8px
+  &__none
+    display: block
+  &__logo
+    img
+      width: 95px
+  &__nav
+    ul
+      display: flex
+      justify-content: flex-end
+    a
+      font-size: 14px
+      font-weight: bold
+      color: $white
+      margin: 0 18px
+      text-transform: uppercase
+      i
+        margin-left: 8px
+        color: #a2a0ef
+        font-size: 10px
+    li
+      &:first-child
+        margin-right: 30px
+      &.active
+        a
+          color: #a2a0ef
