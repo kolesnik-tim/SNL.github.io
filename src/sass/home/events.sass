@@ -31,10 +31,14 @@
       bottom: 70px
   .swiper-container
     max-height: 550px
-    +r(767)
-      max-height: 800px
+    +r(1040)
+      max-height: 100%
+      padding-bottom: 100px
   .swiper-pagination
     padding-right: 10px
+    +r(1040)
+      padding-right: 0
+      bottom: 0
   .swiper-pagination-bullet
     width: 20px
     height: 20px
@@ -43,6 +47,8 @@
     background-color: $white
     opacity: 1
     margin: 16px 0 !important
+    +r(1040)
+      margin: 15px 10px !important
     &-active
       background: #4b1ece
   &__img

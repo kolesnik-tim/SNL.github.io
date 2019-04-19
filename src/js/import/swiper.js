@@ -12,10 +12,9 @@ var swiper = new Swiper('.swiper-events', {
     el: '.swiper-pagination-events',
     clickable: true,
   },
-  // breakpoints: {
-  //   1024: {
-  //     slidesPerView: 1,
-  //     spaceBetween: 30
-  //   }
-  // }
+  breakpoints: {
+    1024: {
+      direction: 'horizontal',
+    }
+  }
 });
