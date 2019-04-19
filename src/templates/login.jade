@@ -15,7 +15,8 @@ block content
         label(for="password") Password
       a(href="#forgot__password").login__step__forgot Forgot Password?
       .login__step__submit
-        input(type="submit" value="Sign in").btn.btn-primary
+        button(type="submit").btn.btn-primary
+          span Sign in
     form.login__step#forgot__password
       img(src="img/logo.png", alt="")
       h2 Retrieve Password
@@ -24,7 +25,8 @@ block content
         label(for="retrieve-email-id") Email ID
       p Enter your email and to receive instructions
       .login__step__submit
-        input(type="submit" value="Send me").btn.btn-primary.login__step__retrieve
+        button(type="submit").btn.btn-primary.login__step__retrieve
+          span Send me
       a(href="#login").login__step__back.login__step__forgot
         i.icon.icon-left-arrow
         | Back to login 

@@ -11,8 +11,9 @@ block content
         .manage__title
           h1 Manager User - 32
           a(href="#").btn.btn-primary.create-event-add
-            i.icon.icon-plus
-            | Create User
+            span
+              i.icon.icon-plus
+              | Create User
         ul.breadcrumbs
           li
             a(href="#") Dashboard
@@ -257,4 +258,5 @@ block content
                   label(for="select-privileges-2-3")
         .manage__form__footer
           a(href="#warning" rel="modal:open").btn.btn-primary cancel
-          input(type="submit" value="create").btn.btn-primary
+          button(type="submit").btn.btn-primary
+            span create

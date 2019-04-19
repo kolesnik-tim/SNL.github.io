@@ -11,8 +11,9 @@ block content
         .manage__title
           h1 Manage Event - 32
           a(href="#").btn.btn-primary.create-event-add
-            i.icon.icon-plus
-            | Create Event
+            span
+              i.icon.icon-plus
+              | Create Event
         ul.breadcrumbs
           li
             a(href="#") Dashboard
@@ -474,4 +475,5 @@ block content
               | Delete
         .manage__form__footer
           a(href="#warning" rel="modal:open").btn.btn-primary cancel
-          input(type="submit" value="create").btn.btn-primary
+          button(type="submit").btn.btn-primary
+            span create

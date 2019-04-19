@@ -324,6 +324,7 @@
         p
           color: $bright-light-blue
     tr.open
+      background-color: #f5fff1
       p
         font-weight: 600
 
@@ -343,6 +344,7 @@
     background-color: #f2f2f2
     box-shadow: -1.5px 2px 16px 0 rgba(2, 23, 56, 0.19)
     transition: all 0.9s
+    z-index: 15
     +r(767)
       max-width: 100%
     &.is-active
@@ -355,6 +357,7 @@
       top: 0
       left: 0
       display: none
+      z-index: 14
     &__header
       width: 100%
       padding: 33px
@@ -652,9 +655,12 @@
         color: $dark
         font-size: 12px
         text-transform: uppercase
+        padding-top: 13px
+        &:before, &:after
+          display: none
         &:hover
           color: $white
           background: $dark
-      input
+      button
         font-size: 12px
         text-transform: uppercase
