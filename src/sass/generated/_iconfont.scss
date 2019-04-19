@@ -17,14 +17,17 @@ $icon-delete: "\EA05";
 $icon-down-arrow: "\EA06";
 $icon-download: "\EA07";
 $icon-edit: "\EA08";
-$icon-left-arrow: "\EA09";
-$icon-logout: "\EA0A";
-$icon-more: "\EA0B";
-$icon-plus: "\EA0C";
-$icon-right-arrow: "\EA0D";
-$icon-search: "\EA0E";
-$icon-settings: "\EA0F";
-$icon-sort-arrows: "\EA10";
+$icon-fb: "\EA09";
+$icon-in: "\EA0A";
+$icon-left-arrow: "\EA0B";
+$icon-logout: "\EA0C";
+$icon-more: "\EA0D";
+$icon-plus: "\EA0E";
+$icon-right-arrow: "\EA0F";
+$icon-search: "\EA10";
+$icon-settings: "\EA11";
+$icon-sort-arrows: "\EA12";
+$icon-twitter: "\EA13";
 
 
 %icon {
@@ -51,6 +54,8 @@ $icon-sort-arrows: "\EA10";
 .icon-down-arrow:before { content: $icon-down-arrow; }
 .icon-download:before { content: $icon-download; }
 .icon-edit:before { content: $icon-edit; }
+.icon-fb:before { content: $icon-fb; }
+.icon-in:before { content: $icon-in; }
 .icon-left-arrow:before { content: $icon-left-arrow; }
 .icon-logout:before { content: $icon-logout; }
 .icon-more:before { content: $icon-more; }
@@ -59,3 +64,4 @@ $icon-sort-arrows: "\EA10";
 .icon-search:before { content: $icon-search; }
 .icon-settings:before { content: $icon-settings; }
 .icon-sort-arrows:before { content: $icon-sort-arrows; }
+.icon-twitter:before { content: $icon-twitter; }

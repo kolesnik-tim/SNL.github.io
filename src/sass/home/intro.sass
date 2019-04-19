@@ -2,6 +2,8 @@
   height: 870px
   background-image: url('../img/home/home-bg.jpg')
   +cover
+  +r(767)
+    height: 500px
   .container
     height: 100%
   &__title
@@ -13,6 +15,9 @@
       font-weight: bold
       color: $white
       margin-bottom: 92px
+      +r(767)
+        font-size: 60px
+        margin-bottom: 40px
       span
         width: 20px
         height: 20px

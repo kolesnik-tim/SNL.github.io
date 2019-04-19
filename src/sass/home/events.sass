@@ -1,5 +1,32 @@
 .home-events
   padding: 160px 0
+  position: relative
+  &__decor
+    position: absolute
+    border-radius: 100%
+    z-index: -1
+    &-1
+      width: 50px
+      height: 50px
+      opacity: 0.69
+      background-color: #30dffd
+      left: 8%
+      top: 50%
+    &-2
+      width: 50px
+      height: 50px
+      opacity: 0.45
+      background-color: #74a241
+      left: 47%
+      top: 13%
+    &-3
+      width: 245px
+      height: 245px
+      opacity: 0.1
+      border: solid 65px #f20487
+      background-color: $white
+      right: 0
+      bottom: 70px
   .swiper-container
     max-height: 550px
   .swiper-pagination
