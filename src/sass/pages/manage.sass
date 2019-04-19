@@ -498,6 +498,24 @@
         top: 50px
         left: 30px
         bottom: auto
+    &__fee
+      display: flex
+      margin-top: 30px
+      +r(530)
+        flex-direction: column
+      input
+        width: 100%
+        border-bottom: 1px solid #cecece
+        margin-right: 15px
+        padding: 9px 0
+        font-size: 14px
+        font-weight: normal
+        color: #616161
+        +r(530)
+          margin-right: 0
+          margin-bottom: 15px
+        &:last-child
+          margin-right: 0
     &__datepicker
       display: flex
       padding-top: 40px
@@ -556,6 +574,9 @@
         border-radius: 10px
         border: dashed 1px #a1a1a1
         overflow: hidden
+        +tr
+        &:hover
+          background: #f2f2f2
         span.output
           position: absolute
           left: 50%

@@ -1,1 +1,75 @@
 .home-locations
+  padding: 260px 0 0
+  position: relative
+  overflow: hidden
+  &__parallax
+    position: absolute
+    right: -25%
+    top: 0px
+    div
+      font-size: 200px
+      font-weight: bold
+      color: rgba(18, 17, 74, 0.1)
+      text-transform: uppercase
+      line-height: 1
+  &__bg
+    position: absolute
+    z-index: 4
+    &-1
+      img
+        max-width: 1090px
+        width: 100%
+    &-2
+      right: -170px
+      bottom: 0
+      img
+        max-width: 480px
+        width: 100%
+  &__content
+    background-color: #f6f6fd
+    padding: 80px 0 150px
+  h2
+    font-size: 50px
+    font-weight: bold
+    color: #12114a
+  &__block
+    margin-top: 60px
+    border-radius: 10px
+    box-shadow: 0px 18px 32px 0 rgba(11, 11, 77, 0.14)
+    background-color: $white
+    position: relative
+    padding: 45px 30px
+    max-width: 370px
+    width: 100%
+    z-index: 5
+    &__img
+      width: 90px
+      height: 90px
+      background-color: #e6e6e6
+      border-radius: 100%
+      +center
+      position: absolute
+      right: -20px
+      top: -20px
+      img
+        width: 55px
+    h4
+      font-size: 20px
+      font-weight: normal
+      color: #12114a
+      margin-bottom: 25px
+    p, a
+      font-size: 15px
+      font-weight: normal
+      line-height: 1.67
+      color: #707070
+      padding-right: 25px
+      display: block
+  &__map
+    height: 100%
+    margin: 50px 0
+    position: relative
+    z-index: 5
+    iframe
+      width: 100%
+      height: calc(100% - 50px)
