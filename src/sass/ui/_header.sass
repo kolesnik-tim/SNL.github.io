@@ -1,9 +1,19 @@
 .header
-  position: absolute
+  position: fixed
   top: 0
   width: 100%
   padding:  15px 0
   display: none
+  z-index: 40
+  transition: all 0.5s
+  +r(767)
+    padding: 5px 0
+    
+  &.active
+    top: -100px
+    background: #12114a
+    &.scroll
+      top: 0
   .menu-open
     position: absolute
     right: 20px
@@ -35,8 +45,13 @@
   &__none
     display: block
   &__logo
+    +r(767)
+      position: relative
+      top: 3px
     img
-      width: 95px
+      height: 60px
+      +r(767)
+        height: 45px
   &__nav
     ul
       display: flex
