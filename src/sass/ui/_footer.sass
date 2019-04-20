@@ -3,8 +3,11 @@
   background-color: #12114a
   position: relative
   overflow: hidden
+  display: none
   +r(767)
     padding: 30px 0
+  &__none
+    display: block
   &__decor
     position: absolute
     z-index: 3
@@ -88,6 +91,8 @@
       color: $white
       font-size: 32px
       margin: 0 18px
+      &:hover
+        color: rgba(#f20487, 0.6)
   &__copyright
     +center-column
     p

@@ -23,8 +23,18 @@
               <nav class="header__nav hidden-xs">
                 <ul>
                   <li class="active"><a href="#">Home</a></li>
-                  <li><a href="#">About Us<i class="icon icon-down-arrow"></i></a></li>
-                  <li><a href="#">Our Services<i class="icon icon-down-arrow"></i></a></li>
+                  <li><a href="#">About Us<i class="icon icon-down-arrow"></i></a>
+                    <ul class="header__nav__dropdown">
+                      <li><a href="#">Our Journey</a></li>
+                      <li><a href="#">Our Vision</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Our Services<i class="icon icon-down-arrow"></i></a>
+                    <ul class="header__nav__dropdown">
+                      <li><a href="#">Our Journey</a></li>
+                      <li><a href="#">Our Vision</a></li>
+                    </ul>
+                  </li>
                   <li><a href="#">Our Events</a></li>
                   <li><a href="#">Contact Us</a></li>
                 </ul>
@@ -33,6 +43,27 @@
           </div>
         </div>
       </header>
+      <div class="header__menu__bg"></div>
+      <div class="header__menu">
+        <div class="menu-close"><span></span></div>
+        <ul>
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">About Us</a>
+            <ul>
+              <li><a href="#">Our Journey</a></li>
+              <li><a href="#">Our Vision</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Our Services</a>
+            <ul>
+              <li><a href="#">Our Journey</a></li>
+              <li><a href="#">Our Vision</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Our Events</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
       <!--END header-->
       <section class="intro">
         <div class="container">
@@ -50,7 +81,7 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="row">
-                  <div class="col-xs-6">
+                  <div class="col-sm-6 col-xs-12">
                     <div class="home-events__img">
                       <ul>
                         <li>
@@ -65,7 +96,7 @@
                       </ul>
                     </div>
                   </div>
-                  <div class="col-xs-6">
+                  <div class="col-sm-6 col-xs-12">
                     <div class="home-events__text">
                       <h2><span>Upcoming Events</span>Advanced Shutdown Turnaround and Outage Management Excellence – 2019</h2>
                       <p>Pixel Pioneers, a one-day conference for web and UX designers and front-end developers, will take place on the 23rd of November 2019 in Belfast.</p>
@@ -76,7 +107,7 @@
               </div>
               <div class="swiper-slide">
                 <div class="row">
-                  <div class="col-xs-6">
+                  <div class="col-sm-6 col-xs-12">
                     <div class="home-events__img">
                       <ul>
                         <li>
@@ -91,7 +122,7 @@
                       </ul>
                     </div>
                   </div>
-                  <div class="col-xs-6">
+                  <div class="col-sm-6 col-xs-12">
                     <div class="home-events__text">
                       <h2><span>Upcoming Events</span>Advanced Shutdown Turnaround and Outage Management Excellence – 2019</h2>
                       <p>Pixel Pioneers, a one-day conference for web and UX designers and front-end developers, will take place on the 23rd of November 2019 in Belfast.</p>
@@ -102,7 +133,7 @@
               </div>
               <div class="swiper-slide">
                 <div class="row">
-                  <div class="col-xs-6">
+                  <div class="col-sm-6 col-xs-12">
                     <div class="home-events__img">
                       <ul>
                         <li>
@@ -117,7 +148,7 @@
                       </ul>
                     </div>
                   </div>
-                  <div class="col-xs-6">
+                  <div class="col-sm-6 col-xs-12">
                     <div class="home-events__text">
                       <h2><span>Upcoming Events</span>Advanced Shutdown Turnaround and Outage Management Excellence – 2019</h2>
                       <p>Pixel Pioneers, a one-day conference for web and UX designers and front-end developers, will take place on the 23rd of November 2019 in Belfast.</p>
@@ -131,8 +162,70 @@
           </div>
         </div>
       </section>
+      <section class="home-values">
+        <div class="home-values__decor home-values__decor-1"><img src="img/home/cirlce-1.png" alt=""></div>
+        <div class="home-values__decor home-values__decor-2"><img src="img/home/designs-1.png" alt=""></div>
+        <div class="container">
+          <div class="home-values__parallax">
+            <div>Our Values</div>
+          </div>
+          <h2>Our Values</h2>
+          <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12"><a href="#" class="home-values__block"><img src="img/home/values-icon-1.png" alt="">
+                <h3>Integrity</h3>
+                <p>The building block of Excellence</p>
+              </a></div>
+            <div class="col-md-3 col-sm-6 col-xs-12"><a href="#" class="home-values__block"><img src="img/home/values-icon-2.png" alt="">
+                <h3>Quality</h3>
+                <p>Focus on the Process</p>
+              </a></div>
+            <div class="col-md-3 col-sm-6 col-xs-12"><a href="#" class="home-values__block"><img src="img/home/values-icon-3.png" alt="">
+                <h3>Perseverance</h3>
+                <p>Keep at it, Sustain during all odds.</p>
+              </a></div>
+            <div class="col-md-3 col-sm-6 col-xs-12"><a href="#" class="home-values__block"><img src="img/home/values-icon-4.png" alt="">
+                <h3>Trust</h3>
+                <p>Foundation of great Business Relationship</p>
+              </a></div>
+          </div>
+        </div>
+      </section>
+      <section class="home-locations">
+        <div class="home-locations__parallax">
+          <div>Get Direction</div>
+        </div>
+        <div class="home-locations__bg home-locations__bg-1"><img src="img/home/locations-icon-2.png" alt=""></div>
+        <div class="home-locations__bg home-locations__bg-2"><img src="img/home/locations-icon-1.png" alt=""></div>
+        <div class="home-locations__content">
+          <div class="container">
+            <h2>Locations</h2>
+            <div class="row">
+              <div class="col-sm-5 col-xs-12">
+                <div class="home-locations__block">
+                  <div class="home-locations__block__img"><img src="img/home/india.png" alt=""></div>
+                  <h4>Bengaluru, India</h4>
+                  <p>Washington State Convention Center 705 Pike Street ,Seattle, WA 98101</p><a href="tel:2066945000">Phone: 206-694-5000</a>
+                </div>
+                <div class="home-locations__block">
+                  <div class="home-locations__block__img"><img src="img/home/dubai.png" alt=""></div>
+                  <h4>Dubai, UAE</h4>
+                  <p>Washington State Convention Center 705 Pike Street ,Seattle, WA 98101</p><a href="tel:2066945000">Phone: 206-694-5000</a>
+                </div>
+                <div class="home-locations__block">
+                  <div class="home-locations__block__img"></div>
+                  <h4>Antwerp, Belgium</h4>
+                  <p>Washington State Convention Center 705 Pike Street ,Seattle, WA 98101</p><a href="tel:2066945000">Phone: 206-694-5000</a>
+                </div>
+              </div>
+              <div class="col-sm-7 col-xs-12">
+                <div id="map" class="home-locations__map"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d8231.82533447571!2d77.56764899461552!3d12.985662806546674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1555672820476!5m2!1sen!2sua" allowfullscreen></iframe></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <!--BEGIN footer-->
-      <footer class="footer">
+      <footer class="footer footer__none">
         <div class="footer__decor footer__decor-1"><img src="img/home/designs-footer-1.png" alt=""></div>
         <div class="footer__decor footer__decor-2"></div>
         <div class="footer__decor footer__decor-3"><img src="img/home/designs-footer-2.png" alt=""></div>

@@ -47,6 +47,8 @@
       color: $white
       margin: 0 18px
       text-transform: uppercase
+      &:hover
+        color: #8f2794
       +r(1040)
         margin: 0 13px
       i
@@ -54,8 +56,102 @@
         color: #a2a0ef
         font-size: 10px
     li
+      position: relative
+      &:hover
+        .header__nav__dropdown
+          opacity: 1
+          visibility: visible
       &:first-child
         margin-right: 30px
       &.active
         a
           color: #a2a0ef
+    &__dropdown
+      position: absolute
+      right: 0
+      top: 22px
+      flex-direction: column
+      width: 100%
+      min-width: 100px
+      background: #a2a0ef 
+      padding: 15px 15px 5px
+      border-radius: 4px
+      opacity: 0
+      visibility: hidden
+      +tr
+      li
+        margin: 0 !important
+        a
+          color: $white
+          margin: 0
+          margin-bottom: 10px
+          display: block
+          text-transform: none
+
+
+
+
+
+
+.header__menu
+  width: 240px
+  position: fixed
+  height: 100%
+  right: -300px
+  top: 0
+  background-color: #12114a
+  z-index: 99
+  transition: all 0.5s
+  padding: 50px 40px
+  overflow-x: hidden
+  overflow-y: auto
+  &.is-active
+    right: 0
+  &__bg
+    width: 100%
+    height: 100%
+    position: fixed
+    left: 0
+    top: 0
+    z-index: 88
+    background: rgba(#000, 0.7)
+    display: none
+  li
+    &.active
+      a
+        color: #a2a0ef
+    ul
+      margin-bottom: 20px
+      margin-right: 20px
+      a
+        padding: 5px 0
+        font-size: 13px
+  a
+    font-size: 19px
+    font-weight: bold
+    color: $white
+    text-transform: uppercase
+    text-align: right
+    display: block
+    padding: 10px 0
+  .menu-close
+    position: absolute
+    left: 15px
+    top: 15px
+    width: 30px
+    height: 30px
+    span
+      &:before, &:after
+        content: ''
+        position: absolute
+        width: 30px
+        height: 2px
+        border-radius: 1px
+        top: 13px
+        background: $white
+      &:before
+        transform: rotate(-45deg)
+        left: 0
+      &:after
+        transform: rotate(45deg)
+        right: 0

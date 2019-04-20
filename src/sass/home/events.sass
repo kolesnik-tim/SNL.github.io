@@ -1,6 +1,8 @@
 .home-events
   padding: 160px 0
   position: relative
+  +r(767)
+    padding: 50px 0
   &__decor
     position: absolute
     border-radius: 100%
@@ -29,8 +31,14 @@
       bottom: 70px
   .swiper-container
     max-height: 550px
+    +r(1040)
+      max-height: 100%
+      padding-bottom: 100px
   .swiper-pagination
     padding-right: 10px
+    +r(1040)
+      padding-right: 0
+      bottom: 0
   .swiper-pagination-bullet
     width: 20px
     height: 20px
@@ -39,15 +47,30 @@
     background-color: $white
     opacity: 1
     margin: 16px 0 !important
+    +r(1040)
+      margin: 15px 10px !important
     &-active
       background: #4b1ece
   &__img
     background-image: url('../img/home/events__img.png')
     background-size: contain
     background-repeat: no-repeat
-    height: 545px
+    height: 100%
     width: 100%
     +center
+    +r(1040)
+      align-items: flex-start
+      padding-top: 90px
+    +r(850)
+      padding-top: 70px
+    +r(767)
+      background-position: 47% 0
+      height: 340px
+      align-items: center
+      padding-top: 0
+      padding-bottom: 50px
+    +r(380)
+      padding-bottom: 100px !important
     &__icon
       width: 50px
       height: 50px
@@ -55,6 +78,8 @@
       background: $white
       +center
       margin-right: 15px
+      +r(767)
+        margin-right: 6px
       img
         width: 30px
     li
@@ -76,11 +101,22 @@
         text-transform: uppercase
   &__text
     padding-left: 60px
+    padding-right: 50px
+    +r(1040)
+      padding-left: 20px
+    +r(767)
+      padding: 0
+      padding-top: 30px
     h2
       font-size: 35px
       font-weight: normal
       color: #12114a
       margin-bottom: 50px
+      +r(1040)
+        font-size: 25px
+      +r(767)
+        margin-bottom: 15px
+
       span
         text-transform: uppercase
         font-size: 14px
@@ -95,8 +131,11 @@
       font-weight: normal
       line-height: 1.94
       color: #707070
-      padding-right: 50px
       margin-bottom: 80px
+      +r(1040)
+        font-size: 15px
+      +r(767)
+        margin-bottom: 40px
     &__btn
       position: relative
       display: inline-flex
