@@ -2,7 +2,7 @@
   padding: 160px 0
   position: relative
   +r(767)
-    padding: 50px 0
+    padding: 50px 0 20px
   &__decor
     position: absolute
     border-radius: 100%
@@ -48,29 +48,34 @@
     opacity: 1
     margin: 16px 0 !important
     +r(1040)
-      margin: 15px 10px !important
+      margin: 20px 10px !important
     &-active
       background: #4b1ece
   &__img
-    background-image: url('../img/home/events__img.png')
-    background-size: contain
-    background-repeat: no-repeat
+    // background-image: url('../img/home/events__img.png')
+    // background-size: contain
+    // background-repeat: no-repeat
     height: 100%
     width: 100%
     +center
+    position: relative
+    svg
+      width: 100%
+      height: 100%
+      position: absolute
+      left: 0 
+      top: 0
+    // svg > rect
+    //   mask: url(#mask-1)
     +r(1040)
       align-items: flex-start
-      padding-top: 90px
-    +r(850)
-      padding-top: 70px
+      padding-top: 100px
     +r(767)
       background-position: 47% 0
       height: 340px
       align-items: center
       padding-top: 0
       padding-bottom: 50px
-    +r(380)
-      padding-bottom: 100px !important
     &__icon
       width: 50px
       height: 50px
@@ -80,8 +85,13 @@
       margin-right: 15px
       +r(767)
         margin-right: 6px
+        width: 40px
+        height: 40px
       img
         width: 30px
+    ul
+      position: relative
+      z-index: 3
     li
       display: flex
       align-items: center
@@ -106,7 +116,9 @@
       padding-left: 20px
     +r(767)
       padding: 0
-      padding-top: 30px
+      padding-top: 20px
+      position: relative
+      top: -10px
     h2
       font-size: 35px
       font-weight: normal
@@ -125,7 +137,6 @@
         letter-spacing: 0.8px
         color: #f20487
         display: block
-        margin-bottom: 13px
     p
       font-size: 17px
       font-weight: normal
@@ -145,8 +156,25 @@
         height: 113px
         background: rgba(#d452ac, 0.07)
         position: absolute
-        left: 50%
+        left: 18px
         top: 50%
-        transform: translate(-50%, -50%)
+        transform: translate(0%, -50%)
         border-radius: 100%
         z-index: -1
+        +r(1040)
+          left: 0px
+      a:last-child
+        padding: 13px 30px 10px
+        border-radius: 25px
+        border: solid 1px #4143ea
+        color: #4143ea
+        margin-left: 20px
+        &:hover
+          background-color: #4143ea
+          color: $white
+      a
+        font-size: 15px
+        span
+          font-size: 15px
+        +r(1040)
+          padding: 12px 12px 9px !important

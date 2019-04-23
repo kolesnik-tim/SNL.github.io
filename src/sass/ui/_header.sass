@@ -1,9 +1,19 @@
 .header
-  position: absolute
+  position: fixed
   top: 0
   width: 100%
   padding:  15px 0
   display: none
+  z-index: 40
+  transition: all 0.5s
+  +r(767)
+    padding: 5px 0
+    
+  &.active
+    top: -100px
+    background: #000125
+    &.scroll
+      top: 0
   .menu-open
     position: absolute
     right: 20px
@@ -35,8 +45,13 @@
   &__none
     display: block
   &__logo
+    +r(767)
+      position: relative
+      top: 3px
     img
-      width: 95px
+      height: 60px
+      +r(767)
+        height: 45px
   &__nav
     ul
       display: flex
@@ -122,29 +137,29 @@
         color: #a2a0ef
     ul
       margin-bottom: 20px
-      margin-right: 20px
+      margin-left: 20px
       a
         padding: 5px 0
-        font-size: 13px
+        font-size: 12px
   a
-    font-size: 19px
+    font-size: 14px
     font-weight: bold
     color: $white
     text-transform: uppercase
-    text-align: right
+    text-align: left
     display: block
     padding: 10px 0
   .menu-close
     position: absolute
     left: 15px
     top: 15px
-    width: 30px
-    height: 30px
+    width: 20px
+    height: 20px
     span
       &:before, &:after
         content: ''
         position: absolute
-        width: 30px
+        width: 20px
         height: 2px
         border-radius: 1px
         top: 13px

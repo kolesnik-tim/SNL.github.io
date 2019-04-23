@@ -79,15 +79,22 @@
     box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.1)
     background-color: $white
     margin-bottom: 100px
-    +r(1250)
-      overflow-x: auto
+    overflow-x: scroll
+    &::-webkit-scrollbar-track
+      background-color: $very-light-pink
+    &::-webkit-scrollbar-thumb
+      border-radius: 2px 
+      background-image: linear-gradient(330deg, #8f2794, #3d30f3 99%)
+    &::-webkit-scrollbar
+      width: 7px 
+      height: 7px
     +r(767)
       margin-bottom: 30px
     &__content
-      min-width: 1100px
+      min-width: 1365px
       display: block
-      +r(767)
-        min-width: 900px
+      // +r(767)
+      //   min-width: 900px
     table, tbody, thead
       width: 100%
       display: block
@@ -117,27 +124,33 @@
       display: flex
       position: relative
       &:first-child
-        width: 5%
+        width: 4%
       &:nth-child(2)
-        width: 14%
-      &:nth-child(3)
-        width: 16%
-      &:nth-child(4)
-        width: 11%
-      &:nth-child(5)
         width: 8%
+      &:nth-child(3)
+        width: 9%
+      &:nth-child(4)
+        width: 9%
+      &:nth-child(5)
+        width: 7%
       &:nth-child(6)
-        width: 11%
+        width: 8%
       &:nth-child(7)
-        width: 10%
+        width: 9%
       &:nth-child(8)
-        width: 11%
+        width: 12%
       &:nth-child(9)
         width: 9%
+      &:nth-child(10)
+        width: 8%
+      &:nth-child(11)
+        width: 9%
+      &:nth-child(12)
+        width: 6%
       &:last-child
-        width: 5%
+        width: 3%
     th
-      padding: 25px 12px
+      padding: 25px 9px
       display: flex
       align-items: center
       ul
@@ -391,6 +404,11 @@
     margin-bottom: 30px
     +r(767)
       padding: 15px
+    h4
+      font-size: 14px
+      font-weight: 600
+      color: $charcoal-grey
+      margin-top: 50px
     &__title
       +center
       justify-content: space-between

@@ -1,6 +1,6 @@
 // import '../lib/maskedinput.js';
 import modal from 'jquery-modal';
-
+import AOS from 'aos';
 
 //select
 // $('select').selectize();
@@ -26,14 +26,9 @@ $('.aside__menu__item--drop-down').on('click', function() {
 });
 
 
+//animate
 
-//header open
-$('.menu-open').on('click', function() {
-  $('.header__menu').addClass('is-active');
-  $('.header__menu__bg').fadeIn();
-});
-//header close
-$('.menu-close, .header__menu__bg').on('click', function() {
-  $('.header__menu').removeClass('is-active');
-  $('.header__menu__bg').fadeOut();
+AOS.init({
+  duration: 1500,
+  offset: 100,
 });
