@@ -1,12 +1,292 @@
 .about
+  overflow: hidden
   &__intro
     background-image: url('../img/about/about-intro-bg.jpg')
     +cover
     height: 440px
     +center
+    +r(767)
+      height: 250px
     h1
       font-size: 90px
       font-weight: bold
       line-height: 1
       color: rgba(250, 250, 250, 0.08)
-      padding-top: 50px
+      padding-top: 100px
+      text-align: center
+      text-transform: uppercase
+      +r(1040)
+        font-size: 50px
+        padding-top: 40px
+      +r(767)
+        font-size: 35px
+  &__journey
+    padding-top: 125px
+    +r(767)
+      padding-top: 40px
+    &__content
+      position: relative
+      display: flex
+      justify-content: flex-end
+      +r(767)
+        flex-direction: column
+    &__title
+      position: absolute
+      top: 50%
+      left: 0
+      transform: translate(0, -50%)
+      max-width: 465px
+      min-height: 445px
+      width: 100%
+      background: $white
+      border-radius: 13.2px
+      box-shadow: -1.5px 12.4px 48.5px 0 rgba(0, 0, 0, 0.17)
+      padding-top: 75px
+      +r(1160)
+        position: static
+        transform: none
+        margin-right: 10px
+      +r(767)
+        max-width: 100%
+        margin-left: 0
+        padding: 20px
+        min-height: auto
+      h2
+        text-align: center
+        font-size: 35.3px
+        font-weight: normal
+        color: #12114a
+    &__text
+      max-width: 925px
+      width: 100%
+      min-height: 570px
+      padding: 50px 70px
+      border-radius: 13.2px
+      background-color: #4422a7
+      display: flex
+      flex-direction: column
+      align-items: flex-end
+      justify-content: center
+      +r(1160)
+        margin-left: 10px
+      +r(1040)
+        padding: 25px
+      +r(767)
+        margin-left: 0
+        margin-top: 20px
+        padding: 20px
+      p
+        padding-left: 28%
+        width: 100%
+        font-size: 14px
+        font-weight: normal
+        line-height: 2.2
+        color: $white
+        padding-bottom: 40px
+        display: block
+        +r(1160)
+          padding-left: 0
+        +r(767)
+          line-height: 1.6
+          padding-bottom: 20px
+        &:last-child
+          padding-bottom: 0
+  &__advantages
+    padding: 120px 0
+    +r(1040)
+      padding: 60px 0 40px
+    &__block
+      +center
+      align-items: flex-start
+      +r(1040)
+        padding-bottom: 30px
+      &__img
+        margin-right: 31px
+        padding-top: 10px
+        width: 80px
+        +center
+        justify-content: flex-end
+        img
+          height: 53px
+      &__text
+        max-width: 110px
+        span
+          font-size: 44px
+          display: block
+          margin-bottom: 10px
+        p
+          font-size: 15.8px
+          line-height: 1.56
+          color: #12114a
+  &__vision
+    padding: 110px 0
+    background-color: #f8f8fa
+    +r(767)
+      padding: 40px 0
+    h2
+      font-size: 35px
+      font-weight: normal
+      color: #12114a
+      margin-bottom: 60px
+      +r(767)
+        margin-bottom: 30px
+    p
+      font-size: 14px
+      font-weight: normal
+      line-height: 1.75
+      color: #707070
+      margin-bottom: 30px
+    &__img
+      display: flex
+      justify-content: flex-end
+      align-items: center
+      height: 100%
+      +r(767)
+        justify-content: center
+      img
+        max-width: 463px
+        width: 100%
+  &__committee
+    padding: 110px 0
+    position: relative
+    +r(767)
+      padding: 90px 0 40px
+    &__parallax
+      position: absolute
+      right: 0
+      top: 0px
+      font-size: 175px
+      font-weight: bold
+      color: rgba(18, 17, 74, 0.03)
+      text-transform: uppercase
+      +r(1040)
+        font-size: 120px
+      +r(767)
+        font-size: 50px
+    h2
+      font-size: 35px
+      font-weight: normal
+      color: #12114a
+      margin-bottom: 90px
+      +r(767)
+        margin-bottom: 40px
+    &__block
+      margin: 0 5px
+      position: relative
+      margin-bottom: 85px
+      min-height: 265px
+      border-radius: 10px
+      overflow: hidden
+      padding: 30px 25px
+      display: flex
+      flex-direction: column
+      justify-content: flex-end
+      align-items: flex-start
+      +r(767)
+        margin-bottom: 20px
+      img
+        width: 100%
+        height: 100%
+        +object-fit(cover)
+        position: absolute
+        top: 0
+        left: 0
+        z-index: -1
+      h4
+        font-size: 18px
+        margin-bottom: 5px
+        color: $white
+      p
+        font-size: 14px
+        font-weight: 600
+        color: $white
+  &__statement
+    min-height: 522px
+    height: 100%
+    background-color: #12114a
+    +center
+    position: relative
+    +r(767)
+      min-height: 300px
+    &__parallax
+      position: absolute
+      right: 0
+      top: 0px
+      font-size: 175px
+      font-weight: bold
+      color: rgba(255, 255, 255, 0.01)
+      text-transform: uppercase
+      z-index: 1
+      +r(1040)
+        font-size: 120px
+      +r(767)
+        font-size: 50px
+        top: 50px
+    &__title
+      padding-top: 100px
+      +r(767)
+        padding-top: 50px
+      h4
+        font-size: 35px
+        font-weight: normal
+        text-align: center
+        color: $white
+        margin-bottom: 15px
+        +r(767)
+          font-size: 22px
+      h2
+        font-size: 50px
+        font-weight: bold
+        color: $white
+        text-align: center
+        text-transform: uppercase
+        +r(1040)
+          font-size: 40px
+        +r(767)
+          font-size: 30px
+  &__location
+    position: relative
+    padding: 130px 0
+    +r(767)
+      padding: 80px 0 40px
+    &__parallax
+      position: absolute
+      right: -250px
+      top: 0px
+      font-size: 175px
+      font-weight: bold
+      color: rgba(18, 17, 74, 0.03)
+      text-transform: uppercase
+      z-index: -1
+      +r(1160)
+        font-size: 120px
+      +r(767)
+        font-size: 48px
+        right: -55px
+    h2
+      font-size: 35.3px
+      font-weight: normal
+      color: #12114a
+      margin-bottom: 110px
+      +r(767)
+        margin-bottom: 30px
+    &__block
+      box-shadow: 0px 16px 28px 0 rgba(11, 11, 77, 0.14)
+      background-color: $white
+      width: 100%
+      padding: 40px 30px
+      +r(1040)
+        margin-bottom: 20px
+      h3
+        font-size: 17px
+        font-weight: normal
+        color: #12114a
+        margin-bottom: 20px
+        text-align: left
+      p
+        font-size: 13.3px
+        font-weight: normal
+        line-height: 1.66
+        text-align: left
+        color: #707070
+        max-width: 240px
