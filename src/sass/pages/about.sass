@@ -24,6 +24,15 @@
     padding-top: 125px
     +r(767)
       padding-top: 40px
+    &__decor
+      position: absolute
+      bottom: 25%
+      right: -60px
+      width: 24px
+      height: 24px
+      border-radius: 100%
+      display: block
+      border: 5px solid rgb(125, 206, 160)
     &__content
       position: relative
       display: flex
@@ -93,8 +102,25 @@
           padding-bottom: 0
   &__advantages
     padding: 120px 0
+    position: relative
     +r(1040)
       padding: 60px 0 40px
+    &__decor
+      +r(500)
+        display: none
+      img:first-child
+        position: absolute
+        left: 40px
+        top: 60px
+        width: 170px
+        +r(1040)
+          width: 150px
+          top: 100px
+      img:last-child
+        position: absolute
+        right: 40px
+        bottom: 80px
+        width: 60px
     &__block
       +center
       align-items: flex-start
