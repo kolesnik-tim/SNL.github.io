@@ -9,3 +9,26 @@ block content
   include ./home/events
   include ./home/values
   include ./home/locations
+  .modal.register#request-pop-up
+    form.form
+      .register__title
+        h2 Request Agenda
+        p Leave your details below and get your copy of the event
+      .register__input
+        input(type="text" id="full-name" name="full-name" required)
+        label(for="full-name") Full Name
+      .register__input
+        input(type="email" id="business-email" name="business-email" required)
+        label(for="business-email") Business Email
+      .register__input
+        input(type="tel" id="phone-number" name="phone-number" required)
+        label(for="phone-number") Phone Number
+      .register__btn
+        a(href="#" rel="modal:close").btn.btn-secondary Cancel
+        button.btn.btn-primary
+          span Request Now
+      strong Privacy Policy: This information will never be shared.
+    .register__true
+      i.icon.icon-checked
+      p Thank you for your message. It has been sent.
+      a(href="#" rel="modal:close")
