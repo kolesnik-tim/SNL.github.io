@@ -114,7 +114,7 @@
                     <div class="home-events__text">
                       <h2><span>Upcoming Events</span>Advanced Shutdown Turnaround and Outage Management Excellence – 2019</h2>
                       <p>Pixel Pioneers, a one-day conference for web and UX designers and front-end developers, will take place on the 23rd of November 2019 in Belfast.</p>
-                      <div class="home-events__text__btn"><a href="#" class="btn btn-primary"><span>Register Now</span></a><a href="#" class="btn">Request Agenda</a></div>
+                      <div class="home-events__text__btn"><a href="#request-pop-up" rel="modal:open" class="btn btn-primary"><span>Register Now</span></a><a href="#" class="btn">Request Agenda</a></div>
                     </div>
                   </div>
                 </div>
@@ -154,7 +154,7 @@
                     <div class="home-events__text">
                       <h2><span>Upcoming Events</span>Advanced Shutdown Turnaround and Outage Management Excellence – 2019</h2>
                       <p>Pixel Pioneers, a one-day conference for web and UX designers and front-end developers, will take place on the 23rd of November 2019 in Belfast.</p>
-                      <div class="home-events__text__btn"><a href="#" class="btn btn-primary"><span>Register Now</span></a><a href="#" class="btn">Request Agenda</a></div>
+                      <div class="home-events__text__btn"><a href="#request-pop-up" rel="modal:open" class="btn btn-primary"><span>Register Now</span></a><a href="#" class="btn">Request Agenda</a></div>
                     </div>
                   </div>
                 </div>
@@ -194,7 +194,7 @@
                     <div class="home-events__text">
                       <h2><span>Upcoming Events</span>Advanced Shutdown Turnaround and Outage Management Excellence – 2019</h2>
                       <p>Pixel Pioneers, a one-day conference for web and UX designers and front-end developers, will take place on the 23rd of November 2019 in Belfast.</p>
-                      <div class="home-events__text__btn"><a href="#" class="btn btn-primary"><span>Register Now</span></a><a href="#" class="btn">Request Agenda</a></div>
+                      <div class="home-events__text__btn"><a href="#request-pop-up" rel="modal:open" class="btn btn-primary"><span>Register Now</span></a><a href="#" class="btn">Request Agenda</a></div>
                     </div>
                   </div>
                 </div>
@@ -266,6 +266,21 @@
           </div>
         </div>
       </section>
+      <div id="request-pop-up" class="modal register">
+        <form class="form">
+          <div class="register__title">
+            <h2>Request Agenda</h2>
+            <p>Leave your details below and get your copy of the event</p>
+          </div>
+          <div class="register__input"><input type="text" id="full-name" name="full-name" required><label for="full-name">Full Name</label></div>
+          <div class="register__input"><input type="email" id="business-email" name="business-email" required><label for="business-email">Business Email</label></div>
+          <div class="register__input"><input type="tel" id="phone-number" name="phone-number" required><label for="phone-number">Phone Number</label></div>
+          <div class="register__btn"><a href="#" rel="modal:close" class="btn btn-secondary">Cancel</a><button class="btn btn-primary"><span>Request Now</span></button></div><strong>Privacy Policy: This information will never be shared.</strong>
+        </form>
+        <div class="register__true"><img src="img/sent.png" alt="">
+          <p>Thank you for your message. It has been sent.</p><a href="#" rel="modal:close"></a>
+        </div>
+      </div>
       <!--BEGIN footer-->
       <footer class="footer footer__none">
         <div class="footer__decor footer__decor-1"><img src="img/home/designs-footer-1.png" alt=""></div>

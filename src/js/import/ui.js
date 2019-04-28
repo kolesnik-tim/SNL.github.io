@@ -32,3 +32,14 @@ AOS.init({
   duration: 1500,
   offset: 100,
 });
+
+
+
+//request_agenda_sucess
+$('button.btn.btn-primary').on('click', function() {
+  if($('.register input').val() === '') {
+  } else{
+    $('.register__true').addClass('active');
+  }
+});
+

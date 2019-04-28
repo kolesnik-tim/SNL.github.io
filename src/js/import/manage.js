@@ -2,7 +2,9 @@ import datepicker from 'air-datepicker';
 import fancybox from '@fancyapps/fancybox';
 import '../lib/selectize.min.js';
 
-
+$('.registration__form__select').selectize({
+  sortField: 'text'
+});
 
 //gallery fancybox
 $('.table__gallery a').fancybox({

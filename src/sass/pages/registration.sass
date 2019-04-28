@@ -1,0 +1,238 @@
+.registration
+  background: rgb(240, 240, 240)
+  padding-bottom: 200px
+  +r(767)
+    padding-bottom: 70px
+  h2
+    font-size: 40px
+    font-weight: normal
+    color: #12114a
+    margin: 60px 0
+    +r(767)
+      font-size: 27px
+      margin: 30px 0
+  &__content
+    display: flex
+    +r(767)
+      flex-direction: column
+  &__form
+    flex: 1
+    padding: 42px
+    border-radius: 10px
+    box-shadow: 0px 5px 10.5px 0 rgba(0, 0, 0, 0.15)
+    border: solid 0 #000000
+    background-color: $white
+    +r(767)
+      padding: 15px
+    h3
+      font-size: 25px
+      font-weight: bold
+      color: #12114a
+      margin-bottom: 30px
+      +r(767)
+        margin-bottom: 15px
+    h4
+      font-size: 18px
+      font-weight: normal
+      color: #12114a
+      margin-bottom: 10px
+      +r(767)
+        margin-bottom: 0
+      b
+        font-weight: 600
+    &__block
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+    &__input
+      position: relative
+      width: calc(50% - 10px)
+      padding-top: 25px
+      +r(767)
+        width: 100%
+      
+      .selectize-input.full
+        background: none
+      .selectize-input
+        border: none
+        border-bottom: 1px solid #cecece
+        box-shadow: none !important
+        border-radius: 0
+        padding: 6px 0
+        width: 100%
+        margin-top: 5px
+      .selectize-input>input
+        display: none !important
+      .selectize-input>*
+        font-family: 'Eina03', sans-serif
+        color: #616161
+        font-size: 14px
+      .selectize-input:after
+        right: 2px !important
+      .selectize-dropdown [data-selectable]
+        color: #616161
+      .selectize-dropdown
+        border-radius: 3px
+        top: 37px !important
+      input
+        width: 100%
+        border-bottom: 1px solid #cecece
+        font-size: 14px
+        font-weight: normal
+        color: #616161
+        padding: 10px 0
+        background: none
+        &:focus 
+          & + label
+            opacity: 0
+        &:valid
+          & + label
+            opacity: 0
+      label
+        font-size: 14px
+        font-weight: normal
+        color: #616161
+        position: absolute
+        left: 0
+        bottom: 10px
+        +tr
+        &:before
+          content: ''
+          position: absolute
+          right: -10px
+          top: 5px
+          width: 6px
+          height: 6px
+          background-color: $orangey-red
+          border-radius: 100%
+    &__more
+      margin-top: 30px
+      margin-bottom: 65px
+      display: flex
+      a.add
+        display: flex
+        align-items: center
+        font-size: 12px
+        font-weight: 600
+        color: #403bee
+        i
+          width: 24px
+          height: 24px
+          +center
+          border-radius: 100%
+          background: #403bee
+          color: $white
+          padding-left: 1px
+          margin-right: 9px
+      a.delete
+        display: flex
+        align-items: center
+        font-size: 12px
+        font-weight: 600
+        color: #f40057
+        margin-left: 25px
+        i
+          width: 24px
+          height: 24px
+          +center
+          border-radius: 100%
+          background: #f40057
+          color: $white
+          padding-right: 1px
+          margin-right: 9px
+    &__checkbox
+      margin-top: 45px
+      +r(767)
+        margin-bottom: 10px
+      input
+        display: none
+        &:checked + label
+          &:before
+            background: #403bee
+            border-color: #403bee
+            color: $white
+      label
+        span
+          font-size: 12px
+          font-weight: normal
+          color: rgba(97, 97, 97, 0.8)
+          flex: 1
+        display: flex
+        &:before
+          content: $icon-checked-1
+          font-family: "iconfont"
+          width: 16px
+          height: 16px
+          border-radius: 3px
+          border: 1px solid rgba(97, 97, 97, 0.8)
+          margin-right: 18px
+          font-size: 9px
+          padding-left: 1px
+          padding-top: 1px
+          +center
+          color: transparent  
+          +tr
+          +r(767)
+            margin-right: 10px
+    &__btn
+      display: flex
+      justify-content: flex-end
+      margin-top: 90px
+      +r(767)
+        margin-top: 40px
+      a
+        width: 112px
+        height: 45px
+        border-radius: 22px
+        border: solid 1px $charcoal-grey
+        background-color: $white
+        +center
+        justify-content: center !important
+        font-size: 14px
+        font-weight: normal
+        padding: 0
+        color: $charcoal-grey
+        +r(767)
+          width: 90px
+        &:hover
+          background: $charcoal-grey
+          color: $white
+      button
+        padding-top: 11px
+        border-radius: 22px
+        margin-left: 10px
+  &__aside
+    max-width: 300px
+    margin-left: 45px
+    +r(767)
+      margin-left: 0
+      margin-top: 40px
+    h3
+      font-size: 18px
+      font-weight: bold
+      color: #12114a
+      margin-bottom: 15px
+    &__details
+      border-bottom: 1px solid #cecece
+      padding-bottom: 30px
+      p
+        font-size: 14px
+        font-weight: normal
+        line-height: 1.43
+        color: #616161
+        margin-bottom: 20px
+      b
+        font-size: 14px
+        font-weight: bold
+        color: #616161
+    &__order
+      padding-top: 30px
+      td
+        font-size: 14px
+        font-weight: normal
+        color: #616161
+        padding: 7px 0
+      tr:last-child
+        td
+          font-weight: bold
+          color: #12114a
