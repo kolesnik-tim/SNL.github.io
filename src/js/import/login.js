@@ -26,3 +26,6 @@ $('#password .login__step__submit a').on('click', function() {
 $('.login__step__input input').focus(function() {
   $('.login__step__input--possword-new').removeClass('error');
 });
+
+// Work-around for chrome auto-fill & placeholder overlapping issue...
+$('#email-id').focus();
