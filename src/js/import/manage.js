@@ -21,6 +21,10 @@ $('#table__name-search').focusout(function() {
 
 //drop-down open
 $('.drop-down--open').on('click', function(e) {
+  console.log('tagName', $(e.target).prop('tagName'));
+  if($(e.target).prop('tagName').toLowerCase() === 'a' || $(e.target).prop('tagName').toLowerCase() === 'li') {
+    return false;
+  }
   e.preventDefault();
   $(this).find('ul').fadeIn();
 });
