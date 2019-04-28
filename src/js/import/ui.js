@@ -42,3 +42,4 @@ $('button.btn.btn-primary').on('click', function() {
     $('.register__true').addClass('active');
   }
 });
+

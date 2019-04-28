@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Register Event</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;amp;subset=cyrillic-ext" rel="stylesheet">
+    <link rel="stylesheet" media="all" href="css/app.css">
+  </head>
+  <body>
+    <!--BEGIN out-->
+    <div class="out">
+      <!--BEGIN header-->
+      <header class="header header__none">
+        <div class="container">
+          <div class="row middle-xs">
+            <div class="col-sm-2 col-xs-7"><a href="index.html" class="header__logo"><img src="img/logo-3.png" alt=""></a></div>
+            <div class="col-sm-10 col-xs-5">
+              <div class="menu-open"><span></span></div>
+              <nav class="header__nav hidden-xs">
+                <ul>
+                  <li class="active"><a href="#">Home</a></li>
+                  <li><a href="#">About Us<i class="icon icon-down-arrow"></i></a>
+                    <ul class="header__nav__dropdown">
+                      <li><a href="#">Our Journey</a></li>
+                      <li><a href="#">Our Vision</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Our Services<i class="icon icon-down-arrow"></i></a>
+                    <ul class="header__nav__dropdown">
+                      <li><a href="#">Our Journey</a></li>
+                      <li><a href="#">Our Vision</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Our Events</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="header__menu__bg"></div>
+      <div class="header__menu">
+        <div class="menu-close"><span></span></div>
+        <ul>
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">About Us</a>
+            <ul>
+              <li><a href="#">Our Journey</a></li>
+              <li><a href="#">Our Vision</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Our Services</a>
+            <ul>
+              <li><a href="#">Our Journey</a></li>
+              <li><a href="#">Our Vision</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Our Events</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <!--END header-->
+      <div class="registration">
+        <section class="about__intro">
+          <div class="container">
+            <h1>Attend. Engage. Grow.</h1>
+          </div>
+        </section>
+        <div class="container">
+          <h2>Online Event Registration</h2>
+          <div class="registration__content">
+            <form class="registration__form">
+              <h3>Delegate Information</h3>
+              <h4>Delegate <b>#1/3</b></h4>
+              <div class="registration__form__block">
+                <div class="registration__form__input"><input type="text" id="first-name" name="first-name" required><label for="first-name">First Name </label></div>
+                <div class="registration__form__input"><input type="text" id="last-name" name="last-name" required><label for="last-name">Last Name</label></div>
+                <div class="registration__form__input"><input type="text" id="job-title" name="job-title" required><label for="job-title">Job Title</label></div>
+                <div class="registration__form__input"><input type="email" id="email-address" name="email-address" required><label for="email-address">Email Address</label></div>
+                <div class="registration__form__input"><input type="tel" id="phone" name="phone" required><label for="phone">Phone</label></div>
+              </div>
+              <div class="registration__form__more"><a href="#" class="add"><i class="icon icon-plus"></i>Add more</a></div>
+              <h4>Delegate <b>#2/3</b></h4>
+              <div class="registration__form__block">
+                <div class="registration__form__input"><input type="text" id="first-name-2" name="first-name-2" required><label for="first-name-2">First Name </label></div>
+                <div class="registration__form__input"><input type="text" id="last-name-2" name="last-name-2" required><label for="last-name-2">Last Name</label></div>
+                <div class="registration__form__input"><input type="text" id="job-title-2" name="job-title-2" required><label for="job-title-2">Job Title</label></div>
+                <div class="registration__form__input"><input type="email" id="email-address-2" name="email-address-2" required><label for="email-address-2">Email Address</label></div>
+                <div class="registration__form__input"><input type="tel" id="phone-2" name="phone-2" required><label for="phone-2">Phone</label></div>
+              </div>
+              <div class="registration__form__more"><a href="#" class="add"><i class="icon icon-plus"></i>Add more</a><a href="#" class="delete"><i class="icon icon-delete"></i>Delete</a></div>
+              <h4>Billing Information (Company Details)</h4>
+              <div class="registration__form__block">
+                <div class="registration__form__input"><input type="text" id="company-name" name="company-name" required><label for="company-name">Company Name </label></div>
+                <div class="registration__form__input"><select class="registration__form__select">
+                    <option value="1">Country</option>
+                    <option value="2">Country2</option>
+                    <option value="3">Country3</option>
+                    <option value="4">Country4 </option>
+                  </select></div>
+                <div class="registration__form__input"><input type="text" id="street-address" name="street-address" required><label for="street-address">Street Address</label></div>
+                <div class="registration__form__input"><input type="number" id="postcode" name="postcode" required><label for="postcode">Postcode / ZIP</label></div>
+                <div class="registration__form__input"><input type="text" id="town" name="town" required><label for="town">Town / City</label></div>
+                <div class="registration__form__input"><input type="number" id="vat-number" name="vat-number" required><label for="vat-number">VAT Number</label></div>
+                <div class="registration__form__input"><input type="email" id="email-addres-3" name="email-addres-3" required><label for="email-addres-3">Email Address</label></div>
+              </div>
+              <div class="registration__form__checkbox"><input type="checkbox" name="checkbox" id="checkbox" checked><label for="checkbox"> <span>I have read and agree to the website terms and conditions. I hereby grant S&L consent to process personal data in accordance to these terms and conditions.</span></label></div>
+              <div class="registration__form__btn"><a href="#" class="btn btn-secondary">Cancel</a><button type="submit" class="btn btn-primary"><span>Register Now</span></button></div>
+            </form>
+            <aside class="registration__aside">
+              <div class="registration__aside__details">
+                <h3>Event Details</h3>
+                <p>Advanced Shutdown Turnaround and Outage Management Excellence – 2019</p>
+                <p>24-27 Sep Antwerp, Belgium.</p><b>€ 1,599.00</b>
+              </div>
+              <div class="registration__aside__order">
+                <h3>Your Order</h3>
+                <table>
+                  <tr>
+                    <td>Subtotal</td>
+                    <td>€ 1,599.00</td>
+                  </tr>
+                  <tr>
+                    <td>Delegate Fee</td>
+                    <td>€ 29.00</td>
+                  </tr>
+                  <tr>
+                    <td>Administration Fee</td>
+                    <td>€ 29.00</td>
+                  </tr>
+                  <tr>
+                    <td>VAT</td>
+                    <td>€ 325.60</td>
+                  </tr>
+                  <tr>
+                    <td>Total</td>
+                    <td>€ 1,953.60</td>
+                  </tr>
+                </table>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+      <!--BEGIN footer-->
+      <footer class="footer footer__none">
+        <div class="footer__decor footer__decor-1"><img src="img/home/designs-footer-1.png" alt=""></div>
+        <div class="footer__decor footer__decor-2"></div>
+        <div class="footer__decor footer__decor-3"><img src="img/home/designs-footer-2.png" alt=""></div>
+        <div class="footer__decor footer__decor-4"></div>
+        <div class="footer__decor footer__decor-5"><img src="img/home/designs-footer-3.png" alt=""></div>
+        <div class="container">
+          <div class="row center-xs">
+            <div class="col-md-8 col-xs-12">
+              <div class="footer__nav">
+                <div class="footer__nav__column">
+                  <h4><a href="#">Home</a></h4>
+                </div>
+                <div class="footer__nav__column">
+                  <h4>About Us</h4>
+                  <ul>
+                    <li><a href="#">Our Journey</a></li>
+                    <li><a href="#">Our Vision</a></li>
+                  </ul>
+                </div>
+                <div class="footer__nav__column">
+                  <h4>Our Services</h4>
+                  <ul>
+                    <li><a href="#">Our Journey</a></li>
+                    <li><a href="#">Our Vision</a></li>
+                  </ul>
+                </div>
+                <div class="footer__nav__column">
+                  <h4><a href="#">Our Events</a></h4>
+                </div>
+                <div class="footer__nav__column">
+                  <h4><a href="#">Contact Us</a></h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__social"><a href="#"><i class="icon icon-fb"></i></a><a href="#"><i class="icon icon-twitter"></i></a><a href="#"><i class="icon icon-in"></i></a></div>
+          <div class="footer__copyright">
+            <p>Copyright © 2019 Sync&Link All Rights Reserved.</p><span>Powered by evolve media solutions</span>
+          </div>
+        </div>
+      </footer>
+      <!--END footer-->
+      <!--BEGIN pop-up-->
+      <div id="warning" class="modal warning">
+        <h3>Are you sure?</h3>
+        <p>Are you sure that you want to perform this action?</p>
+        <div class="warning__btn"><a href="#close" rel="modal:close" class="btn btn-primary"><span>No</span></a><a href="#close" rel="modal:close" class="btn btn-primary manage__create__close"><span>Yes</span></a></div>
+      </div>
+      <!--END pop-up-->
+    </div>
+    <!--END out-->
+    <!--LOAD SCRIPTS-->
+    <script type="text/javascript" src="js/app.js"></script>
+  </body>
+</html>

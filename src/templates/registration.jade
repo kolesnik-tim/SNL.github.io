@@ -1,0 +1,125 @@
+---
+title: Register Event
+header__none: header__none
+footer__none: footer__none
+---
+extends layouts/_layout
+block content
+  .registration
+    section.about__intro
+      .container
+        h1 Attend. Engage. Grow.
+    .container
+      h2 Online Event Registration
+      .registration__content
+        form.registration__form
+          h3 Delegate Information
+          h4 Delegate 
+            b #1/3
+          .registration__form__block
+            .registration__form__input
+              input(type="text" id="first-name" name="first-name" required)
+              label(for="first-name") First Name 
+            .registration__form__input
+              input(type="text" id="last-name" name="last-name" required)
+              label(for="last-name") Last Name
+            .registration__form__input
+              input(type="text" id="job-title" name="job-title" required)
+              label(for="job-title") Job Title
+            .registration__form__input
+              input(type="email" id="email-address" name="email-address" required)
+              label(for="email-address") Email Address
+            .registration__form__input
+              input(type="tel" id="phone" name="phone" required)
+              label(for="phone") Phone
+          .registration__form__more
+            a(href="#").add
+              i.icon.icon-plus
+              | Add more
+          h4 Delegate 
+            b #2/3
+          .registration__form__block
+            .registration__form__input
+              input(type="text" id="first-name-2" name="first-name-2" required)
+              label(for="first-name-2") First Name 
+            .registration__form__input
+              input(type="text" id="last-name-2" name="last-name-2" required)
+              label(for="last-name-2") Last Name
+            .registration__form__input
+              input(type="text" id="job-title-2" name="job-title-2" required)
+              label(for="job-title-2") Job Title
+            .registration__form__input
+              input(type="email" id="email-address-2" name="email-address-2" required)
+              label(for="email-address-2") Email Address
+            .registration__form__input
+              input(type="tel" id="phone-2" name="phone-2" required)
+              label(for="phone-2") Phone
+          .registration__form__more
+            a(href="#").add
+              i.icon.icon-plus
+              | Add more
+            a(href="#").delete
+              i.icon.icon-delete
+              | Delete
+          h4 Billing Information (Company Details)
+          .registration__form__block
+            .registration__form__input
+              input(type="text" id="company-name" name="company-name" required)
+              label(for="company-name") Company Name 
+            .registration__form__input
+              select.registration__form__select
+                option(value="1") Country
+                option(value="2") Country2
+                option(value="3") Country3
+                option(value="4") Country4 
+            .registration__form__input
+              input(type="text" id="street-address" name="street-address" required)
+              label(for="street-address") Street Address
+            .registration__form__input
+              input(type="number" id="postcode" name="postcode" required)
+              label(for="postcode") Postcode / ZIP
+            .registration__form__input
+              input(type="text" id="town" name="town" required)
+              label(for="town") Town / City
+            .registration__form__input
+              input(type="number" id="vat-number" name="vat-number" required)
+              label(for="vat-number") VAT Number
+            .registration__form__input
+                input(type="email" id="email-addres-3" name="email-addres-3" required)
+                label(for="email-addres-3") Email Address
+          .registration__form__checkbox
+            input(type="checkbox" name="checkbox" id="checkbox" checked)
+            label(for="checkbox") 
+              span I have read and agree to the website terms and conditions. I hereby grant S&L consent to process personal data in accordance to these terms and conditions.
+          .registration__form__btn
+            a(href="#").btn.btn-secondary Cancel
+            button(type="submit").btn.btn-primary
+              span Register Now
+        aside.registration__aside
+          .registration__aside__details
+            h3 Event Details
+            p Advanced Shutdown Turnaround and Outage Management Excellence – 2019
+            p 24-27 Sep Antwerp, Belgium.
+            b € 1,599.00
+          .registration__aside__order
+            h3 Your Order
+            table
+              tr
+                td Subtotal
+                td € 1,599.00
+              tr
+                td Delegate Fee
+                td € 29.00
+              tr
+                td Administration Fee
+                td € 29.00
+              tr
+                td VAT
+                td € 325.60
+              tr
+                td Total
+                td € 1,953.60
+
+
+
+
