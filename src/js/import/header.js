@@ -23,10 +23,12 @@ mywindow.scroll(function() {
       $('.header').stop().removeClass('scroll');
       $('.slider__header').css({'top': 0});
       up = !up;
+      $('.registration__aside').removeClass('active');
     } else if(newscroll < mypos && up) {
       $('.header').stop().addClass('scroll');
       $('.slider__header').css({'top': $('.header').innerHeight()});
       up = !up;
+      $('.registration__aside').addClass('active');
     }
     mypos = newscroll;
   } else {
