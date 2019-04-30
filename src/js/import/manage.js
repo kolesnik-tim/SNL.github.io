@@ -22,13 +22,9 @@ $('#table__name-search').focusout(function() {
 });
 
 //drop-down open
-$('.drop-down--open').on('click', function(e) {
-  console.log('tagName', $(e.target).prop('tagName'));
-  if($(e.target).prop('tagName').toLowerCase() === 'a' || $(e.target).prop('tagName').toLowerCase() === 'li') {
-    return false;
-  }
+$('.drop-down--open--trigger').on('click', function(e) {
   e.preventDefault();
-  $(this).find('ul').fadeIn();
+  $(this).parents('.drop-down--open').find('ul').fadeIn();
 });
 //document mouseup
 $(document).mouseup(function(e) {

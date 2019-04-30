@@ -28,5 +28,5 @@ $('.login__step__input input').focus(function() {
 });
 
 // Work-around for chrome auto-fill & placeholder overlapping issue...
-$("#password").focus();
+$('#password').focus();
 $('#email-id').focus();
