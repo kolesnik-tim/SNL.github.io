@@ -83,7 +83,13 @@
         color: #616161
         padding: 10px 0
         background: none
+        &.focused
+          & + label
+            opacity: 0
         &:focus 
+          & + label
+            opacity: 0
+        &:-webkit-autofill 
           & + label
             opacity: 0
         &:valid

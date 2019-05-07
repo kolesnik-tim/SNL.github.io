@@ -43,3 +43,14 @@ $('button.btn.btn-primary').on('click', function() {
   }
 });
 
+
+// remove the focused class from field on focus
+$(document).on('focus', 'input,textarea', function() {
+  $(this).removeClass('focused');
+});
+
+setTimeout(function() {
+  $('input,textarea').each(function() {
+    if($(this).val() || $('#'+$(this).attr('id')+':-webkit-autofill').val()) $(this).addClass('focused');
+  });
+}, 500);

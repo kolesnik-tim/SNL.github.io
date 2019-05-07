@@ -469,7 +469,13 @@
         color: #616161
         padding-bottom: 10px
         background: none
+        &.focused
+          & + label
+            opacity: 0
         &:focus 
+          & + label
+            opacity: 0
+        &:-webkit-autofill 
           & + label
             opacity: 0
         &:valid
@@ -556,6 +562,18 @@
         color: #616161
         padding-bottom: 10px
         background: none
+        &.focused
+          & + label
+            opacity: 0
+        &:focus 
+          & + label
+            opacity: 0
+        &:-webkit-autofill 
+          & + label
+            opacity: 0
+        &:valid
+          & + label
+            opacity: 0
       label
         font-size: 14px
         font-weight: normal
