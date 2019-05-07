@@ -1,0 +1,59 @@
+---
+title: Contact-us
+header__none: header__none
+footer__none: footer__none
+---
+extends layouts/_layout
+block content
+  .contact
+    section.contact__intro
+      .container
+        h1 CONTACT US
+    section.contact__form
+      .contact__form__decor
+        img(src="img/about/about-location.png", alt="")
+        img(src="img/about/about-line.png", alt="")
+        span
+      .container
+        form
+          .row
+            .col-sm-4.col-xs-12
+              .contact__form__input
+                p Full Name
+                input(type="text" name="name" placeholder="Sohel Nazmul")
+            .col-sm-4.col-xs-12
+              .contact__form__input
+                p Business Email
+                input(type="email" name="email" placeholder="sohel@gmail.com")
+            .col-sm-4.col-xs-12
+              .contact__form__input
+                p Phone Number
+                input(type="tel" name="phone" placeholder="887276272")
+            .col-xs-12
+              .contact__form__message
+                p Message
+                textarea(name="message" placeholder="Enter youe meaases here")
+            .col-xs-12.end-xs
+              button(type="submit").btn.btn-primary
+                span Send Message
+    section.contact__location
+      .contact__location__decor
+        img(src="img/about/about-location.png", alt="")
+        img(src="img/about/about-line.png", alt="")
+        span
+      .contact__location__parallax(data-aos="fade-right") Get Direction
+      .container
+        h2 Locations
+        .row.center-xs
+          .col-md-4.col-sm-6.col-xs-12
+            .contact__location__block
+              h3 Bengaluru, India
+              p Washington State Convention Center 705 Pike Street ,Seattle, WA 98101 Phone: 206-694-5000
+          .col-md-4.col-sm-6.col-xs-12
+            .contact__location__block
+              h3 Dubai, UAE
+              p Washington State Convention Center 705 Pike Street ,Seattle, WA 98101 Phone: 206-694-5000
+          .col-md-4.col-sm-6.col-xs-12
+            .contact__location__block
+              h3 Antwerp, Belgium
+              p Washington State Convention Center 705 Pike Street ,Seattle, WA 98101 Phone: 206-694-5000
