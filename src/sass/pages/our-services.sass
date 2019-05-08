@@ -26,6 +26,44 @@
       +r(767)
         font-size: 40px !important
   &__content
+    position: relative
+    &__decor
+      span
+        display: block
+        position: absolute
+        border-radius: 100%
+        &:first-child
+          width: 277px
+          height: 277px
+          opacity: 0.5
+          border: solid 68px #30dffd
+          left: -140px
+          top: 0
+          +r(767)
+            display: none
+        &:nth-child(2)
+          width: 110px
+          height: 110px
+          opacity: 0.4
+          right: 30px
+          top: 16%
+          background-color: #d452ac
+        &:nth-child(3)
+          width: 46px
+          height: 46px
+          opacity: 0.26
+          left: 5%
+          top: 45%
+          background-color: #74a241
+          +r(767)
+            top: 39%
+        &:last-child
+          width: 49px
+          height: 49px
+          opacity: 0.65
+          right: 30px
+          bottom: 42%
+          background-color: #30dffd
   &__block
     margin-bottom: 100px
     strong
