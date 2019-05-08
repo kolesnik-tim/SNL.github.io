@@ -1,0 +1,281 @@
+.events_details
+  &__intro
+    background-image: linear-gradient(310deg, #2226a3, $dark)
+    padding: 120px 0 50px
+    &__img
+      height: 100%
+      width: 100%
+      +center
+      position: relative
+      svg
+        width: 100%
+        height: 100%
+        position: absolute
+        left: 0 
+        top: 0
+      +r(1040)
+        align-items: flex-start
+        padding-top: 100px
+      +r(767)
+        background-position: 47% 0
+        height: 340px
+        align-items: center
+        padding-top: 0
+        padding-bottom: 50px
+    &__text
+      padding-left: 60px
+      padding-right: 50px
+      +r(1040)
+        padding-left: 20px
+      +r(767)
+        padding: 0 !important
+        padding-top: 20px !important
+        position: relative
+        top: -10px
+      &__icon
+        width: 50px
+        height: 50px
+        border-radius: 100%
+        background: $white
+        +center
+        margin-right: 15px
+        +r(767)
+          margin-right: 6px
+          width: 40px
+          height: 40px
+        img
+          width: 30px
+      ul
+        position: relative
+        z-index: 3
+        display: flex
+        align-items: center
+        justify-content: space-between
+        width: 620px
+        margin-bottom: 65px
+        +r(1040)
+          width: 100%
+          flex-direction: column
+          align-items: flex-start
+        +r(767)
+          margin-bottom: 40px
+      li
+        display: flex
+        align-items: center
+        margin-bottom: 13px
+        &:first-child
+          font-size: 30px
+          font-weight: bold
+          color: $white
+        &:nth-child(2)
+          font-size: 14px
+          font-weight: bold
+          color: $white
+        &:last-child
+          font-size: 14px
+          font-weight: bold
+          color: $white
+          text-transform: uppercase
+      h2
+        font-size: 35px
+        font-weight: normal
+        color: #ffffff
+        margin-bottom: 50px
+        +r(1040)
+          font-size: 25px
+        +r(767)
+          margin-bottom: 15px
+
+        span
+          text-transform: uppercase
+          font-size: 14px
+          font-weight: bold
+          line-height: 2.5
+          letter-spacing: 0.8px
+          color: #f20487
+          display: block
+      p
+        font-size: 17px
+        font-weight: normal
+        line-height: 1.94
+        color: #707070
+        margin-bottom: 80px
+        +r(1040)
+          font-size: 15px
+        +r(767)
+          margin-bottom: 40px
+      &__btn
+        position: relative
+        display: inline-flex
+        &:before
+          content: ''
+          width: 113px
+          height: 113px
+          background: rgba(#d452ac, 0.07)
+          position: absolute
+          left: 18px
+          top: 50%
+          transform: translate(0%, -50%)
+          border-radius: 100%
+          z-index: -1
+          +r(1040)
+            left: 0px
+        a:last-child
+          padding: 13px 30px 10px
+          border-radius: 25px
+          border: solid 1px #ffffff
+          color: #ffffff
+          margin-left: 20px
+          &:hover
+            background-color: #4143ea
+            border-color: #4143ea
+        a
+          font-size: 15px
+          span
+            font-size: 15px
+          +r(1040)
+            padding: 12px 12px 9px !important
+  &__parallax
+    position: absolute
+    right: -200px
+    top: 0px
+    font-size: 175px
+    font-weight: bold
+    color: rgba(18, 17, 74, 0.03)
+    text-transform: uppercase
+    +r(1040)
+      font-size: 120px
+    +r(767)
+      font-size: 50px !important
+      right: -80px
+  &__content
+    position: relative
+    padding: 230px 0 0
+    overflow: hidden
+    background-color: #f8f8fa
+    +r(767)
+      padding: 70px 0 0
+    img
+      max-width: 100%
+      width: 420px
+      margin-bottom: -10px
+  &__text
+    +r(767)
+      margin-bottom: 40px
+    h2
+      font-size: 39px
+      font-weight: bold
+      color: #12114a
+      margin-bottom: 60px
+      +r(767)
+        margin-bottom: 30px
+    p
+      font-size: 18px
+      font-weight: normal
+      line-height: 1.94
+      color: #707070
+      padding-right: 40px
+      +r(767)
+        padding-right: 0
+  &__triners
+    position: relative
+    padding-top: 160px
+    overflow: hidden
+    +r(767)
+      padding-top: 70px
+    &__parallax
+      position: absolute
+      right: -330px
+      top: 80px
+      font-size: 175px
+      font-weight: bold
+      color: rgba(18, 17, 74, 0.03)
+      text-transform: uppercase
+      +r(1040)
+        font-size: 120px
+      +r(767)
+        font-size: 50px !important
+        right: -80px
+        top: 10px
+    h2
+      font-size: 39px
+      font-weight: bold
+      color: #12114a
+      margin-bottom: 125px
+      +r(767)
+        margin-bottom: 10px
+    &__img
+      height: 355px
+      +center
+      background-image: url('../img/pages/events_details__triners__photo.png')
+      background-size: contain
+      background-repeat: no-repeat
+      background-position: 52% 50%
+    &__photo
+      width: 240px
+      height: 240px
+      overflow: hidden
+      border-radius: 100%
+      +center
+      +r(767)
+        width: 200px
+        height: 200px
+    &__text
+      h3
+        font-size: 30px
+        font-weight: bold
+        text-align: center
+        color: #110437
+        margin-bottom: 90px
+        padding-top: 10px
+        +r(767)
+          margin-bottom: 50px
+      li, p
+        font-size: 14px
+        font-weight: normal
+        line-height: 2.5
+        color: #707070
+        +r(767)
+          font-size: 12px
+      ul, ol
+        padding-bottom: 50px
+      p
+        padding-bottom: 50px
+  &__gallery
+    position: relative
+    overflow: hidden
+    background-color: #f8f8fa
+    padding: 110px 0 170px
+    +r(767)
+      padding: 70px 0 30px
+    &__parallax
+      position: absolute
+      right: -370px
+      top: 30px
+      font-size: 175px
+      font-weight: bold
+      color: rgba(18, 17, 74, 0.03)
+      text-transform: uppercase
+      +r(1040)
+        font-size: 120px
+      +r(767)
+        font-size: 50px !important
+        right: -100px
+        top: 10px
+    h2
+      font-size: 39px
+      font-weight: bold
+      color: #12114a
+      margin-bottom: 125px
+      +r(767)
+        margin-bottom: 30px
+    &__block
+      margin-bottom: 20px
+      border-radius: 8px
+      background-color: #898989
+      overflow: hidden
+      height: 245px
+      img
+        +object-fit(cover)
+        width: 100%
+        height: 100%
