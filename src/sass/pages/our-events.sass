@@ -29,8 +29,70 @@
         font-size: 45px !important
   &__block
     margin-bottom: 200px
+    position: relative
     +r(767)
       margin-bottom: 100px
+    &__decor
+      span
+        display: block
+        border-radius: 100%
+        position: absolute
+        z-index: -1
+        &:first-child
+          width: 50px
+          height: 50px
+          opacity: 0.69
+          background-color: #30dffd
+        &:nth-child(2)
+          width: 47px
+          height: 47px
+          opacity: 0.45
+          background-color: #74a241
+        &:last-child
+          width: 245px
+          height: 245px
+          opacity: 0.1
+          border: solid 65px #f20487
+          background-color: $white
+          +r(767)
+            width: 190px
+            height: 190px
+            border: solid 45px #f20487
+      &-1
+        span
+          &:first-child
+            top: 50%
+            left: 0
+            +r(767)
+              top: 40%
+          &:nth-child(2)
+            left: 44%
+            top: -40px
+          &:last-child
+            right: -245px
+            bottom: -180px
+            +r(1100)
+              right: 0
+            +r(767)
+              bottom: -100px
+      &-2
+        span
+          &:first-child
+            top: 50%
+            left: 48%
+            +r(767)
+              top: 42%
+              left: 80%
+          &:nth-child(2)
+            right: 0
+            top: 0px
+          &:last-child
+            left: -245px
+            bottom: -180px
+            +r(1100)
+              left: 0
+            +r(767)
+              bottom: -100px
     &__img
       height: 100%
       width: 100%
