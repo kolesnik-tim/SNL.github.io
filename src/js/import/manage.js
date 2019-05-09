@@ -117,6 +117,17 @@ $('#select-country').selectize({
   },
 
 });
+//selectize
+$('#select-state').selectize({
+  onChange: function(value) {
+    if($(value) === '') {
+      $('.select-state').find('.point').fadeIn();
+    } else{
+      $('.select-state').find('.point').fadeOut();
+    }
+  },
+
+});
 
 if($('div').hasClass('manage__form__image')) {
 
@@ -258,11 +269,39 @@ if($('div').hasClass('manage__form__image')) {
 
   document.getElementById('file-4').addEventListener('change', handleFileSelectSingle4, false);
 
+
+  // //image 5
+  function handleFileSelectSingle5(evt) {
+    var file = evt.target.files; // FileList object
+
+    var f = file[0];
+
+    // Only process image files.
+    if (!f.type.match('image.*')) {
+      alert('Только изображения....');
+    }
+
+    var reader = new FileReader();
+
+    // Closure to capture the file information.
+    reader.onload = (function(theFile) {
+      return function(e) {
+        // Render thumbnail.
+        var span = document.createElement('span');
+        span.innerHTML = ['<img class="img-thumbnail" src="', e.target.result,
+          '" title="', escape(theFile.name), '"/>'].join('');
+        document.getElementById('output-5').innerHTML = '';
+        document.getElementById('output-5').insertBefore(span, null);
+      };
+    })(f);
+
+    // Read in the image file as a data URL.
+    reader.readAsDataURL(f);
+  }
+
+
+  document.getElementById('file-5').addEventListener('change', handleFileSelectSingle5, false);
 }
-
-
-
-
 
 
 

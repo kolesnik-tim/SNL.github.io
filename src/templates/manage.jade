@@ -426,20 +426,21 @@ block content
           .manage__form__input
             input(type="text" id="event-name" name="event-name" required)
             label(for="event-name") Event Name
-          .manage__form__input.select-country
-            span.point
-            select#select-country(required)
-              option(value="") Venue
-              option(value="1") Angola
-              option(value="2") România
-          //- .manage__form__input.select-state
-          //-   span.point
-          //-   select#select-state(required)
-          //-     option(value="") Event Name
-          //-     option(value="1") Angola2
-          //-     option(value="2") România
-          //-     option(value="3") România3
-          //-     option(value="4") România
+          .manage__form__input.manage__form__input--select
+            .select-country
+              span.point
+              select#select-country(required)
+                option(value="") Venue
+                option(value="1") Venue 2
+                option(value="2") Venue 3
+            .select-state
+              span.point
+              select#select-state(required)
+                option(value="") Select Country
+                option(value="1") Angola2
+                option(value="2") România
+                option(value="3") România3
+                option(value="4") România
           .manage__form__datepicker
             .manage__form__datepicker__block
               input(type='text' id="event-start-date" class="datepicker-create_event" data-language='en')
@@ -467,8 +468,15 @@ block content
                   i.icon.icon-plus
                   | Upload Image
             .manage__form__image__block.manage__form__image__block--add
-              input(type="file" id="file-3" name="file")
+              input(type="file" id="file-3" name="file-3")
               span#output-3.output
+              p
+                a(href="#") 
+                  i.icon.icon-plus
+                  | Upload Image
+            .manage__form__image__block.manage__form__image__block--add
+              input(type="file" id="file-4" name="file-4")
+              span#output-4.output
               p
                 a(href="#") 
                   i.icon.icon-plus
@@ -501,8 +509,8 @@ block content
             #about-trainer
           .manage__form__image
             .manage__form__image__block.manage__form__image__block--add
-              input(type="file" id="file-4" name="file")
-              span#output-4.output
+              input(type="file" id="file-5" name="file-5")
+              span#output-5.output
               p
                 a(href="#") 
                   i.icon.icon-plus
