@@ -410,7 +410,6 @@ block content
 
 
 
-
     a(href="#warning" rel="modal:open").manage__create--bg
     .manage__create
       .manage__create__header
@@ -427,20 +426,21 @@ block content
           .manage__form__input
             input(type="text" id="event-name" name="event-name" required)
             label(for="event-name") Event Name
-          .manage__form__input.select-country
-            span.point
-            select#select-country(required)
-              option(value="") Venue
-              option(value="1") Angola
-              option(value="2") România
-          //- .manage__form__input.select-state
-          //-   span.point
-          //-   select#select-state(required)
-          //-     option(value="") Event Name
-          //-     option(value="1") Angola2
-          //-     option(value="2") România
-          //-     option(value="3") România3
-          //-     option(value="4") România
+          .manage__form__input.manage__form__input--select
+            .select-country
+              span.point
+              select#select-country(required)
+                option(value="") Venue
+                option(value="1") Venue 2
+                option(value="2") Venue 3
+            .select-state
+              span.point
+              select#select-state(required)
+                option(value="") Select Country
+                option(value="1") Angola2
+                option(value="2") România
+                option(value="3") România3
+                option(value="4") România
           .manage__form__datepicker
             .manage__form__datepicker__block
               input(type='text' id="event-start-date" class="datepicker-create_event" data-language='en')
@@ -468,15 +468,23 @@ block content
                   i.icon.icon-plus
                   | Upload Image
             .manage__form__image__block.manage__form__image__block--add
-              input(type="file" id="file-3" name="file")
+              input(type="file" id="file-3" name="file-3")
               span#output-3.output
               p
                 a(href="#") 
                   i.icon.icon-plus
                   | Upload Image
+            .manage__form__image__block.manage__form__image__block--add
+              input(type="file" id="file-4" name="file-4")
+              span#output-4.output
+              p
+                a(href="#") 
+                  i.icon.icon-plus
+                  | Upload Image
           .manage__form__description
-            textarea(id="description-1" name="description-1" required)
-            label(for="description-1") Description
+            //- textarea(id="description-1" name="description-1" required)
+            //- label(for="description-1") Description
+            #manage__form__description
           .manage__form__fee
             input(type="text" placeholder="Event Fee")
             input(type="text" placeholder="Delegate Fee")
@@ -495,13 +503,14 @@ block content
           .manage__form__input
             input(type="text" id="name" name="name" required)
             label(for="name") Name
-          .manage__form__description
-            textarea(id="about-trainer" name="about-trainer" required)
-            label(for="about-trainer") About Trainer
+          .manage__form__description.about-trainer
+            //- textarea(id="about-trainer" name="about-trainer" required)
+            //- label(for="about-trainer") About Trainer
+            #about-trainer
           .manage__form__image
             .manage__form__image__block.manage__form__image__block--add
-              input(type="file" id="file-4" name="file")
-              span#output-4.output
+              input(type="file" id="file-5" name="file-5")
+              span#output-5.output
               p
                 a(href="#") 
                   i.icon.icon-plus
@@ -514,8 +523,9 @@ block content
             input(type="text" id="designation" name="designation" required)
             label(for="designation") Designation
           .manage__form__description
-            textarea(id="testimonial" name="testimonial" required)
-            label(for="testimonial") Testimonial
+            //- textarea(id="testimonial" name="testimonial" required)
+            //- label(for="testimonial") Testimonial
+            #testimonial
           .manage__form__btn
             a(href="#").manage__form__btn__add-more
               i.icon.icon-plus
