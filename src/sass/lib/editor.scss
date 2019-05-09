@@ -391,17 +391,6 @@
   right: 15px;
   display: inline-block;
 }
-.ql-editor.ql-blank::after {
-  content: '';
-  position: absolute;
-  left: 97px;
-  top: 17px;
-  width: 6px;
-  height: 6px;
-  background-color: $orangey-red;
-  border-radius: 100%;
-  
-}
 .ql-snow.ql-toolbar:after,
 .ql-snow .ql-toolbar:after {
   clear: both;

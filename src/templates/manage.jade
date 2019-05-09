@@ -476,7 +476,7 @@ block content
           .manage__form__description
             //- textarea(id="description-1" name="description-1" required)
             //- label(for="description-1") Description
-            #editor
+            #manage__form__description
           .manage__form__fee
             input(type="text" placeholder="Event Fee")
             input(type="text" placeholder="Delegate Fee")
@@ -495,9 +495,10 @@ block content
           .manage__form__input
             input(type="text" id="name" name="name" required)
             label(for="name") Name
-          .manage__form__description
-            textarea(id="about-trainer" name="about-trainer" required)
-            label(for="about-trainer") About Trainer
+          .manage__form__description.about-trainer
+            //- textarea(id="about-trainer" name="about-trainer" required)
+            //- label(for="about-trainer") About Trainer
+            #about-trainer
           .manage__form__image
             .manage__form__image__block.manage__form__image__block--add
               input(type="file" id="file-4" name="file")
@@ -514,8 +515,9 @@ block content
             input(type="text" id="designation" name="designation" required)
             label(for="designation") Designation
           .manage__form__description
-            textarea(id="testimonial" name="testimonial" required)
-            label(for="testimonial") Testimonial
+            //- textarea(id="testimonial" name="testimonial" required)
+            //- label(for="testimonial") Testimonial
+            #testimonial
           .manage__form__btn
             a(href="#").manage__form__btn__add-more
               i.icon.icon-plus

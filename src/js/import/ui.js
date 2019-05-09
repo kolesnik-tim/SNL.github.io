@@ -3,17 +3,40 @@ import modal from 'jquery-modal';
 import AOS from 'aos';
 import Quill from 'quill';
 
-var quill = new Quill('#editor', {
+var quill = new Quill('#manage__form__description', {
   theme: 'snow',
   modules: {
     toolbar: [
-      // [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
       [{ 'size': ['small', false, 'large', 'huge'] }],
       ['bold', 'italic',],
       [{ 'list': 'ordered'}, { 'list': 'bullet' }],
     ]
   },
   placeholder: 'Description',
+});
+
+var quill = new Quill('#about-trainer', {
+  theme: 'snow',
+  modules: {
+    toolbar: [
+      [{ 'size': ['small', false, 'large', 'huge'] }],
+      ['bold', 'italic',],
+      [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+    ]
+  },
+  placeholder: 'About Trainer',
+});
+
+var quill = new Quill('#testimonial', {
+  theme: 'snow',
+  modules: {
+    toolbar: [
+      [{ 'size': ['small', false, 'large', 'huge'] }],
+      ['bold', 'italic',],
+      [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+    ]
+  },
+  placeholder: 'Testimonial',
 });
 
 
