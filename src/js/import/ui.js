@@ -43,8 +43,26 @@ AOS.init({
 $('div#request-pop-up button.btn.btn-primary').on('click', function(e) {
   e.preventDefault();
 
-  if($('.register #full-name').val() === '' || $('.register #business-email').val() === '' || $('.register #phone-number').val() === '') {
-    $('div#request-pop-up form').submit();
+  var fields = [
+    {id: 'full-name', msg: 'Full Name is required'}, 
+    {id: 'business-email', msg: 'Email is required'},
+    {id: 'phone-number', msg: 'Phone is required'},
+  ];
+  var errorMsg = '';
+
+  fields.forEach(function(f) {
+    if(!errorMsg && !$('.register #'+f.id).val()) {
+      errorMsg = f.msg;
+    }
+  });
+  if(errorMsg) {
+    $.toast({
+      // heading: 'Success',
+      text: errorMsg,
+      showHideTransition: 'slide',
+      icon: 'info',
+      position: 'bottom-right'
+    });
     return;
   }
 
@@ -64,6 +82,7 @@ $('div#request-pop-up button.btn.btn-primary').on('click', function(e) {
     success: function(data) {
       if(data.status === 'success') {
         $('.register__true').addClass('active');
+        $('div#request-pop-up form').reset();
       } else {
         console.log('Error --> ', data.message);
       }
@@ -88,4 +107,61 @@ setTimeout(function() {
 
 $(document).on('click', '[href="#"]', function(e) {
   e.preventDefault();
+});
+
+
+$('section.contact__form button.btn.btn-primary').on('click', function(e) {
+  e.preventDefault();
+
+  var fields = [
+    {id: 'full-name', msg: 'Full Name is required'}, 
+    {id: 'email', msg: 'Email is required'},
+    {id: 'phone', msg: 'Phone is required'},
+    {id: 'message', msg: 'Message is required'}
+  ];
+  var errorMsg = '';
+
+  fields.forEach(function(f) {
+    if(!errorMsg && !$('section.contact__form #'+f.id).val()) {
+      errorMsg = f.msg;
+    }
+  });
+  if(errorMsg) {
+    $.toast({
+      // heading: 'Success',
+      text: errorMsg,
+      showHideTransition: 'slide',
+      icon: 'info',
+      position: 'bottom-right'
+    });
+    return;
+  }
+
+  var data = {
+    name: $('section.contact__form #full-name').val(),
+    email: $('section.contact__form #email').val(),
+    phone: $('section.contact__form #phone').val(),
+    message: $('section.contact__form #message').val(),
+    _token:$('section.contact__form form [name=_token]').val()
+  };
+
+  $.ajax({
+    type: 'POST',
+    url: $('section.contact__form form').attr('action'),
+    data: data,
+    dataType: 'JSON',
+    success: function(data) {
+      if(data.status === 'success') {
+        $('#contact-pop-up').modal({
+          fadeDuration: 200
+        });
+        $('section.contact__form form').reset();
+      } else {
+        console.log('Error --> ', data.message);
+      }
+    },
+    failure: function(data) {
+      console.log('Error --> ', data);
+    }
+  });
 });
