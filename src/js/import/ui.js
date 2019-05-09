@@ -7,7 +7,8 @@ var quill = new Quill('#editor', {
   theme: 'snow',
   modules: {
     toolbar: [
-      [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+      // [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+      [{ 'size': ['small', false, 'large', 'huge'] }],
       ['bold', 'italic',],
       [{ 'list': 'ordered'}, { 'list': 'bullet' }],
     ]
