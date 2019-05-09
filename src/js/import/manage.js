@@ -123,7 +123,7 @@ $('body').on('DOMSubtreeModified', '.output', function() {
 $('.manage__form__image__block').click(function() {
   $(this).find('input').fadeIn();
   $(this).find('.output').html('');
-  $(this).find('a').html('<i class="icon icon-plus"></i>' + $(this).attr("data-title"));
+  $(this).find('a').html('<i class="icon icon-plus"></i>' + $(this).attr('data-title'));
   $(this).find('a').removeClass('delete');
   $(this).addClass('manage__form__image__block--add');
 });
@@ -285,7 +285,7 @@ function formInitCallback() {
   $('.manage__form__image__block').click(function() {
     $(this).find('input').fadeIn();
     $(this).find('.output').html('');
-    $(this).find('a').html('<i class="icon icon-plus"></i>' + $(this).attr("data-title"));
+    $(this).find('a').html('<i class="icon icon-plus"></i>' + $(this).attr('data-title'));
     $(this).find('a').removeClass('delete');
     $(this).addClass('manage__form__image__block--add');
   });

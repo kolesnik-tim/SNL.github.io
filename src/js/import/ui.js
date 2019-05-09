@@ -7,6 +7,10 @@ import AOS from 'aos';
 
 //pop-up
 $('[rel="modal:open"]').on('click', function(event) {
+  $('.register__true').removeClass('active');
+  if($(this).attr('href') === '#request-pop-up') {
+    $('div#request-pop-up form #event-detail-id').val($(this).attr('data-event-detail'));
+  }
   $(this).modal({
     fadeDuration: 200
   });
@@ -36,11 +40,38 @@ AOS.init({
 
 
 //request_agenda_sucess
-$('button.btn.btn-primary').on('click', function() {
-  if($('.register input').val() === '') {
-  } else{
-    $('.register__true').addClass('active');
+$('div#request-pop-up button.btn.btn-primary').on('click', function(e) {
+  e.preventDefault();
+
+  if($('.register #full-name').val() === '' || $('.register #business-email').val() === '' || $('.register #phone-number').val() === '') {
+    $('div#request-pop-up form').submit();
+    return;
   }
+
+  var data = {
+    name: $('.register #full-name').val(),
+    email: $('.register #business-email').val(),
+    mobile: $('.register #phone-number').val(),
+    event_id: $('.register #event-detail-id').val(),
+    _token:$('div#request-pop-up form [name=_token]').val()
+  };
+
+  $.ajax({
+    type: 'POST',
+    url: $('div#request-pop-up form').attr('action'),
+    data: data,
+    dataType: 'JSON',
+    success: function(data) {
+      if(data.status === 'success') {
+        $('.register__true').addClass('active');
+      } else {
+        console.log('Error --> ', data.message);
+      }
+    },
+    failure: function(data) {
+      console.log('Error --> ', data);
+    }
+  });
 });
 
 
@@ -54,3 +85,7 @@ setTimeout(function() {
     if($(this).val() || $('#'+$(this).attr('id')+':-webkit-autofill').val()) $(this).addClass('focused');
   });
 }, 500);
+
+$(document).on('click', '[href="#"]', function(e) {
+  e.preventDefault();
+});
