@@ -410,7 +410,6 @@ block content
 
 
 
-
     a(href="#warning" rel="modal:open").manage__create--bg
     .manage__create
       .manage__create__header
@@ -475,8 +474,9 @@ block content
                   i.icon.icon-plus
                   | Upload Image
           .manage__form__description
-            textarea(id="description-1" name="description-1" required)
-            label(for="description-1") Description
+            //- textarea(id="description-1" name="description-1" required)
+            //- label(for="description-1") Description
+            #editor
           .manage__form__fee
             input(type="text" placeholder="Event Fee")
             input(type="text" placeholder="Delegate Fee")

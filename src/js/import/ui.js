@@ -1,6 +1,22 @@
 // import '../lib/maskedinput.js';
 import modal from 'jquery-modal';
 import AOS from 'aos';
+import Quill from 'quill';
+
+var quill = new Quill('#editor', {
+  theme: 'snow',
+  modules: {
+    toolbar: [
+      [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+      ['bold', 'italic',],
+      [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+    ]
+  },
+  placeholder: 'Description',
+});
+
+
+
 
 //select
 // $('select').selectize();
