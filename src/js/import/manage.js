@@ -9,43 +9,44 @@ import Quill from 'quill';
 
 
 
-
+if($('div').hasClass('manage')) {
 //text edit
-var quill = new Quill('.text-manage__form__description', {
-  theme: 'snow',
-  modules: {
-    toolbar: [
-      [{ 'size': ['small', false, 'large', 'huge'] }],
-      ['bold', 'italic',],
-      [{ 'list': 'ordered'}, { 'list': 'bullet' }],
-    ]
-  },
-  placeholder: 'Description',
-});
+  var quill = new Quill('.text-manage__form__description', {
+    theme: 'snow',
+    modules: {
+      toolbar: [
+        [{ 'size': ['small', false, 'large', 'huge'] }],
+        ['bold', 'italic',],
+        [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+      ]
+    },
+    placeholder: 'Description',
+  });
 
-var quill1 = new Quill('.text-about-trainer', {
-  theme: 'snow',
-  modules: {
-    toolbar: [
-      [{ 'size': ['small', false, 'large', 'huge'] }],
-      ['bold', 'italic',],
-      [{ 'list': 'ordered'}, { 'list': 'bullet' }],
-    ]
-  },
-  placeholder: 'About Trainer',
-});
+  var quill1 = new Quill('.text-about-trainer', {
+    theme: 'snow',
+    modules: {
+      toolbar: [
+        [{ 'size': ['small', false, 'large', 'huge'] }],
+        ['bold', 'italic',],
+        [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+      ]
+    },
+    placeholder: 'About Trainer',
+  });
 
-var quill2 = new Quill('.text-testimonial', {
-  theme: 'snow',
-  modules: {
-    toolbar: [
-      [{ 'size': ['small', false, 'large', 'huge'] }],
-      ['bold', 'italic',],
-      [{ 'list': 'ordered'}, { 'list': 'bullet' }],
-    ]
-  },
-  placeholder: 'Testimonial',
-});
+  var quill2 = new Quill('.text-testimonial', {
+    theme: 'snow',
+    modules: {
+      toolbar: [
+        [{ 'size': ['small', false, 'large', 'huge'] }],
+        ['bold', 'italic',],
+        [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+      ]
+    },
+    placeholder: 'Testimonial',
+  });
+}
 
 
 
