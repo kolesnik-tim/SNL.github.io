@@ -454,29 +454,33 @@ block content
                 img(src="img/manage/calendar.png", alt="")
           .manage__form__image
             .manage__form__image__block.manage__form__image__block--add
-              input(type="file" id="file" name="file")
-              span#output.output
+              input(type="file" id="file" name="file").file-image
+              span
+                img(src="", alt="")
               p
                 a(href="#")
                   i.icon.icon-plus
                   | Upload Image
             .manage__form__image__block.manage__form__image__block--add
-              input(type="file" id="file-2" name="file-2")
-              span#output-2.output
+              input(type="file" id="file-2" name="file-2").file-image
+              span
+                img(src="", alt="")
               p
                 a(href="#") 
                   i.icon.icon-plus
                   | Upload Image
             .manage__form__image__block.manage__form__image__block--add
-              input(type="file" id="file-3" name="file-3")
-              span#output-3.output
+              input(type="file" id="file-3" name="file-3").file-image
+              span
+                img(src="", alt="")
               p
                 a(href="#") 
                   i.icon.icon-plus
                   | Upload Image
             .manage__form__image__block.manage__form__image__block--add
-              input(type="file" id="file-4" name="file-4")
-              span#output-4.output
+              input(type="file" id="file-4" name="file-4").file-image
+              span
+                img(src="", alt="")
               p
                 a(href="#") 
                   i.icon.icon-plus
@@ -484,7 +488,7 @@ block content
           .manage__form__description
             //- textarea(id="description-1" name="description-1" required)
             //- label(for="description-1") Description
-            #manage__form__description
+            .text-manage__form__description
           .manage__form__fee
             input(type="text" placeholder="Event Fee")
             input(type="text" placeholder="Delegate Fee")
@@ -501,9 +505,9 @@ block content
               span 02
               | Trainer Details
               .manage__form__btn
-                a(href="#").manage__form__btn__add-more
+                a(href="#").manage__form__btn__add-more.add-triner
                   i.icon.icon-plus
-                a(href="#").manage__form__btn__delete
+                a(href="#").manage__form__btn__delete.remove-triner
                   i.icon.icon-delete
           .manage__form__input
             input(type="text" id="name" name="name" required)
@@ -511,31 +515,33 @@ block content
           .manage__form__description.about-trainer
             //- textarea(id="about-trainer" name="about-trainer" required)
             //- label(for="about-trainer") About Trainer
-            #about-trainer
+            .text-about-trainer
           .manage__form__image
             .manage__form__image__block.manage__form__image__block--add
-              input(type="file" id="file-5" name="file-5")
-              span#output-5.output
+              input(type="file" id="file-5" name="file-5").file-image
+              span
+                img(src="", alt="")
               p
                 a(href="#") 
                   i.icon.icon-plus
                   | Upload Image
-          h4 Trainer Testimonials
-            .manage__form__btn
-              a(href="#").manage__form__btn__add-more
-                i.icon.icon-plus
-              a(href="#").manage__form__btn__delete
-                i.icon.icon-delete
-          .manage__form__input
-            input(type="text" id="name-trainer" name="name-trainer" required)
-            label(for="name-trainer") Name
-          .manage__form__input
-            input(type="text" id="designation" name="designation" required)
-            label(for="designation") Designation
-          .manage__form__description
-            //- textarea(id="testimonial" name="testimonial" required)
-            //- label(for="testimonial") Testimonial
-            #testimonial
+          .manage__form__testimonials
+            h4 Trainer Testimonials
+              .manage__form__btn
+                a(href="#").manage__form__btn__add-more
+                  i.icon.icon-plus
+                a(href="#").manage__form__btn__delete
+                  i.icon.icon-delete
+            .manage__form__input
+              input(type="text" id="name-trainer" name="name-trainer" required)
+              label(for="name-trainer") Name
+            .manage__form__input
+              input(type="text" id="designation" name="designation" required)
+              label(for="designation") Designation
+            .manage__form__description
+              //- textarea(id="testimonial" name="testimonial" required)
+              //- label(for="testimonial") Testimonial
+              .text-testimonial
         .manage__form__footer
           a(href="#warning" rel="modal:open").btn.btn-primary cancel
           button(type="submit").btn.btn-primary

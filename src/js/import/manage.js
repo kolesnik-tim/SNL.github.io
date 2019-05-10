@@ -1,6 +1,56 @@
 import datepicker from 'air-datepicker';
 import fancybox from '@fancyapps/fancybox';
 import '../lib/selectize.min.js';
+import Quill from 'quill';
+
+
+
+
+
+
+
+
+//text edit
+var quill = new Quill('.text-manage__form__description', {
+  theme: 'snow',
+  modules: {
+    toolbar: [
+      [{ 'size': ['small', false, 'large', 'huge'] }],
+      ['bold', 'italic',],
+      [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+    ]
+  },
+  placeholder: 'Description',
+});
+
+var quill1 = new Quill('.text-about-trainer', {
+  theme: 'snow',
+  modules: {
+    toolbar: [
+      [{ 'size': ['small', false, 'large', 'huge'] }],
+      ['bold', 'italic',],
+      [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+    ]
+  },
+  placeholder: 'About Trainer',
+});
+
+var quill2 = new Quill('.text-testimonial', {
+  theme: 'snow',
+  modules: {
+    toolbar: [
+      [{ 'size': ['small', false, 'large', 'huge'] }],
+      ['bold', 'italic',],
+      [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+    ]
+  },
+  placeholder: 'Testimonial',
+});
+
+
+
+
+
 
 $('.registration__form__select').selectize({
   sortField: 'text'
@@ -129,215 +179,42 @@ $('#select-state').selectize({
 
 });
 
-if($('div').hasClass('manage__form__image')) {
 
-//image-1
-  function handleFileSelectSingle(evt) {
-    var file = evt.target.files; // FileList object
 
-    var f = file[0];
 
-    // Only process image files.
-    if (!f.type.match('image.*')) {
-      alert('Только изображения....');
-    }
 
+
+//image
+$('body').on('change', '.file-image', function() {
+  readURL(this);
+  $(this).closest('.manage__form__image__block').removeClass('manage__form__image__block--add');
+  $(this).closest('.manage__form__image__block').find('a').html('<i class="icon icon-delete"></i>Delete');
+  $(this).closest('.manage__form__image__block').find('input').fadeOut();
+  $(this).closest('.manage__form__image__block').find('p a').addClass('delete');
+});
+
+function readURL(input) {
+  if (input.files && input.files[0]) {
     var reader = new FileReader();
-
-    // Closure to capture the file information.
-    reader.onload = (function(theFile) {
-      return function(e) {
-      // Render thumbnail.
-        var span = document.createElement('span');
-        span.innerHTML = ['<img class="img-thumbnail" src="', e.target.result,
-          '" title="', escape(theFile.name), '"/>'].join('');
-        document.getElementById('output').innerHTML = '';
-        document.getElementById('output').insertBefore(span, null);
-      };
-    })(f);
-
-    // Read in the image file as a data URL.
-    reader.readAsDataURL(f);
+    reader.onload = function(e) {
+      $(input).next().find('img').attr('src', e.target.result).attr('alt', $(input)[0].files[0].name);
+    };
+    reader.readAsDataURL(input.files[0]);
   }
-
-
-  document.getElementById('file').addEventListener('change', handleFileSelectSingle, false);
-
-
-
-
-
-
-  //image
-  //image-2
-  function handleFileSelectSingle2(evt) {
-    var file = evt.target.files; // FileList object
-
-    var f = file[0];
-
-    // Only process image files.
-    if (!f.type.match('image.*')) {
-      alert('Только изображения....');
-    }
-
-    var reader = new FileReader();
-
-    // Closure to capture the file information.
-    reader.onload = (function(theFile) {
-      return function(e) {
-      // Render thumbnail.
-        var span = document.createElement('span');
-        span.innerHTML = ['<img class="img-thumbnail" src="', e.target.result,
-          '" title="', escape(theFile.name), '"/>'].join('');
-        document.getElementById('output-2').innerHTML = '';
-        document.getElementById('output-2').insertBefore(span, null);
-      };
-    })(f);
-
-    // Read in the image file as a data URL.
-    reader.readAsDataURL(f);
-  }
-
-
-  document.getElementById('file-2').addEventListener('change', handleFileSelectSingle2, false);
-
-
-
-  // //image 3
-  function handleFileSelectSingle3(evt) {
-    var file = evt.target.files; // FileList object
-
-    var f = file[0];
-
-    // Only process image files.
-    if (!f.type.match('image.*')) {
-      alert('Только изображения....');
-    }
-
-    var reader = new FileReader();
-
-    // Closure to capture the file information.
-    reader.onload = (function(theFile) {
-      return function(e) {
-      // Render thumbnail.
-        var span = document.createElement('span');
-        span.innerHTML = ['<img class="img-thumbnail" src="', e.target.result,
-          '" title="', escape(theFile.name), '"/>'].join('');
-        document.getElementById('output-3').innerHTML = '';
-        document.getElementById('output-3').insertBefore(span, null);
-      };
-    })(f);
-
-    // Read in the image file as a data URL.
-    reader.readAsDataURL(f);
-  }
-
-
-  document.getElementById('file-3').addEventListener('change', handleFileSelectSingle3, false);
-
-
-
-  // //image 4
-  function handleFileSelectSingle4(evt) {
-    var file = evt.target.files; // FileList object
-
-    var f = file[0];
-
-    // Only process image files.
-    if (!f.type.match('image.*')) {
-      alert('Только изображения....');
-    }
-
-    var reader = new FileReader();
-
-    // Closure to capture the file information.
-    reader.onload = (function(theFile) {
-      return function(e) {
-      // Render thumbnail.
-        var span = document.createElement('span');
-        span.innerHTML = ['<img class="img-thumbnail" src="', e.target.result,
-          '" title="', escape(theFile.name), '"/>'].join('');
-        document.getElementById('output-4').innerHTML = '';
-        document.getElementById('output-4').insertBefore(span, null);
-      };
-    })(f);
-
-    // Read in the image file as a data URL.
-    reader.readAsDataURL(f);
-  }
-
-
-  document.getElementById('file-4').addEventListener('change', handleFileSelectSingle4, false);
-
-
-  // //image 5
-  function handleFileSelectSingle5(evt) {
-    var file = evt.target.files; // FileList object
-
-    var f = file[0];
-
-    // Only process image files.
-    if (!f.type.match('image.*')) {
-      alert('Только изображения....');
-    }
-
-    var reader = new FileReader();
-
-    // Closure to capture the file information.
-    reader.onload = (function(theFile) {
-      return function(e) {
-        // Render thumbnail.
-        var span = document.createElement('span');
-        span.innerHTML = ['<img class="img-thumbnail" src="', e.target.result,
-          '" title="', escape(theFile.name), '"/>'].join('');
-        document.getElementById('output-5').innerHTML = '';
-        document.getElementById('output-5').insertBefore(span, null);
-      };
-    })(f);
-
-    // Read in the image file as a data URL.
-    reader.readAsDataURL(f);
-  }
-
-
-  document.getElementById('file-5').addEventListener('change', handleFileSelectSingle5, false);
 }
 
-
-
-
-
-
-
-
-
-$('body').on('DOMSubtreeModified', '.output', function() {
-  if($(this).find('span').length >= 1) {
-    $(this).closest('.manage__form__image__block').removeClass('manage__form__image__block--add');
-    $(this).closest('.manage__form__image__block').find('a').html('<i class="icon icon-delete"></i>Delete');
-    $(this).closest('.manage__form__image__block').find('input').fadeOut();
-    $(this).closest('.manage__form__image__block').find('p a').addClass('delete');
-  }
-});
-$('.manage__form__image__block').click(function() {
+$('body').on('click', '.manage__form__image__block', function() {
   $(this).find('input').fadeIn();
-  $(this).find('.output').html('');
+  $(this).find('img').attr('src', '').attr('alt', '');
   $(this).find('a').html('<i class="icon icon-plus"></i>Upload Image');
   $(this).find('a').removeClass('delete');
   $(this).addClass('manage__form__image__block--add');
 });
 
-// $('#select-state').selectize({
-//   maxItems: 10,
-//   onChange: function(value) {
-//     if($(value) === '') {
-//       $('.select-state').find('.point').fadeIn();
-//     } else{
-//       $('.select-state').find('.point').fadeOut();
-//     }
-//   },
-// });
 
+
+
+//select
 $('#select-gear').selectize({
   sortField: 'text'
 });
@@ -380,3 +257,49 @@ $('.select-privileges-edit').change(function() {
     $('#select-privileges-edit').prop('checked', false);
   }
 });
+
+
+
+//add triner
+//number
+$(document).ready(function() {   
+  for (var i = 0; i < $('.manage__create__form').length; i++) { 
+    $($('.manage__create__form')[i]).find('h3 span').text('0'+(i+1)); 
+  }
+});
+
+//add
+$('body').on('click', '.manage__form__btn__add-more', function() {
+  if($(this).hasClass('add-triner')) {
+    $(this).closest('.manage__create__form').clone().insertAfter($(this).closest('.manage__create__form'));
+    number();
+    // quill1.update();
+    // quill2.update();
+    // console.log('1234');
+  } else{
+    $(this).closest('.manage__form__testimonials').clone().insertAfter($(this).closest('.manage__form__testimonials'));
+  }
+});
+
+//remove
+$('body').on('click', '.manage__form__btn__delete', function() {
+  if($(this).hasClass('remove-triner')) {
+    if($('.manage__create__form').length <= 2) {
+    } else{
+      $(this).closest('.manage__create__form').remove();
+      number();
+    }
+  } else{
+    if($(this).closest('.manage__create__form').find('.manage__form__testimonials').length <= 1) {
+    } else{
+      $(this).closest('.manage__form__testimonials').remove();
+    }
+  }
+});
+
+
+function number() {
+  for (var i = 0; i < $('.manage__create__form').length; i++) { 
+    $($('.manage__create__form')[i]).find('h3 span').text('0'+(i+1)); 
+  }
+}
