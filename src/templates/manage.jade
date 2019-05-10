@@ -500,6 +500,11 @@ block content
             h3
               span 02
               | Trainer Details
+              .manage__form__btn
+                a(href="#").manage__form__btn__add-more
+                  i.icon.icon-plus
+                a(href="#").manage__form__btn__delete
+                  i.icon.icon-delete
           .manage__form__input
             input(type="text" id="name" name="name" required)
             label(for="name") Name
@@ -516,6 +521,11 @@ block content
                   i.icon.icon-plus
                   | Upload Image
           h4 Trainer Testimonials
+            .manage__form__btn
+              a(href="#").manage__form__btn__add-more
+                i.icon.icon-plus
+              a(href="#").manage__form__btn__delete
+                i.icon.icon-delete
           .manage__form__input
             input(type="text" id="name-trainer" name="name-trainer" required)
             label(for="name-trainer") Name
@@ -526,13 +536,6 @@ block content
             //- textarea(id="testimonial" name="testimonial" required)
             //- label(for="testimonial") Testimonial
             #testimonial
-          .manage__form__btn
-            a(href="#").manage__form__btn__add-more
-              i.icon.icon-plus
-              | Add more
-            a(href="#").manage__form__btn__delete
-              i.icon.icon-delete
-              | Delete
         .manage__form__footer
           a(href="#warning" rel="modal:open").btn.btn-primary cancel
           button(type="submit").btn.btn-primary
