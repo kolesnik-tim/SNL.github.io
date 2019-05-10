@@ -193,7 +193,7 @@ $(document).on('click', '.create-event-add', function(e) {
   });
 });
 
-$(document).on('click', '.drop-down--open li a.edit', function(e) {
+$(document).on('click', '.drop-down--open li a.edit, .manage__table__content tbody a.edit', function(e) {
   e.preventDefault();
   $('.manage__create.manage-user__create').html('');
   $('.manage__create').addClass('is-active');
@@ -281,6 +281,11 @@ function formInitCallback() {
   });
 
 
+  // SELECT/UNSELECT ALL
+  $('input#select-privileges-view,input#select-privileges-add,input#select-privileges-edit,input#select-privileges-delete').on('click', function(e) {
+    $('input.' + $(this).attr('id')).prop('checked', $(this).prop('checked'));
+  });
+
 
   $('.manage__form__image__block').click(function() {
     $(this).find('input').fadeIn();
@@ -333,6 +338,74 @@ function formInitCallback() {
   $('.selectized').each(function() {
     if($(this).val()) $(this).parent().find('.point').fadeOut();
   });
+
+  // validate form before save submit...
+  if($('.manage__create.manage-user__create').attr('data-validate-url')) {
+    $('.manage__create.manage-user__create button[type=submit].btn.btn-primary').on('click', function(e) {
+      e.preventDefault();
+
+      var fields = [
+        {id: 'display-name', msg: 'Display Name is required'}, 
+        {id: 'username', msg: 'Username is required'},
+        {id: 'email', msg: 'Email is required'},
+        {id: 'password', msg: 'Password is required'}
+      ];
+      var errorMsg = '';
+
+      fields.forEach(function(f) {
+        if(!errorMsg && !$('.manage__create.manage-user__create #'+f.id).val()) {
+          errorMsg = f.msg;
+        }
+      });
+      if(errorMsg) {
+        $.toast({
+          // heading: 'Success',
+          text: errorMsg,
+          showHideTransition: 'slide',
+          icon: 'info',
+          position: 'bottom-right'
+        });
+        return;
+      }
+
+      var data = {
+        _token:$('.manage__create.manage-user__create [name=_token]').val()
+      };
+
+
+      var subFields = $('.manage__create.manage-user__create').attr('data-validate-fields').split(',');
+
+      subFields.forEach(function(f) {
+        var fs = f.split('#');
+        data[fs[1]] = $('.manage__create.manage-user__create #'+fs[0]).val();
+      });
+
+
+      $.ajax({
+        type: 'POST',
+        url: $('.manage__create.manage-user__create').attr('data-validate-url'),
+        data: data,
+        dataType: 'JSON',
+        success: function(data) {
+          //$('.manage__create.manage-user__create [name=_token]').val(data.token);
+          if(data.status === 'success') {
+            $('.manage__create.manage-user__create form').submit();
+          } else {
+            $.toast({
+              // heading: 'Success',
+              text: data.message,
+              showHideTransition: 'slide',
+              icon: 'warning',
+              position: 'bottom-right'
+            });
+          }
+        },
+        failure: function(data) {
+          console.log('Error --> ', data);
+        }
+      });
+    });
+  }
 }
 
 
@@ -347,4 +420,68 @@ if($('div.alert').length > 0) {
     icon: $('div.alert').attr('data-type'),
     position: 'bottom-right'
   });
+}
+
+
+
+// Event Registration form...
+function prepareRegistrationOrder() {
+  $('.event_fee').html('0.0');
+  $('.delegate_count').html($('.delegate_fields_section').length);
+  $('.delegate_fee').html('0.0');
+  $('.administration_fee').html('0.0');
+  $('.vat_fee').html('0.0');
+  $('.total_fee').html('0.0');
+
+  if(!$('#country_id').val()) {
+    return;
+  }
+
+
+  // calculate the vat...
+  var countryVatMapping = window['countryVatMapping'] || [];
+  var vat_percentage = countryVatMapping[$('#country_id').val()] || 0;
+
+  
+  var event_fee = parseFloat($('#event_fee').val());
+  var delegate_fee = parseFloat($('#delegate_fee').val());
+  var delegate_count = $('.delegate_fields_section').length;
+  var administration_fee = parseFloat($('#administration_fee').val());
+
+  var sub_total = event_fee + (delegate_fee * delegate_count) + administration_fee;
+
+  var vat_amount = sub_total * vat_percentage / 100 ;
+
+  var total_amount = sub_total + vat_amount;
+
+  
+  $('.event_fee').html(event_fee);
+  $('.delegate_count').html(delegate_count);
+  $('.delegate_fee').html(delegate_fee);
+  $('.administration_fee').html(administration_fee);
+  $('.vat_fee').html(vat_amount);
+  $('.total_fee').html(total_amount);
+    
+  
+  $('#delegate_fee_total').val(delegate_fee);
+  $('#vat_percentage').val(vat_percentage);
+  $('#vat_amount').val(vat_amount);
+  $('#total_amount').val(total_amount);
+
+
+
+  // calculate the total...
+}
+
+if($('form.registration__form').length > 0) {
+
+  prepareRegistrationOrder();
+
+  // prepare the registration order for below events...
+  // country channge...
+  $('#country_id').on('change', function() {
+    prepareRegistrationOrder();
+  });
+  // TODO: Also add for  add/delete delegate
+
 }
