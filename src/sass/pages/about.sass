@@ -213,7 +213,7 @@
       border-radius: 10px
       overflow: hidden
       width: 100%
-      padding: 30px 25px
+      padding: 30px 22px
       display: flex
       flex-direction: column
       justify-content: flex-end
@@ -258,12 +258,13 @@
         z-index: -1
       h4
         font-size: 18px
-        margin-bottom: 5px
         color: $white
+        text-shadow: 0px 0.5px 0.5px #000000
       p
         font-size: 14px
         font-weight: 600
         color: $white
+        text-shadow: 0px 0.5px 0.5px #000000
   &__statement
     min-height: 522px
     height: 100%
@@ -322,6 +323,8 @@
   &__location
     position: relative
     padding: 130px 0
+    display: flex
+    justify-content: center
     +r(767)
       padding: 80px 0 40px
     &__decor
@@ -352,23 +355,30 @@
         top: 50px
     &__parallax
       position: absolute
-      right: -250px
+      display: inline-block
       top: 0px
       font-size: 175px
       font-weight: bold
       color: rgba(18, 17, 74, 0.03)
       text-transform: uppercase
       z-index: -1
+      +r(1360)
+        font-size: 140px
       +r(1160)
         font-size: 120px
+      +r(1000)
+        font-size: 96px
       +r(767)
         font-size: 48px
-        right: -55px
+      +r(400)
+        font-size: 38px
+        top: 20px
     h2
       font-size: 35.3px
       font-weight: normal
       color: #12114a
       margin-bottom: 110px
+      text-align: center
       +r(767)
         margin-bottom: 30px
     &__block
