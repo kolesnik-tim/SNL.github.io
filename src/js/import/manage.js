@@ -2,6 +2,13 @@ import datepicker from 'air-datepicker';
 import fancybox from '@fancyapps/fancybox';
 import '../lib/selectize.min.js';
 import '../lib/jquery.toast.min.js';
+import Quill from 'quill';
+
+
+
+
+
+
 
 $('.registration__form__select').selectize({
   sortField: 'text'
@@ -109,6 +116,32 @@ $('.datepicker-create_event').datepicker({
 
 
 
+//image
+$('body').on('change', '.file-image', function() {
+  readURL(this);
+  $(this).closest('.manage__form__image__block').removeClass('manage__form__image__block--add');
+  $(this).closest('.manage__form__image__block').find('a').html('<i class="icon icon-delete"></i>Delete');
+  $(this).closest('.manage__form__image__block').find('input').fadeOut();
+  $(this).closest('.manage__form__image__block').find('p a').addClass('delete');
+});
+
+function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      $(input).next().find('img').attr('src', e.target.result).attr('alt', $(input)[0].files[0].name);
+    };
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+
+$('body').on('click', '.manage__form__image__block', function() {
+  $(this).find('input').fadeIn();
+  $(this).find('img').attr('src', '').attr('alt', '');
+  $(this).find('a').html('<i class="icon icon-plus"></i>' + $(this).attr('data-title'));
+  $(this).find('a').removeClass('delete');
+  $(this).addClass('manage__form__image__block--add');
+});
 
 
 
@@ -119,13 +152,6 @@ $('body').on('DOMSubtreeModified', '.output', function() {
     $(this).closest('.manage__form__image__block').find('input').fadeOut();
     $(this).closest('.manage__form__image__block').find('p a').addClass('delete');
   }
-});
-$('.manage__form__image__block').click(function() {
-  $(this).find('input').fadeIn();
-  $(this).find('.output').html('');
-  $(this).find('a').html('<i class="icon icon-plus"></i>' + $(this).attr('data-title'));
-  $(this).find('a').removeClass('delete');
-  $(this).addClass('manage__form__image__block--add');
 });
 
 // $('#select-state').selectize({
@@ -441,7 +467,6 @@ function prepareRegistrationOrder() {
   // calculate the vat...
   var countryVatMapping = window['countryVatMapping'] || [];
   var vat_percentage = countryVatMapping[$('#country_id').val()] || 0;
-
   
   var event_fee = parseFloat($('#event_fee').val());
   var delegate_fee = parseFloat($('#delegate_fee').val());
@@ -484,4 +509,176 @@ if($('form.registration__form').length > 0) {
   });
   // TODO: Also add for  add/delete delegate
 
+//add check all Edit
+$('#select-privileges-edit').click(function() {
+  $('.select-privileges-edit:checkbox').not(this).prop('checked', this.checked);
+});
+$('.select-privileges-edit').change(function() {
+  let lengthCheckBlock = $('.select-privileges-edit:checked').length;
+  let lengthCheck = $('.select-privileges-edit').length;
+  if(lengthCheck === lengthCheckBlock) {
+    $('#select-privileges-edit').prop('checked', true);
+  } else{
+    $('#select-privileges-edit').prop('checked', false);
+  }
+});
+
+
+
+//add triner
+//number
+$(document).ready(function() {   
+  for (var i = 0; i < $('.manage__create__form').length; i++) { 
+    $($('.manage__create__form')[i]).find('h3 span').text('0'+(i+1)); 
+  }
+});
+
+//add
+$('body').on('click', '.manage__form__btn__add-more', function(event) {
+  event.preventDefault();
+  if($(this).hasClass('add-triner')) {
+    $(this).closest('.manage__create__form').clone().insertAfter($(this).closest('.manage__create__form'));
+    number();
+    numberClass();
+  } else{
+    $(this).closest('.manage__form__testimonials').clone().insertAfter($(this).closest('.manage__form__testimonials'));
+  }
+});
+
+//remove
+$('body').on('click', '.manage__form__btn__delete', function(event) {
+  event.preventDefault();
+  if($(this).hasClass('remove-triner')) {
+    if($('.manage__create__form').length <= 2) {
+    } else{
+      $(this).closest('.manage__create__form').remove();
+      number();
+      quill.update();
+    }
+  } else{
+    if($(this).closest('.manage__create__form').find('.manage__form__testimonials').length <= 1) {
+    } else{
+      $(this).closest('.manage__form__testimonials').remove();
+    }
+  }
+});
+
+
+function number() {
+  for (var i = 0; i < $('.manage__create__form').length; i++) { 
+    $($('.manage__create__form')[i]).find('h3 span').text('0'+(i+1)); 
+  }
+}
+
+function numberClass() {
+  for (var i = 0; i < $('.manage__create__form').length; i++) { 
+    $($('.text-testimonial')[i]).addClass('text-testimonial'+(i+1)); 
+  }
+}
+
+
+
+if($('div').hasClass('manage')) {
+  //text edit
+  var quill = new Quill('.text-manage__form__description', {
+    theme: 'snow',
+    modules: {
+      toolbar: [
+        [{ 'size': ['small', false, 'large', 'huge'] }],
+        ['bold', 'italic',],
+        [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+      ]
+    },
+    placeholder: 'Description',
+  });
+  
+  var quill = new Quill('.text-about-trainer1', {
+    theme: 'snow',
+    modules: {
+      toolbar: [
+        [{ 'size': ['small', false, 'large', 'huge'] }],
+        ['bold', 'italic',],
+        [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+      ]
+    },
+    placeholder: 'About Trainer',
+  });
+  var quill = new Quill('.text-about-trainer2', {
+    theme: 'snow',
+    modules: {
+      toolbar: [
+        [{ 'size': ['small', false, 'large', 'huge'] }],
+        ['bold', 'italic',],
+        [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+      ]
+    },
+    placeholder: 'About Trainer',
+  });
+  var quill = new Quill('.text-about-trainer3', {
+    theme: 'snow',
+    modules: {
+      toolbar: [
+        [{ 'size': ['small', false, 'large', 'huge'] }],
+        ['bold', 'italic',],
+        [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+      ]
+    },
+    placeholder: 'About Trainer',
+  });
+  var quill = new Quill('.text-about-trainer4', {
+    theme: 'snow',
+    modules: {
+      toolbar: [
+        [{ 'size': ['small', false, 'large', 'huge'] }],
+        ['bold', 'italic',],
+        [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+      ]
+    },
+    placeholder: 'About Trainer',
+  });
+  
+  var quill = new Quill('.text-testimonial1', {
+    theme: 'snow',
+    modules: {
+      toolbar: [
+        [{ 'size': ['small', false, 'large', 'huge'] }],
+        ['bold', 'italic',],
+        [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+      ]
+    },
+    placeholder: 'Testimonial',
+  });
+  var quill = new Quill('.text-testimonial2', {
+    theme: 'snow',
+    modules: {
+      toolbar: [
+        [{ 'size': ['small', false, 'large', 'huge'] }],
+        ['bold', 'italic',],
+        [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+      ]
+    },
+    placeholder: 'Testimonial',
+  });
+  var quill = new Quill('.text-testimonial3', {
+    theme: 'snow',
+    modules: {
+      toolbar: [
+        [{ 'size': ['small', false, 'large', 'huge'] }],
+        ['bold', 'italic',],
+        [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+      ]
+    },
+    placeholder: 'Testimonial',
+  });
+  var quill = new Quill('.text-testimonial4', {
+    theme: 'snow',
+    modules: {
+      toolbar: [
+        [{ 'size': ['small', false, 'large', 'huge'] }],
+        ['bold', 'italic',],
+        [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+      ]
+    },
+    placeholder: 'Testimonial',
+  });
 }
