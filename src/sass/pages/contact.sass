@@ -66,20 +66,19 @@
       font-size: 15px
       font-weight: normal
       color: #12114a
-      padding-bottom: 20px
+      padding-bottom: 15px
     input, textarea
       border-radius: 5px
       border: solid 1px #cccccc
       padding: 16px 25px
       width: 100%
-      max-width: 350px
       font-size: 14px
       font-weight: normal
       color: #585e74
       +r(767)
         max-width: 100%
     textarea
-      max-width: calc(100% - 25px)
+      width: 100%
       height: 195px
       margin-bottom: 35px
       +r(1250)
@@ -88,8 +87,32 @@
         max-width: 100%
     .btn
       margin-right: 25px
+      position: relative
+      left: 100%
+      transform: translate(-100%)
       +r(1150)
         margin-right: 0px
+    &__title
+      margin-left: 100px
+      +r(1040)
+        margin-left: 10px
+      +r(767)
+        margin-bottom: 50px
+      h2
+        font-size: 35.3px
+        font-weight: normal
+        color: #12114a
+        margin-bottom: 30px
+      p
+        font-size: 18px !important
+        font-weight: normal
+        line-height: 1.39
+        color: #707070 !important
+        max-width: 435px
+        a
+          color: #707070
+          &:hover
+            text-decoration: underline
   &__location
     position: relative
     padding: 130px 0

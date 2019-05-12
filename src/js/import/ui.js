@@ -46,3 +46,17 @@ $('button.btn.btn-primary').on('click', function() {
   }
 });
 
+
+
+
+
+//footer
+
+$('.footer__nav__column ul').on('click','a', function(event) {
+  if($('div').hasClass('about')) {
+    event.preventDefault();
+    var id  = $(this).attr('rel'),
+      top = $(id).offset().top;
+    $('body,html').animate({scrollTop: top - 90}, 1500);
+  }
+});
