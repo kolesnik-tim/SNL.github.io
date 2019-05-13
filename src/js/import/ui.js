@@ -93,10 +93,10 @@ $('.our-services__block').hover(function() {
 $('.triners__text-show').on('click', function(event) {
   event.preventDefault();
   if($(this).hasClass('active')) {
-    $(this).removeClass('active').text('Show More... ');
+    $(this).removeClass('active').text('Show More...');
     $('.events_details__triners__text p.none').slideUp();
   } else{
-    $(this).addClass('active').text('Show Less... ');
+    $(this).addClass('active').text('Show Less');
     $('.events_details__triners__text p.none').slideDown();
   }
 });
