@@ -86,3 +86,17 @@ $('.our-services__block').hover(function() {
     $(thisElement).find('svg path').attr('d', 'M0,35C0,35,80.9279,46.5,133,46.5C185.072,46.5,266,35,266,35C266,35,266,147,266,147C266,147,0,147,0,147C0,147,0,0,0,0C0,0,0,35,0,35'); 
   }, 200);
 });
+
+
+
+//events_details show text
+$('.triners__text-show').on('click', function(event) {
+  event.preventDefault();
+  if($(this).hasClass('active')) {
+    $(this).removeClass('active').text('Show More... ');
+    $('.events_details__triners__text p.none').slideUp();
+  } else{
+    $(this).addClass('active').text('Show Less... ');
+    $('.events_details__triners__text p.none').slideDown();
+  }
+});

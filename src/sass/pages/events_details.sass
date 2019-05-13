@@ -256,14 +256,25 @@
         padding: 20px 15px
     &__text
       border-bottom: 1px solid #e7e7e7
+      padding-bottom: 30px
       p
         font-size: 16px
         font-weight: normal
         line-height: 2.03
         color: #12114a
-        margin-bottom: 40px
-        &:last-child
-          margin-bottom: 30px
+        display: inline
+        &.none
+          display: none
+      a
+        color: #12114a
+        font-weight: bold
+        display: inline
+        +tr
+        &.active
+          padding-top: 10px
+          display: block
+        &:hover
+          text-decoration: underline
     &__slider
       margin-top: 40px
       h4
