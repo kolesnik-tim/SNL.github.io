@@ -124,21 +124,8 @@
     &__btn
       position: relative
       display: inline-flex
-      &:before
-        content: ''
-        width: 113px
-        height: 113px
-        background: rgba(#d452ac, 0.07)
-        position: absolute
-        left: 18px
-        top: 50%
-        transform: translate(0%, -50%)
-        border-radius: 100%
-        z-index: -1
-        +r(1040)
-          left: 0px
       a:last-child
-        padding: 13px 30px 10px
+        padding: 13px 33px 10px
         border-radius: 25px
         border: solid 1px #4143ea
         color: #4143ea
@@ -148,6 +135,12 @@
           color: $white
       a
         font-size: 15px
+        padding: 15px 33px 12px !important
+        height: 50px
+        +center
+        border-radius: 25px
+        &:before, &:after
+          border-radius: 25px !important
         span
           font-size: 15px
         +r(1040)
