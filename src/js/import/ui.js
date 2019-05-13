@@ -52,7 +52,7 @@ $('button.btn.btn-primary').on('click', function() {
 
 //footer
 
-$('.footer__nav__column ul').on('click','a', function(event) {
+$('.footer__nav__column ul, .header__nav__dropdown').on('click','a', function(event) {
   if($('div').hasClass('about')) {
     event.preventDefault();
     var id  = $(this).attr('rel'),
@@ -62,7 +62,7 @@ $('.footer__nav__column ul').on('click','a', function(event) {
 });
 
 
-
+// animation
 $('.our-services__block').hover(function() {
   let attrSvg = $(this).attr('data-path-hover');
   let thisElement = $(this);

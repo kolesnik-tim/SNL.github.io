@@ -83,11 +83,11 @@
           color: #a2a0ef
     &__dropdown
       position: absolute
-      right: 0
+      left: 50%
+      transform: translate(-50%)
       top: 22px
       flex-direction: column
-      width: 100%
-      min-width: 100px
+      width: 200px
       background: #a2a0ef 
       padding: 15px 15px 5px
       border-radius: 4px
@@ -109,7 +109,7 @@
 
 
 .header__menu
-  width: 240px
+  width: 270px
   position: fixed
   height: 100%
   right: -300px
@@ -118,6 +118,7 @@
   z-index: 99
   transition: all 0.5s
   padding: 50px 40px
+  padding-right: 20px
   overflow-x: hidden
   overflow-y: auto
   &.is-active
