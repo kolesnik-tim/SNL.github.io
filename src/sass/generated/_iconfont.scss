@@ -23,11 +23,12 @@ $icon-left-arrow: "\EA0B";
 $icon-logout: "\EA0C";
 $icon-more: "\EA0D";
 $icon-plus: "\EA0E";
-$icon-right-arrow: "\EA0F";
-$icon-search: "\EA10";
-$icon-settings: "\EA11";
-$icon-sort-arrows: "\EA12";
-$icon-twitter: "\EA13";
+$icon-quotes: "\EA0F";
+$icon-right-arrow: "\EA10";
+$icon-search: "\EA11";
+$icon-settings: "\EA12";
+$icon-sort-arrows: "\EA13";
+$icon-twitter: "\EA14";
 
 
 %icon {
@@ -60,6 +61,7 @@ $icon-twitter: "\EA13";
 .icon-logout:before { content: $icon-logout; }
 .icon-more:before { content: $icon-more; }
 .icon-plus:before { content: $icon-plus; }
+.icon-quotes:before { content: $icon-quotes; }
 .icon-right-arrow:before { content: $icon-right-arrow; }
 .icon-search:before { content: $icon-search; }
 .icon-settings:before { content: $icon-settings; }
