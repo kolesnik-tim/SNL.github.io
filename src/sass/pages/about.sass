@@ -230,15 +230,22 @@
       position: relative
       min-height: 265px
       border-radius: 10px
-      overflow: hidden
       width: 100%
       padding: 30px 22px
       display: flex
       flex-direction: column
       justify-content: flex-end
       align-items: flex-start
+      &:hover
+        .about__committee__block__info
+          opacity: 1
+          visibility: visible
+          transform: scale(1)
+          h4, p, b
+            opacity: 1
       +r(767)
         margin-bottom: 20px
+          font-weight: normal
       &-content
         position: relative
         margin: 0 10px
@@ -275,6 +282,7 @@
         top: 0
         left: 0
         z-index: -1
+        border-radius: 10px
       h4
         font-size: 18px
         color: $white
@@ -289,6 +297,37 @@
         font-size: 14px
         font-weight: 600
         color: $white
+      &__info
+        position: absolute
+        width: calc(100% + 40px)
+        height: calc(100% + 40px)
+        top: -20px
+        bottom: -20px
+        left: -20px
+        right: -20px
+        padding: 20px
+        background-image: linear-gradient(159deg,#170472,#9c32ff 93%)
+        opacity: 0
+        visibility: hidden
+        transform: scale(0.8)
+        transition: all 0.3s
+        border-radius: 10px
+        h4
+          font-size: 28px
+          font-weight: normal
+          margin-bottom: 15px
+          opacity: 0
+          transition: all 0.2s 0.2s
+        b
+          margin-bottom: 10px
+          display: block
+          text-transform: uppercase
+          opacity: 0
+          transition: all 0.2s 0.2s
+        p
+          line-height: 1.6
+          opacity: 0
+          transition: all 0.2s 0.2s
   &__statement
     min-height: 607px
     height: 100%
