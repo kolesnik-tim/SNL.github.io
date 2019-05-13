@@ -89,6 +89,23 @@ $('.manage__create__close').on('click', function(e) {
 
 
 
+//Create Event
+//open
+$('.message-open').on('click', function(e) {
+  e.preventDefault();
+  $('.message-popup').addClass('is-active');
+  $('.message-popup--bg').fadeIn();
+});
+//close
+$('.message-popup-close, .message-popup--bg').on('click', function(e) {
+  e.preventDefault();
+  $('.message-popup').removeClass('is-active');
+  $('.message-popup--bg').fadeOut();
+});
+
+
+
+
 $('.datepicker-create_event').on('focus', function() {
   $(this).next('label').fadeOut();
 });

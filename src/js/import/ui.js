@@ -37,6 +37,15 @@ AOS.init({
 });
 
 
+$('input[type="tel"]').keyup(function() {
+  if($(this).val() !== '' && !$.isNumeric($(this).val())) {
+    $(this).val(
+      function(index, value) {
+        return value.substr(0, value.length - 1);
+      });
+  }
+});
+
 
 //request_agenda_sucess
 $('button.btn.btn-primary').on('click', function() {
