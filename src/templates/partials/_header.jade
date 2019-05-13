@@ -10,9 +10,9 @@ header.header(class=header__none)
           span
         nav.header__nav.hidden-xs
           ul
-            li.active
+            li(class=header__home)
               a(href="index.html") Home
-            li
+            li(class=header__about)
               a(href="about.html") About Us
                 i.icon.icon-down-arrow
               ul.header__nav__dropdown
@@ -26,11 +26,11 @@ header.header(class=header__none)
                   a(href="about.html#business-development" rel="#business-development") Business Development
                 li 
                   a(href="about.html#statement" rel="#statement") The Mission Statement
-            li
+            li(class=header__ourServices)
               a(href="our-services.html") Our Services
-            li
+            li(class=header__ourEvents)
               a(href="our-events.html") Our Events
-            li
+            li(class=header__contact)
               a(href="contact.html") Contact Us
 .header__menu__bg
 .header__menu
