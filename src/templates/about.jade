@@ -1,6 +1,7 @@
 ---
 title: About
 header__none: header__none
+header__about: active
 footer__none: footer__none
 ---
 extends layouts/_layout
@@ -8,11 +9,11 @@ block content
   .about
     section.about__intro
       .container
-        h1 Attend. Engage. Grow.
-    section.about__journey
+        h1 about us
+    section.about__journey#our-journey
       .container
         .about__journey__content
-          .about__journey__decor
+          //- .about__journey__decor
           .about__journey__title
             h2 Our Journey
           .about__journey__text
@@ -20,9 +21,9 @@ block content
             p We are the experts in syncing talents and linking businesses. It is critical to achieve the dual expertise and to bring them all together to sustain and succeed. Our highly experienced and immensely talented team have catered to all major industries like Energy, Healthcare, Hospitality, Finance and Telecommunication.
             p Events, these days are a helter-skelter. We are the missing link between these events and Quality, between these events and sustenance. The road we travel leads to you and in turn leads to the world.
     section.about__advantages
-      .about__advantages__decor
-        img(src="img/about/about-advantages.png", alt="")
-        img(src="img/about/about-line.png", alt="")
+      //- .about__advantages__decor
+      //-   img(src="img/about/about-advantages.png", alt="")
+      //-   img(src="img/about/about-line.png", alt="")
       .container
         .row
           .col-md-3.col-sm-6.col-xs-12
@@ -53,7 +54,7 @@ block content
               .about__advantages__block__text
                 span 35+ 
                 p Our Visionary Speakers
-    section.about__vision
+    section.about__vision#our-vision
       .container
         .row
           .col-sm-6.col-xs-12
@@ -69,49 +70,41 @@ block content
       .about__committee__parallax(data-aos="fade-right") Team
       .container
         h2 Key Advisory Committee
-        .about__committee__content
+        .about__committee__content#key-advisory-committee
           .about__committee__block-content.about__committee__block-content-top
             .about__committee__block
+              .about__committee__block__info
+                h4 Tim Briggs 
+                b Past President of IOSH
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse fugiat vitae qui harum beatae doloremque possimus, modi hic eos veniam, optio unde incidunt pariatur in doloribus odio eaque. Nisi, exercitationem.
               img(src="img/team/tim.jpg", alt="")
-              h4 Tim Briggs
-              p Course Director Programme Leader Leeds Beckett University Past President of IOSH
+              h4 Tim Briggs 
+              p Course Director Programme Leader Leeds Beckett University
+              b Past President of IOSH
         h2 Business Development
-        .about__committee__content
+        .about__committee__content#business-development
           .about__committee__block-content.about__committee__block-content-top
             .about__committee__block
+              .about__committee__block__info
+                h4 Sri hari Kamban
+                b Energy & Safety Sector
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse fugiat vitae qui harum beatae doloremque possimus, modi hic eos veniam, optio unde incidunt pariatur in doloribus odio eaque. Nisi, exercitationem.
               img(src="img/team/arun.jpg", alt="")
               h4 Sri hari Kamban
               p Energy & Safety Sector
           .about__committee__block-content.about__committee__block-content-bottom
             .about__committee__block
+              .about__committee__block__info
+                h4 Arun Veetil
+                b Healthcare & Hospitality Sector
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse fugiat vitae qui harum beatae doloremque possimus, modi hic eos veniam, optio unde incidunt pariatur in doloribus odio eaque. Nisi, exercitationem.
               img(src="img/team/arun.jpg", alt="")
               h4 Arun Veetil
               p Healthcare & Hospitality Sector
-    section.about__statement
+    section.about__statement#statement
       .about__statement__parallax(data-aos="fade-right") Statement
       .container
         .about__statement__title
           h4 The Mission Statement
           h2 “One to live for and live by ”
           p Brick by brick, stone by stone we have build the values of Integrity, Quality, Perseverance and Trust to achieve the eventuality – We will be the Numero Uno choice as Events Organizers, worldwide.
-    section.about__location
-      .about__location__parallax(data-aos="fade-right") Get Direction
-      .contact__location__decor
-        img(src="img/about/about-location.png", alt="")
-        img(src="img/about/about-line.png", alt="")
-        span
-      .container
-        h2 Locations
-        .row.center-xs
-          .col-md-4.col-sm-6.col-xs-12
-            .about__location__block
-              h3 Bengaluru, India
-              p Washington State Convention Center 705 Pike Street ,Seattle, WA 98101 Phone: 206-694-5000
-          .col-md-4.col-sm-6.col-xs-12
-            .about__location__block
-              h3 Dubai, UAE
-              p Washington State Convention Center 705 Pike Street ,Seattle, WA 98101 Phone: 206-694-5000
-          .col-md-4.col-sm-6.col-xs-12
-            .about__location__block
-              h3 Antwerp, Belgium
-              p Washington State Convention Center 705 Pike Street ,Seattle, WA 98101 Phone: 206-694-5000

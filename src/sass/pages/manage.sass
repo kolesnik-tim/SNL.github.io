@@ -79,8 +79,7 @@
     box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.1)
     background-color: $white
     margin-bottom: 50px
-    overflow-x: scroll
-    max-height: 90vh
+    overflow-x: auto
     position: relative
     z-index: 2
     &::-webkit-scrollbar-track
@@ -94,10 +93,8 @@
     +r(767)
       margin-bottom: 30px
     &__content
-      min-width: 1365px
       display: block
-      // +r(767)
-      //   min-width: 900px
+      min-width: 1150px
     table, tbody, thead
       width: 100%
       display: block
@@ -134,27 +131,23 @@
       &:first-child
         width: 4%
       &:nth-child(2)
-        width: 8%
+        width: 10%
       &:nth-child(3)
-        width: 9%
+        width: 11%
       &:nth-child(4)
-        width: 9%
+        width: 11%
       &:nth-child(5)
-        width: 7%
+        width: 9%
       &:nth-child(6)
-        width: 8%
+        width: 10%
       &:nth-child(7)
-        width: 9%
+        width: 11%
       &:nth-child(8)
-        width: 12%
+        width: 10%
       &:nth-child(9)
-        width: 9%
+        width: 11%
       &:nth-child(10)
         width: 8%
-      &:nth-child(11)
-        width: 9%
-      &:nth-child(12)
-        width: 6%
       &:last-child
         width: 3%
     th
@@ -353,9 +346,8 @@
 
 
 
-
-
-  &__create
+  
+  &__create, 
     position: fixed
     right: -100%
     top: 0
@@ -599,6 +591,9 @@
         color: #616161
         padding-bottom: 10px
         background: none
+        position: relative
+        z-index: 3
+        cursor: pointer
         &.focused
           & + label
             opacity: 0
@@ -760,3 +755,45 @@
       button
         font-size: 12px
         text-transform: uppercase
+
+
+
+
+.message-popup
+  position: fixed
+  right: -100%
+  top: 0
+  max-width: 700px
+  width: 100%
+  height: 100vh
+  background-color: #f2f2f2
+  box-shadow: -1.5px 2px 16px 0 rgba(2, 23, 56, 0.19)
+  transition: all 0.9s
+  z-index: 15
+  +r(767)
+    max-width: 100%
+  &.is-active
+    right: 0
+  &__content
+    overflow: scroll
+    height: calc(100vh - 100px)
+  &__block
+    margin: 30px
+    padding: 50px 45px 20px
+    border-radius: 10px
+    box-shadow: 0px 1px 9px 0 rgba(0, 0, 0, 0.16)
+    background-color: $white
+    p
+      font-size: 14px
+      line-height: 1.79
+      color: $charcoal-grey
+      padding-bottom: 30px
+.message-popup--bg
+  background: rgba(0, 0, 0, 0.4)
+  position: fixed
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  display: none
+  z-index: 14

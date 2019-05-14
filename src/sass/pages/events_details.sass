@@ -150,59 +150,16 @@
       right: -80px
   &__content
     position: relative
-    padding: 230px 0 0
+    padding: 230px 0 120px
     overflow: hidden
     background-color: #f8f8fa
     +r(767)
-      padding: 70px 0 0
+      padding: 70px 0 50px
     img
       max-width: 100%
-      width: 420px
-      margin-bottom: -10px
-    &__decor
-      img
-        position: absolute
-        right: 0
-        bottom: 0
-        width: 480px
-        z-index: 1
-      span
-        display: block
-        position: absolute
-        border-radius: 100%
-        z-index: 1
-        &:first-child
-          width: 50px
-          height: 50px
-          opacity: 0.69
-          background-color: #30dffd
-          left: 20px
-          bottom: 17%
-        &:nth-child(2)
-          width: 98px
-          height: 98px
-          background-color: #07b6ee
-          top: 45%
-          left: 5%
-          +r(767)
-            display: none
-        &:nth-child(3)
-          width: 39px
-          height: 39px
-          opacity: 0.61
-          background-color: #07b6ee
-          right: 14px
-          top: 30%
-        &:nth-child(4)
-          width: 39px
-          height: 39px
-          opacity: 0.79
-          background-color: #4b1ece
-          right: 14%
-          bottom: 25%
-    .container
-      position: relative
-      z-index: 2
+      width: 400px
+      +r(767)
+        margin: 0 auto
   &__text
     +r(767)
       margin-bottom: 40px
@@ -223,10 +180,10 @@
         padding-right: 0
   &__triners
     position: relative
-    padding-top: 160px
+    padding: 160px 0
     overflow: hidden
     +r(767)
-      padding-top: 70px
+      padding: 70px 0
     &__parallax
       position: absolute
       right: -330px
@@ -248,43 +205,141 @@
       margin-bottom: 125px
       +r(767)
         margin-bottom: 10px
-    &__img
-      height: 355px
-      +center
-      background-image: url('../img/pages/events_details__triners__photo.png')
-      background-size: contain
-      background-repeat: no-repeat
-      background-position: 52% 50%
-    &__photo
-      width: 240px
-      height: 240px
-      overflow: hidden
-      border-radius: 100%
-      +center
+    &__container
+      position: relative
+    &__person
+      width: 466px
+      height: 445px
+      border-radius: 13px
+      box-shadow: -1.5px 12.4px 48.5px 0 rgba(0, 0, 0, 0.17)
+      background-color: $white
+      position: absolute
+      left: 0
+      top: 70px
+      padding: 15px
+      +center-column
+      +r(1040)
+        position: relative
+        top: 0
+        left: 50%
+        transform: translate(-50%)
+        margin-bottom: 30px
       +r(767)
-        width: 200px
-        height: 200px
-    &__text
+        width: 100%
       h3
         font-size: 30px
         font-weight: bold
         text-align: center
         color: #110437
-        margin-bottom: 90px
-        padding-top: 10px
-        +r(767)
-          margin-bottom: 50px
-      li, p
-        font-size: 14px
-        font-weight: normal
-        line-height: 2.5
-        color: #707070
-        +r(767)
-          font-size: 12px
-      ul, ol
-        padding-bottom: 50px
+      &__img
+        width: 240px
+        height: 240px
+        background-color: #12114a
+        border-radius: 100%
+        overflow: hidden
+        margin-bottom: 35px
+        img
+          width: 100%
+          height: 100%
+          +object-fit(cover)
+    &__content
+      border-radius: 13px
+      border: solid 1px #12114a
+      background-color: $white
+      padding: 85px 75px 35px
+      padding-left: 35%
+      +r(1100)
+        padding-left: 40%
+      +r(1040)
+        padding: 50px
+      +r(767)
+        padding: 20px 15px
+    &__text
+      border-bottom: 1px solid #e7e7e7
+      padding-bottom: 30px
       p
+        font-size: 16px
+        font-weight: normal
+        line-height: 2.03
+        color: #12114a
+        display: inline
+        &.none
+          display: none
+      a
+        color: #12114a
+        font-weight: bold
+        display: inline
+        +tr
+        &.active
+          padding-top: 10px
+          display: block
+        &:hover
+          text-decoration: underline
+    &__slider
+      margin-top: 40px
+      h4
+        font-size: 21px
+        font-weight: bold
+        line-height: 1.39
+        color: #110437
+        margin-bottom: 40px
+      .swiper-container
         padding-bottom: 50px
+      .swiper-pagination
+        text-align: left
+        padding-left: 97px
+        &-bullet
+          width: 9px
+          height: 9px
+          opacity: 0.2
+          background-color: #110437
+          margin: 0 3px !important
+          &-active
+            color: #000000
+            opacity: 1
+      &__slide
+        p
+          font-size: 16px
+          line-height: 2.03
+          color: #12114a
+          margin-bottom: 20px
+          padding-left: 100px
+          padding-right: 20px
+          position: relative
+          +r(767)
+            padding: 0 15px
+          &:before
+            content: $icon-quotes
+            position: absolute
+            left: 0
+            top: 0
+            font-size: 80px
+            color: rgba(0, 0, 0, 0.1)
+            font-family: "iconfont"
+            display: block
+            line-height: 1
+            +r(767)
+              font-size: 50px
+        strong
+          font-size: 14px
+          font-weight: 600
+          line-height: 1.61
+          color: #12114a
+          display: block
+          padding-left: 100px
+          padding-right: 20px
+          +r(767)
+            padding: 0 15px
+        span
+          font-size: 14px
+          color: #12114a
+          display: block
+          font-weight: normal
+          color: #8d8d8d
+          padding-left: 100px
+          padding-right: 20px
+          +r(767)
+            padding: 0 15px
   &__gallery
     position: relative
     overflow: hidden
@@ -292,32 +347,32 @@
     padding: 110px 0 170px
     +r(767)
       padding: 70px 0 30px
-    &__decor
-      img
-        z-index: 1
-        &:first-child
-          width: 170px
-          position: absolute
-          left: 2%
-          top: 50%
-          +r(767)
-            top: 40px
-        &:nth-child(2)
-          position: absolute
-          right: 2%
-          bottom: 30%
-          width: 68px
-      span
-        width: 24px
-        height: 24px
-        background: $white
-        border: 5px solid rgb(125, 205, 160)
-        display: block
-        border-radius: 100%
-        position: absolute
-        right: 8%
-        bottom: 45%
-        z-index: 1
+    // &__decor
+    //   img
+    //     z-index: 1
+    //     &:first-child
+    //       width: 170px
+    //       position: absolute
+    //       left: 2%
+    //       top: 50%
+    //       +r(767)
+    //         top: 40px
+    //     &:nth-child(2)
+    //       position: absolute
+    //       right: 2%
+    //       bottom: 30%
+    //       width: 68px
+    //   span
+    //     width: 24px
+    //     height: 24px
+    //     background: $white
+    //     border: 5px solid rgb(125, 205, 160)
+    //     display: block
+    //     border-radius: 100%
+    //     position: absolute
+    //     right: 8%
+    //     bottom: 45%
+    //     z-index: 1
     .container
       position: relative
       z-index: 2

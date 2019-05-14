@@ -83,25 +83,30 @@
           color: #a2a0ef
     &__dropdown
       position: absolute
-      right: 0
+      left: 50%
+      transform: translate(-50%)
       top: 22px
       flex-direction: column
-      width: 100%
-      min-width: 100px
-      background: #a2a0ef 
+      width: 180px
+      background: $white
       padding: 15px 15px 5px
       border-radius: 4px
       opacity: 0
       visibility: hidden
       +tr
+      box-shadow: 0px 1px 5px 0 rgba(0, 0, 0, 0.24)
       li
         margin: 0 !important
         a
-          color: $white
+          color: $dark !important
           margin: 0
+          font-weight: normal
           margin-bottom: 10px
           display: block
+          font-size: 12px
           text-transform: none
+          &:hover
+            color: #8f2794 !important
 
 
 
@@ -109,7 +114,7 @@
 
 
 .header__menu
-  width: 240px
+  width: 270px
   position: fixed
   height: 100%
   right: -300px
@@ -118,6 +123,7 @@
   z-index: 99
   transition: all 0.5s
   padding: 50px 40px
+  padding-right: 20px
   overflow-x: hidden
   overflow-y: auto
   &.is-active

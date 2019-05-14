@@ -1,7 +1,7 @@
 .our-services
   overflow: hidden
   &__intro
-    background-image: url('../img/pages/our-events__images.jpg')
+    background-image: url('../img/pages/our-services-image.jpg')
     +cover
     height: 440px
     +center
@@ -10,109 +10,123 @@
     +r(767)
       height: 250px
       margin-bottom: 50px
+    .container
+      position: relative
+      height: 100%
     h1
-      font-size: 150px
+      background-image: linear-gradient(150deg, #9f9cef, #3d30f3 99%), linear-gradient(to bottom, #7e75bd, #7e75bd)
+      font-size: 100px
       font-weight: bold
       line-height: 1
-      color: rgba(250, 250, 250, 0.08)
+      color: #7e75bd
+      -webkit-background-clip: text
+      background-clip: text
+      -webkit-text-fill-color: transparent
       position: absolute
-      bottom: -32px
-      right: 0
+      bottom: 30%
+      left: 3px !important
+      right: auto
+      display: block
       text-align: center
       text-transform: uppercase
-      +r(1150)
-        font-size: 100px
-        bottom: 0
+      // +r(1150)
+      //   font-size: 100px
       +r(767)
         font-size: 40px !important
   &__content
     position: relative
-    &__decor
-      span
-        display: block
-        position: absolute
-        border-radius: 100%
-        &:first-child
-          width: 277px
-          height: 277px
-          opacity: 0.5
-          border: solid 68px #30dffd
-          left: -140px
-          top: 0
-          +r(767)
-            display: none
-        &:nth-child(2)
-          width: 110px
-          height: 110px
-          opacity: 0.4
-          right: 30px
-          top: 16%
-          background-color: #d452ac
-        &:nth-child(3)
-          width: 46px
-          height: 46px
-          opacity: 0.26
-          left: 5%
-          top: 45%
-          background-color: #74a241
-          +r(767)
-            top: 39%
-        &:last-child
-          width: 49px
-          height: 49px
-          opacity: 0.65
-          right: 30px
-          bottom: 42%
-          background-color: #30dffd
+    // &__decor
+    //   span
+    //     display: block
+    //     position: absolute
+    //     border-radius: 100%
+    //     z-index: -1
+    //     &:first-child
+    //       width: 277px
+    //       height: 277px
+    //       opacity: 0.5
+    //       border: solid 68px #30dffd
+    //       left: -140px
+    //       top: 0
+    //       +r(767)
+    //         display: none
+    //     &:nth-child(2)
+    //       width: 110px
+    //       height: 110px
+    //       opacity: 0.4
+    //       right: 30px
+    //       top: 16%
+    //       background-color: #d452ac
+    //     &:nth-child(3)
+    //       width: 46px
+    //       height: 46px
+    //       opacity: 0.26
+    //       left: 5%
+    //       top: 45%
+    //       background-color: #74a241
+    //       +r(767)
+    //         top: 39%
+    //     &:last-child
+    //       width: 49px
+    //       height: 49px
+    //       opacity: 0.65
+    //       right: 30px
+    //       bottom: 42%
+    //       background-color: #30dffd
   &__block
-    margin-bottom: 100px
-    strong
-      font-size: 15px
-      font-weight: normal
-      color: #f20487
-      display: block
-      margin-bottom: 3px
+    border-radius: 10px
+    box-shadow: 0px 1px 23px 0 rgba(0, 0, 0, 0.08)
+    border: solid 0 #000000
+    background-color: $white
+    margin: 0 7px 60px
+    overflow: hidden
+    display: block
+    &:hover
+      box-shadow: 0 25px 60px rgba(67,54,102,.2)
+      .our-services__block__text
+        top: -40px
     h2
-      font-size: 25px
+      font-size: 21px
       font-weight: normal
+      text-align: center
       color: #12114a
-      margin-bottom: 75px
-    svg
-      width: 95px
-      height: 88px
-      transform: rotate(145deg)
-      margin-bottom: 50px
-      margin-top: -30px
+      margin-bottom: 35px
+      +r(767)
+        margin-bottom: 20px
     p
-      font-size: 14.5px
+      font-size: 14px
       font-weight: normal
       line-height: 1.88
+      text-align: center
       color: #707070
-      margin-bottom: 45px
+      margin-bottom: 55px
     i
-      font-size: 17.5px
+      font-size: 25px
       font-weight: normal
-      line-height: 1.39
-      color: #12114a
-      min-height: 80px
+      font-style: normal
+      line-height: 1.2
+      text-align: center
+      color: rgba(40, 40, 40, 0.5)
       display: block
-    &__text
-      padding: 0 30px 20px
+    path
+      transition: all 0.2s
+    &__img
+      overflow: hidden
+      height: 225px
       position: relative
-      min-height: 485px
-      &:before, &:after
-        content: ''
-        position: absolute
-        display: block
-      &:before
-        width: 12px
-        height: 12px
-        border-radius: 100%
-        background-color: #e6e6f6
-        left: -5px
-      &:after
-        width: 2px
+      img
+        width: 100%
         height: 100%
+        +object-fit(cover)
+      svg
+        position: absolute
+        bottom: 0
         left: 0
-        top: 0
-        background-color: #e6e6f6
+        width: 100%
+    &__text
+      padding: 40px 35px 70px
+      position: relative
+      top: 0
+      transition: all 0.4s
+      +r(767)
+        padding: 30px 15px 50px

@@ -1,6 +1,7 @@
 ---
 title: Contact-us
 header__none: header__none
+header__contact: active
 footer__none: footer__none
 ---
 extends layouts/_layout
@@ -10,37 +11,38 @@ block content
       .container
         h1 CONTACT US
     section.contact__form
-      .contact__form__decor
-        img(src="img/about/about-location.png", alt="")
-        img(src="img/about/about-line.png", alt="")
-        span
+      //- .contact__form__decor
+      //-   img(src="img/about/about-location.png", alt="")
+      //-   img(src="img/about/about-line.png", alt="")
+      //-   span
       .container
-        form
-          .row
-            .col-sm-4.col-xs-12
+        .row
+          .col-md-5.col-sm-6.col-xs-12.first-sm.last-xs
+            form
               .contact__form__input
                 p Full Name
-                input(type="text" name="name" placeholder="Sohel Nazmul")
-            .col-sm-4.col-xs-12
+                input(type="text" name="name" placeholder="Sohel Nazmul" required)
               .contact__form__input
                 p Business Email
-                input(type="email" name="email" placeholder="sohel@gmail.com")
-            .col-sm-4.col-xs-12
+                input(type="email" name="email" placeholder="sohel@gmail.com" required)
               .contact__form__input
                 p Phone Number
                 input(type="tel" name="phone" placeholder="887276272")
-            .col-xs-12
               .contact__form__message
                 p Message
-                textarea(name="message" placeholder="Enter youe meaases here")
-            .col-xs-12.end-xs
+                textarea(name="message" placeholder="Enter youe meaases here" required)
               button(type="submit").btn.btn-primary
                 span Send Message
+          .col-md-7.col-sm-6.col-xs-12
+            .contact__form__title
+              h2 Career with us
+              p If you are with an events experience of 5 years and above please send your resume to: 
+                a(href="mailto:info@syncandlink.com") info@syncandlink.com
     section.contact__location
-      .contact__location__decor
-        img(src="img/about/about-location.png", alt="")
-        img(src="img/about/about-line.png", alt="")
-        span
+      //- .contact__location__decor
+      //-   img(src="img/about/about-location.png", alt="")
+      //-   img(src="img/about/about-line.png", alt="")
+      //-   span
       .contact__location__parallax(data-aos="fade-right") Get Direction
       .container
         h2 Locations
@@ -48,12 +50,10 @@ block content
           .col-md-4.col-sm-6.col-xs-12
             .contact__location__block
               h3 Bengaluru, India
-              p Washington State Convention Center 705 Pike Street ,Seattle, WA 98101 Phone: 206-694-5000
+              b Sync &amp; Link Events India Pvt. Ltd
+              p No.25, 12 th B Main, HAL II Stage, Indiranagar, Bengaluru, Karnataka. 560038
           .col-md-4.col-sm-6.col-xs-12
             .contact__location__block
               h3 Dubai, UAE
-              p Washington State Convention Center 705 Pike Street ,Seattle, WA 98101 Phone: 206-694-5000
-          .col-md-4.col-sm-6.col-xs-12
-            .contact__location__block
-              h3 Antwerp, Belgium
-              p Washington State Convention Center 705 Pike Street ,Seattle, WA 98101 Phone: 206-694-5000
+              p #302, Omer Bin Haider Building, Kuwait Street, Al Karama, Dubai, UAE
+              a(href="tel:+971559817407") +971559817407

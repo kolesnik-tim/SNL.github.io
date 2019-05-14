@@ -9,6 +9,37 @@
     <meta name="format-detection" content="telephone=no">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;amp;subset=cyrillic-ext" rel="stylesheet">
     <link rel="stylesheet" media="all" href="css/app.css">
+    <!--Start of Tawk.to Script-->
+    <script>
+      var Tawk_API = Tawk_API ||
+        {},
+        Tawk_LoadStart = new Date();
+      (function()
+      {
+        var s1 = document.createElement("script"),
+          s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/5cd948e22846b90c57ae38a5/default';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+      })();
+
+    </script>
+    <!--End of Tawk.to Script-->
+    <!-- Start Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140055669-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag()
+      {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'UA-140055669-1');
+
+    </script><!-- End Global site tag (gtag.js) - Google Analytics -->
   </head>
   <body>
     <!--BEGIN out-->
@@ -22,21 +53,19 @@
               <div class="menu-open"><span></span></div>
               <nav class="header__nav hidden-xs">
                 <ul>
-                  <li class="active"><a href="#">Home</a></li>
-                  <li><a href="#">About Us<i class="icon icon-down-arrow"></i></a>
+                  <li><a href="index.html">Home</a></li>
+                  <li class="active"><a href="about.html">About Us<i class="icon icon-down-arrow"></i></a>
                     <ul class="header__nav__dropdown">
-                      <li><a href="#">Our Journey</a></li>
-                      <li><a href="#">Our Vision</a></li>
+                      <li><a href="about.html#our-journey" rel="#our-journey">Our Journey</a></li>
+                      <li><a href="about.html#our-vision" rel="#our-vision">Our Vision</a></li>
+                      <li> <a href="about.html#key-advisory-committee" rel="#key-advisory-committee">Key Advisory Committee</a></li>
+                      <li> <a href="about.html#business-development" rel="#business-development">Business Development</a></li>
+                      <li> <a href="about.html#statement" rel="#statement">The Mission Statement</a></li>
                     </ul>
                   </li>
-                  <li><a href="#">Our Services<i class="icon icon-down-arrow"></i></a>
-                    <ul class="header__nav__dropdown">
-                      <li><a href="#">Our Journey</a></li>
-                      <li><a href="#">Our Vision</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="#">Our Events</a></li>
-                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="our-services.html">Our Services</a></li>
+                  <li><a href="our-events.html">Our Events</a></li>
+                  <li><a href="contact.html">Contact Us</a></li>
                 </ul>
               </nav>
             </div>
@@ -47,34 +76,31 @@
       <div class="header__menu">
         <div class="menu-close"><span></span></div>
         <ul>
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">About Us</a>
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a>
             <ul>
-              <li><a href="#">Our Journey</a></li>
-              <li><a href="#">Our Vision</a></li>
+              <li><a href="about.html#our-journey" rel="#our-journey">Our Journey</a></li>
+              <li><a href="about.html#our-vision" rel="#our-vision">Our Vision</a></li>
+              <li> <a href="about.html#key-advisory-committee" rel="#key-advisory-committee">Key Advisory Committee</a></li>
+              <li> <a href="about.html#business-development" rel="#business-development">Business Development</a></li>
+              <li> <a href="about.html#statement" rel="#statement">The Mission Statement</a></li>
             </ul>
           </li>
-          <li><a href="#">Our Services</a>
-            <ul>
-              <li><a href="#">Our Journey</a></li>
-              <li><a href="#">Our Vision</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Our Events</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <li><a href="our-services.html">Our Services</a></li>
+          <li><a href="our-events.html">Our Events</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div>
       <!--END header-->
       <div class="about">
         <section class="about__intro">
           <div class="container">
-            <h1>Attend. Engage. Grow.</h1>
+            <h1>about us</h1>
           </div>
         </section>
-        <section class="about__journey">
+        <section id="our-journey" class="about__journey">
           <div class="container">
             <div class="about__journey__content">
-              <div class="about__journey__decor"></div>
               <div class="about__journey__title">
                 <h2>Our Journey</h2>
               </div>
@@ -87,7 +113,6 @@
           </div>
         </section>
         <section class="about__advantages">
-          <div class="about__advantages__decor"><img src="img/about/about-advantages.png" alt=""><img src="img/about/about-line.png" alt=""></div>
           <div class="container">
             <div class="row">
               <div class="col-md-3 col-sm-6 col-xs-12">
@@ -125,7 +150,7 @@
             </div>
           </div>
         </section>
-        <section class="about__vision">
+        <section id="our-vision" class="about__vision">
           <div class="container">
             <div class="row">
               <div class="col-sm-6 col-xs-12">
@@ -145,24 +170,36 @@
           <div data-aos="fade-right" class="about__committee__parallax">Team</div>
           <div class="container">
             <h2>Key Advisory Committee</h2>
-            <div class="about__committee__content">
+            <div id="key-advisory-committee" class="about__committee__content">
               <div class="about__committee__block-content about__committee__block-content-top">
-                <div class="about__committee__block"><img src="img/team/tim.jpg" alt="">
-                  <h4>Tim Briggs</h4>
-                  <p>Course Director Programme Leader Leeds Beckett University Past President of IOSH</p>
+                <div class="about__committee__block">
+                  <div class="about__committee__block__info">
+                    <h4>Tim Briggs </h4><b>Past President of IOSH</b>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse fugiat vitae qui harum beatae doloremque possimus, modi hic eos veniam, optio unde incidunt pariatur in doloribus odio eaque. Nisi, exercitationem.</p>
+                  </div><img src="img/team/tim.jpg" alt="">
+                  <h4>Tim Briggs </h4>
+                  <p>Course Director Programme Leader Leeds Beckett University</p><b>Past President of IOSH</b>
                 </div>
               </div>
             </div>
             <h2>Business Development</h2>
-            <div class="about__committee__content">
+            <div id="business-development" class="about__committee__content">
               <div class="about__committee__block-content about__committee__block-content-top">
-                <div class="about__committee__block"><img src="img/team/arun.jpg" alt="">
+                <div class="about__committee__block">
+                  <div class="about__committee__block__info">
+                    <h4>Sri hari Kamban</h4><b>Energy & Safety Sector</b>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse fugiat vitae qui harum beatae doloremque possimus, modi hic eos veniam, optio unde incidunt pariatur in doloribus odio eaque. Nisi, exercitationem.</p>
+                  </div><img src="img/team/arun.jpg" alt="">
                   <h4>Sri hari Kamban</h4>
                   <p>Energy & Safety Sector</p>
                 </div>
               </div>
               <div class="about__committee__block-content about__committee__block-content-bottom">
-                <div class="about__committee__block"><img src="img/team/arun.jpg" alt="">
+                <div class="about__committee__block">
+                  <div class="about__committee__block__info">
+                    <h4>Arun Veetil</h4><b>Healthcare & Hospitality Sector</b>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse fugiat vitae qui harum beatae doloremque possimus, modi hic eos veniam, optio unde incidunt pariatur in doloribus odio eaque. Nisi, exercitationem.</p>
+                  </div><img src="img/team/arun.jpg" alt="">
                   <h4>Arun Veetil</h4>
                   <p>Healthcare & Hospitality Sector</p>
                 </div>
@@ -170,40 +207,13 @@
             </div>
           </div>
         </section>
-        <section class="about__statement">
+        <section id="statement" class="about__statement">
           <div data-aos="fade-right" class="about__statement__parallax">Statement</div>
           <div class="container">
             <div class="about__statement__title">
               <h4>The Mission Statement</h4>
               <h2>“One to live for and live by ”</h2>
               <p>Brick by brick, stone by stone we have build the values of Integrity, Quality, Perseverance and Trust to achieve the eventuality – We will be the Numero Uno choice as Events Organizers, worldwide.</p>
-            </div>
-          </div>
-        </section>
-        <section class="about__location">
-          <div data-aos="fade-right" class="about__location__parallax">Get Direction</div>
-          <div class="contact__location__decor"><img src="img/about/about-location.png" alt=""><img src="img/about/about-line.png" alt=""><span></span></div>
-          <div class="container">
-            <h2>Locations</h2>
-            <div class="row center-xs">
-              <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="about__location__block">
-                  <h3>Bengaluru, India</h3>
-                  <p>Washington State Convention Center 705 Pike Street ,Seattle, WA 98101 Phone: 206-694-5000</p>
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="about__location__block">
-                  <h3>Dubai, UAE</h3>
-                  <p>Washington State Convention Center 705 Pike Street ,Seattle, WA 98101 Phone: 206-694-5000</p>
-                </div>
-              </div>
-              <div class="col-md-4 col-sm-6 col-xs-12">
-                <div class="about__location__block">
-                  <h3>Antwerp, Belgium</h3>
-                  <p>Washington State Convention Center 705 Pike Street ,Seattle, WA 98101 Phone: 206-694-5000</p>
-                </div>
-              </div>
             </div>
           </div>
         </section>
@@ -220,26 +230,26 @@
             <div class="col-md-8 col-xs-12">
               <div class="footer__nav">
                 <div class="footer__nav__column">
-                  <h4><a href="#">Home</a></h4>
+                  <h4><a href="index.html">Home</a></h4>
                 </div>
                 <div class="footer__nav__column">
-                  <h4>About Us</h4>
+                  <h4> <a href="about.html">About Us</a></h4>
                   <ul>
-                    <li><a href="#">Our Journey</a></li>
-                    <li><a href="#">Our Vision</a></li>
-                    <li> <a href="#">Key Advisory Committee</a></li>
-                    <li> <a href="#">Business Development</a></li>
-                    <li> <a href="#">The Mission Statement</a></li>
+                    <li><a href="about.html#our-journey" rel="#our-journey">Our Journey</a></li>
+                    <li><a href="about.html#our-vision" rel="#our-vision">Our Vision</a></li>
+                    <li> <a href="about.html#key-advisory-committee" rel="#key-advisory-committee">Key Advisory Committee</a></li>
+                    <li> <a href="about.html#business-development" rel="#business-development">Business Development</a></li>
+                    <li> <a href="about.html#statement" rel="#statement">The Mission Statement</a></li>
                   </ul>
                 </div>
                 <div class="footer__nav__column">
-                  <h4>Our Services</h4>
+                  <h4> <a href="our-services.html">Our Services</a></h4>
                 </div>
                 <div class="footer__nav__column">
-                  <h4><a href="#">Our Events</a></h4>
+                  <h4><a href="our-events.html">Our Events</a></h4>
                 </div>
                 <div class="footer__nav__column">
-                  <h4><a href="#">Contact Us</a></h4>
+                  <h4><a href="contact.html">Contact Us</a></h4>
                 </div>
               </div>
             </div>

@@ -135,20 +135,23 @@
     .icon-plus:before {
       content: "\EA0E";
     }
-    .icon-right-arrow:before {
+    .icon-quotes:before {
       content: "\EA0F";
     }
-    .icon-search:before {
+    .icon-right-arrow:before {
       content: "\EA10";
     }
-    .icon-settings:before {
+    .icon-search:before {
       content: "\EA11";
     }
-    .icon-sort-arrows:before {
+    .icon-settings:before {
       content: "\EA12";
     }
-    .icon-twitter:before {
+    .icon-sort-arrows:before {
       content: "\EA13";
+    }
+    .icon-twitter:before {
+      content: "\EA14";
     }
   </style>
 </head>
@@ -275,8 +278,16 @@
     </li>
     
     <li class="icon-box">
-      <input class="icon-class-name autoselect" type="text" value=".icon-right-arrow" readonly>
+      <input class="icon-class-name autoselect" type="text" value=".icon-quotes" readonly>
       <input class="icon-unicode autoselect" type="text" value="\EA0F" readonly>
+      <div class="icon-container">
+        <i class="icon icon-quotes"></i>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-right-arrow" readonly>
+      <input class="icon-unicode autoselect" type="text" value="\EA10" readonly>
       <div class="icon-container">
         <i class="icon icon-right-arrow"></i>
       </div>
@@ -284,7 +295,7 @@
     
     <li class="icon-box">
       <input class="icon-class-name autoselect" type="text" value=".icon-search" readonly>
-      <input class="icon-unicode autoselect" type="text" value="\EA10" readonly>
+      <input class="icon-unicode autoselect" type="text" value="\EA11" readonly>
       <div class="icon-container">
         <i class="icon icon-search"></i>
       </div>
@@ -292,7 +303,7 @@
     
     <li class="icon-box">
       <input class="icon-class-name autoselect" type="text" value=".icon-settings" readonly>
-      <input class="icon-unicode autoselect" type="text" value="\EA11" readonly>
+      <input class="icon-unicode autoselect" type="text" value="\EA12" readonly>
       <div class="icon-container">
         <i class="icon icon-settings"></i>
       </div>
@@ -300,7 +311,7 @@
     
     <li class="icon-box">
       <input class="icon-class-name autoselect" type="text" value=".icon-sort-arrows" readonly>
-      <input class="icon-unicode autoselect" type="text" value="\EA12" readonly>
+      <input class="icon-unicode autoselect" type="text" value="\EA13" readonly>
       <div class="icon-container">
         <i class="icon icon-sort-arrows"></i>
       </div>
@@ -308,7 +319,7 @@
     
     <li class="icon-box">
       <input class="icon-class-name autoselect" type="text" value=".icon-twitter" readonly>
-      <input class="icon-unicode autoselect" type="text" value="\EA13" readonly>
+      <input class="icon-unicode autoselect" type="text" value="\EA14" readonly>
       <div class="icon-container">
         <i class="icon icon-twitter"></i>
       </div>
@@ -338,4 +349,4 @@
     count.innerHTML = icons.length;
   </script>
 </body>
-</html>
+</html>

@@ -18,3 +18,17 @@ var swiper = new Swiper('.swiper-events', {
     }
   }
 });
+
+
+
+//home
+var swiper = new Swiper('.swiper-events_details', {
+  // navigation: {
+  //   nextEl: '.swiper-shares-next',
+  //   prevEl: '.swiper-shares-prev',
+  // },
+  pagination: {
+    el: '.swiper-pagination-events_details',
+    clickable: true,
+  }
+});

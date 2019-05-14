@@ -3,6 +3,36 @@
   padding-bottom: 200px
   +r(767)
     padding-bottom: 70px
+  &__intro 
+    background-image: url('../img/about/about-intro-bg.jpg')
+    +cover
+    height: 440px
+    position: relative
+    +center 
+    +r(767)
+      height: 250px
+    .container
+      position: relative
+      height: 100%
+    h1
+      font-size: 90px
+      font-weight: bold
+      color: rgba(250, 250, 250, 0.08)
+      position: absolute
+      bottom: 30%
+      left: 3px
+      display: block
+      text-align: center
+      text-transform: uppercase
+      padding-left: 20px
+      +r(1180)
+        font-size: 60px
+      +r(767)
+        font-size: 50px
+      +r(660)
+        font-size: 33px
+        left: 0
+        padding-left: 0
   h2
     font-size: 40px
     font-weight: normal

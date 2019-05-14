@@ -3,32 +3,6 @@
   position: relative
   +r(767)
     padding: 50px 0 20px
-  &__decor
-    position: absolute
-    border-radius: 100%
-    z-index: -1
-    &-1
-      width: 50px
-      height: 50px
-      opacity: 0.69
-      background-color: #30dffd
-      left: 8%
-      top: 50%
-    &-2
-      width: 50px
-      height: 50px
-      opacity: 0.45
-      background-color: #74a241
-      left: 47%
-      top: 13%
-    &-3
-      width: 245px
-      height: 245px
-      opacity: 0.1
-      border: solid 65px #f20487
-      background-color: $white
-      right: 0
-      bottom: 70px
   .swiper-container
     max-height: 550px
     +r(1040)
@@ -120,14 +94,16 @@
       position: relative
       top: -10px
     h2
-      font-size: 35px
-      font-weight: normal
-      color: #12114a
-      margin-bottom: 50px
-      +r(1040)
-        font-size: 25px
-      +r(767)
-        margin-bottom: 15px
+      a
+        font-size: 35px
+        font-weight: normal
+        color: #12114a
+        margin-bottom: 50px
+        display: block
+        +r(1040)
+          font-size: 25px
+        +r(767)
+          margin-bottom: 15px
 
       span
         text-transform: uppercase
@@ -150,21 +126,8 @@
     &__btn
       position: relative
       display: inline-flex
-      &:before
-        content: ''
-        width: 113px
-        height: 113px
-        background: rgba(#d452ac, 0.07)
-        position: absolute
-        left: 18px
-        top: 50%
-        transform: translate(0%, -50%)
-        border-radius: 100%
-        z-index: -1
-        +r(1040)
-          left: 0px
       a:last-child
-        padding: 13px 30px 10px
+        padding: 13px 33px 10px
         border-radius: 25px
         border: solid 1px #4143ea
         color: #4143ea
@@ -174,6 +137,12 @@
           color: $white
       a
         font-size: 15px
+        padding: 15px 33px 12px !important
+        height: 50px
+        +center
+        border-radius: 25px
+        &:before, &:after
+          border-radius: 25px !important
         span
           font-size: 15px
         +r(1040)
