@@ -94,6 +94,8 @@ $('.manage__create__close').on('click', function(e) {
 //open
 $('.message-open').on('click', function(e) {
   e.preventDefault();
+  $('.message-popup .contact-form-name-block').html($(this).attr('data-name-content'));
+  $('.message-popup .contact-form-message-block').html($(this).attr('data-message-content'));
   $('.message-popup').addClass('is-active');
   $('.message-popup--bg').fadeIn();
 });
@@ -345,42 +347,7 @@ function formInitCallback() {
     $(this).addClass('manage__form__image__block--add');
   });
 
-  if($('div').hasClass('manage__form__image')) {
-
-    function handleFileSelectSingle(evt) {
-      var spanTarget = $(this).attr('data-span-target');
-      var fileType = $(this).attr('data-file-type');
-      var file = evt.target.files; // FileList object
-
-      var f = file[0];
-
-      // Only process image files.
-      if (!fileType && !f.type.match('image.*')) {
-        alert('Only Images...');
-      }
-
-      var reader = new FileReader();
-
-      // Closure to capture the file information.
-      reader.onload = (function(theFile) {
-        return function(e) {
-        // Render thumbnail.
-          var span = document.createElement('span');
-          span.innerHTML = ['<img class="img-thumbnail" src="', e.target.result,
-            '" title="', escape(theFile.name), '"/>'].join('');
-          document.getElementById(spanTarget).innerHTML = '';
-          document.getElementById(spanTarget).insertBefore(span, null);
-        };
-      })(f);
-
-      // Read in the image file as a data URL.
-      reader.readAsDataURL(f);
-    }
-
-    $('div.manage__form__image [type=file]').each(function() {
-      document.getElementById($(this).attr('id')).addEventListener('change', handleFileSelectSingle, false);
-    });
-  }
+  attachHandleToImageUpload();
 
   $('input,textarea').each(function() {
     if($(this).val()) $(this).addClass('focused');
@@ -458,22 +425,7 @@ function formInitCallback() {
     });
   }
 
-
-
-  // QUILL EDITOR...
-  if($('.text-manage__form__description').length > 0) {
-    initQuillEditor('.text-manage__form__description', 'Description');
-  }
-
-  if($('.text-about-trainer1').length > 0) {
-    initQuillEditor('.text-about-trainer1', 'About Trainer');
-  }
-
-  if($('.text-testimonial1').length > 0) {
-    initQuillEditor('.text-testimonial1', 'Testimonial');
-  }
-  
-
+  initQuillEditorForAll();
 
   // validation before form submit...
   $('form.manage__create__content').on('submit', function(ev) {
@@ -551,14 +503,60 @@ $(document).ready(function() {
 $('body').on('click', '.manage__form__btn__add-more', function(event) {
   event.preventDefault();
   if($(this).hasClass('add-triner')) {
-    $(this).closest('.manage__create__form').clone().insertAfter($(this).closest('.manage__create__form'));
+    var tclone = $(this).closest('.manage__create__form').clone();
+
+    tclone.find('input.trainer_name').val('');
+    tclone.find('input.text-about-trainer-input').val('');
+    
+    /*if(tclone.find('div.text-about-trainer').get(0).__quill)
+      tclone.find('div.text-about-trainer').get(0).__quill.root.innerHTML = '';*/
+    tclone.find('div.about-trainer').find('.ql-toolbar.ql-snow').remove();
+    tclone.find('div.text-about-trainer').removeClass('ql-container ql-snow').html('');
+    
+    tclone.find('input.trainer_image').val('');
+    tclone.find('.manage__form__image__block').find('input').fadeIn();
+    tclone.find('.manage__form__image__block').find('img').attr('src', '').attr('alt', '');
+    tclone.find('.manage__form__image__block').find('a').html(
+      '<i class="icon icon-plus"></i>' + tclone.find('.manage__form__image__block').attr('data-title')
+    );
+    tclone.find('.manage__form__image__block').find('a').removeClass('delete');
+    tclone.find('.manage__form__image__block').addClass('manage__form__image__block--add');
+    
+    tclone.find('.manage__form__testimonials:gt(0)').remove();
+    tclone.find('.remove-on-clone').remove();
+
+    tclone.find('.manage__form__testimonials').each(function() {
+      $(this).find('input.testimonial_name').val('');
+      $(this).find('input.testimonial_designation').val('');
+      $(this).find('input.text-testimonial-input').val('');
+      /*if($(this).find('div.text-testimonial').get(0).__quill)
+        $(this).find('div.text-testimonial').get(0).__quill.root.innerHTML = '';*/
+      $(this).find('div.manage__form__description').find('.ql-toolbar.ql-snow').remove();
+      $(this).find('div.text-testimonial').removeClass('ql-container ql-snow').html('');
+    });
+    
+    tclone.insertAfter($(this).closest('.manage__create__form'));
     number();
     numberClass();
   } else{
-    $(this).closest('.manage__form__testimonials').clone().insertAfter($(this).closest('.manage__form__testimonials'));
+    var tclone = $(this).closest('.manage__form__testimonials').clone();
+
+    tclone.find('input.testimonial_name').val('');
+    tclone.find('input.testimonial_designation').val('');
+    tclone.find('input.text-testimonial-input').val('');
+    /*if(tclone.find('div.text-testimonial').get(0).__quill)
+      tclone.find('div.text-testimonial').get(0).__quill.root.innerHTML = '';*/
+    tclone.find('div.manage__form__description').find('.ql-toolbar.ql-snow').remove();
+    tclone.find('div.text-testimonial').removeClass('ql-container ql-snow').html('');
+
+    tclone.insertAfter($(this).closest('.manage__form__testimonials'));
   }
 
+  
   updateFieldsNameAttribute();
+  
+  initQuillEditorForAll();
+  attachHandleToImageUpload();
 });
 
 //remove
@@ -584,12 +582,18 @@ $('body').on('click', '.manage__form__btn__delete', function(event) {
 function updateFieldsNameAttribute() {
   $('.trainer_with_testimonial_section').each(function(i) {
     $(this).find('input.trainer_name').attr('name', 'trainer['+i+'][name]');
+    $(this).find('input.trainer_name').next('label').attr('for', 'trainer['+i+'][name]');
     $(this).find('input.text-about-trainer-input').attr('name', 'trainer['+i+'][description]');
-    $(this).find('input.trainer_image').attr('name', 'trainer['+i+'][image_path]');
+    $(this).find('input.trainer_image').attr('id', 'trainer-file-'+i).attr('name', 'trainer['+i+'][image_path]');
+
+    $(this).find('div.manage__form__image__block input[type=file]').attr('data-span-target', 'trainer-output-' + i);
+    $(this).find('div.manage__form__image__block span.output').attr('id', 'trainer-output-' + i);
 
     $(this).find('div.manage__form__testimonials').each(function(j) {
       $(this).find('input.testimonial_name').attr('name', 'trainer['+i+'][testimonial]['+j+'][name]');
+      $(this).find('input.testimonial_name').next('label').attr('for', 'trainer['+i+'][testimonial]['+j+'][name]');
       $(this).find('input.testimonial_designation').attr('name', 'trainer['+i+'][testimonial]['+j+'][designation]');
+      $(this).find('input.testimonial_designation').next('label').attr('for', 'trainer['+i+'][testimonial]['+j+'][designation]');
       $(this).find('input.text-testimonial-input').attr('name', 'trainer['+i+'][testimonial]['+j+'][description]');
     });
   });
@@ -611,6 +615,30 @@ function populateHiddenField(fieldRef) {
   $(fieldRef).next('input[type=hidden]').val();
 }
 
+function initQuillEditorForAll() {
+  // QUILL EDITOR...
+  if($('.text-manage__form__description').length > 0) {
+    $('.text-manage__form__description').each(function() {
+      if(!this.__quill)
+        initQuillEditor(this, 'Description');
+    });
+  }
+
+  if($('.text-about-trainer1').length > 0) {
+    $('.text-about-trainer1').each(function() {
+      if(!this.__quill)
+        initQuillEditor(this, 'About Trainer');
+    });
+  }
+
+  if($('.text-testimonial1').length > 0) {
+    $('.text-testimonial1').each(function() {
+      if(!this.__quill)
+        initQuillEditor(this, 'Testimonial');
+    });
+  }
+}
+
 function initQuillEditor(targetEle, targetPlaceholder) {
   var quill = new Quill(targetEle, {
     theme: 'snow',
@@ -624,3 +652,41 @@ function initQuillEditor(targetEle, targetPlaceholder) {
     placeholder: targetPlaceholder,
   }); 
 }
+
+function attachHandleToImageUpload() {
+  if($('div').hasClass('manage__form__image')) {
+    function handleFileSelectSingle(evt) {
+      var spanTarget = $(this).attr('data-span-target');
+      var fileType = $(this).attr('data-file-type');
+      var file = evt.target.files; // FileList object
+
+      var f = file[0];
+
+      // Only process image files.
+      if (!fileType && !f.type.match('image.*')) {
+        alert('Only Images...');
+      }
+
+      var reader = new FileReader();
+
+      // Closure to capture the file information.
+      reader.onload = (function(theFile) {
+        return function(e) {
+        // Render thumbnail.
+          var span = document.createElement('span');
+          var imgSrc = (fileType === 'pdf') ? 'img/pdf.png' : e.target.result;
+          span.innerHTML = ['<img class="img-thumbnail" src="', imgSrc, '" title="', escape(theFile.name), '"/>'].join('');
+          document.getElementById(spanTarget).innerHTML = '';
+          document.getElementById(spanTarget).insertBefore(span, null);
+        };
+      })(f);
+
+      // Read in the image file as a data URL.
+      reader.readAsDataURL(f);
+    }
+
+    $('div.manage__form__image [type=file]').each(function() {
+      document.getElementById($(this).attr('id')).addEventListener('change', handleFileSelectSingle, false);
+    });
+  }
+};

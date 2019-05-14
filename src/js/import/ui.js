@@ -52,31 +52,8 @@ $('input[type="tel"]').keyup(function() {
 
 
 //request_agenda_sucess
-$('div#request-pop-up button.btn.btn-primary').on('click', function(e) {
+$('div#request-pop-up form').on('submit', function(e) {
   e.preventDefault();
-
-  var fields = [
-    {id: 'full-name', msg: 'Full Name is required'}, 
-    {id: 'business-email', msg: 'Email is required'},
-    {id: 'phone-number', msg: 'Phone is required'},
-  ];
-  var errorMsg = '';
-
-  fields.forEach(function(f) {
-    if(!errorMsg && !$('.register #'+f.id).val()) {
-      errorMsg = f.msg;
-    }
-  });
-  if(errorMsg) {
-    $.toast({
-      // heading: 'Success',
-      text: errorMsg,
-      showHideTransition: 'slide',
-      icon: 'info',
-      position: 'bottom-right'
-    });
-    return;
-  }
 
   var data = {
     name: $('.register #full-name').val(),
@@ -94,7 +71,7 @@ $('div#request-pop-up button.btn.btn-primary').on('click', function(e) {
     success: function(data) {
       if(data.status === 'success') {
         $('.register__true').addClass('active');
-        $('div#request-pop-up form').reset();
+        $('div#request-pop-up form').get(0).reset();
       } else {
         console.log('Error --> ', data.message);
       }
@@ -122,32 +99,8 @@ $(document).on('click', '[href="#"]', function(e) {
 });
 
 
-$('section.contact__form button.btn.btn-primary').on('click', function(e) {
+$('section.contact__form form').on('submit', function(e) {
   e.preventDefault();
-
-  var fields = [
-    {id: 'full-name', msg: 'Full Name is required'}, 
-    {id: 'email', msg: 'Email is required'},
-    {id: 'phone', msg: 'Phone is required'},
-    {id: 'message', msg: 'Message is required'}
-  ];
-  var errorMsg = '';
-
-  fields.forEach(function(f) {
-    if(!errorMsg && !$('section.contact__form #'+f.id).val()) {
-      errorMsg = f.msg;
-    }
-  });
-  if(errorMsg) {
-    $.toast({
-      // heading: 'Success',
-      text: errorMsg,
-      showHideTransition: 'slide',
-      icon: 'info',
-      position: 'bottom-right'
-    });
-    return;
-  }
 
   var data = {
     name: $('section.contact__form #full-name').val(),
@@ -167,7 +120,7 @@ $('section.contact__form button.btn.btn-primary').on('click', function(e) {
         $('#contact-pop-up').modal({
           fadeDuration: 200
         });
-        $('section.contact__form form').reset();
+        $('section.contact__form form').get(0).reset();
       } else {
         console.log('Error --> ', data.message);
       }
