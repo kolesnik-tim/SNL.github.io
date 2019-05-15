@@ -27,6 +27,7 @@ var swiper = new Swiper('.swiper-events_details', {
   //   nextEl: '.swiper-shares-next',
   //   prevEl: '.swiper-shares-prev',
   // },
+  autoHeight: true,
   pagination: {
     el: '.swiper-pagination-events_details',
     clickable: true,
