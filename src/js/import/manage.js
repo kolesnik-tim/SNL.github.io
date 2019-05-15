@@ -366,12 +366,16 @@ function formInitCallback() {
         {id: 'display-name', msg: 'Display Name is required'}, 
         {id: 'username', msg: 'Username is required'},
         {id: 'email', msg: 'Email is required'},
-        {id: 'password', msg: 'Password is required'}
       ];
+
+      if(!$('.manage__create.manage-user__create #edit-flag').val()) {
+        fields.push({id: 'password', msg: 'Password is required'});
+      }
+
       var errorMsg = '';
 
       fields.forEach(function(f) {
-        if(!errorMsg && !$('.manage__create.manage-user__create #'+f.id).val()) {
+        if(!errorMsg && $('.manage__create.manage-user__create #'+f.id).length > 0 && !$('.manage__create.manage-user__create #'+f.id).val()) {
           errorMsg = f.msg;
         }
       });
@@ -398,6 +402,9 @@ function formInitCallback() {
         data[fs[1]] = $('.manage__create.manage-user__create #'+fs[0]).val();
       });
 
+      if($('.manage__create.manage-user__create #edit-flag').val()) {
+        data['edit'] = $('.manage__create.manage-user__create #edit-flag').val();
+      }
 
       $.ajax({
         type: 'POST',
@@ -428,7 +435,7 @@ function formInitCallback() {
   initQuillEditorForAll();
 
   // validation before form submit...
-  $('form.manage__create__content').on('submit', function(ev) {
+  $('div.manage-event-list-page form.manage__create__content').on('submit', function(ev) {
     var errorFlag = false;
 
     var divClasses = ['.text-manage__form__description', '.text-about-trainer', '.text-testimonial'];

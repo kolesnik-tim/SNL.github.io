@@ -135,21 +135,21 @@ $('section.contact__form form').on('submit', function(e) {
 // about auto-scroll...
 if($('div').hasClass('about')) {
   var aboutUrlToSectionMapping = {
-    'journey': 'about__journey', 
-    'vision': 'about__vision', 
-    'key-advisory-committee': 'about__committee h2:eq(0)', 
-    'business-development': 'about__committee h2:eq(1)', 
-    'the-mission-statement': 'about__statement'
+    'journey': 'our-journey', 
+    'vision': 'our-vision', 
+    'key-advisory-committee': 'key-advisory-committee', 
+    'business-development': 'business-development', 
+    'the-mission-statement': 'statement'
   };
   var hash = location.hash.replace('#','');
   if(hash && aboutUrlToSectionMapping[hash]) {
-    $('html, body').animate({ scrollTop: $('.' + aboutUrlToSectionMapping[hash]).offset().top}, 1000);
+    $('html, body').animate({ scrollTop: $('#' + aboutUrlToSectionMapping[hash]).offset().top}, 1000);
   }
 
   Object.keys(aboutUrlToSectionMapping).forEach(function(k) {
     $('[href*="#'+k+'"]').attr('data-target-scrolltoview', aboutUrlToSectionMapping[k]);
     $(document).on('click', '[href*="#'+k+'"]', function() {
-      $('body,html').animate({ scrollTop: $('.' + $(this).attr('data-target-scrolltoview')).offset().top - 90}, 1500);
+      $('body,html').animate({ scrollTop: $('#' + $(this).attr('data-target-scrolltoview')).offset().top - 90}, 1500);
     });
   });
 }
