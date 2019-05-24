@@ -61,7 +61,9 @@ function prepareRegistrationOrder() {
   var delegate_count = $('.registration__form__delegate.open').length;
   var administration_fee = parseFloat($('#administration_fee').val());
 
-  var sub_total = parseFloat((event_fee + (delegate_fee * delegate_count) + administration_fee).toFixed(2));
+  var delegate_fee_total = parseFloat((delegate_fee * delegate_count).toFixed(2));
+
+  var sub_total = parseFloat((event_fee + delegate_fee_total + administration_fee).toFixed(2));
 
   var vat_amount = parseFloat((sub_total * vat_percentage / 100).toFixed(2)) ;
 
@@ -70,13 +72,13 @@ function prepareRegistrationOrder() {
   
   $('.event_fee').html((event_fee).toFixed(2));
   $('.delegate_count').html(delegate_count);
-  $('.delegate_fee').html((delegate_fee).toFixed(2));
+  $('.delegate_fee').html(delegate_fee_total);
   $('.administration_fee').html((administration_fee).toFixed(2));
   $('.vat_fee').html((vat_amount).toFixed(2));
   $('.total_fee').html((total_amount).toFixed(2));
     
   
-  $('#delegate_fee_total').val(delegate_fee * delegate_count);
+  $('#delegate_fee_total').val(delegate_fee_total);
   $('#vat_percentage').val(vat_percentage);
   $('#vat_amount').val(vat_amount);
   $('#total_amount').val(total_amount);
@@ -94,5 +96,12 @@ if($('form.registration__form').length > 0) {
   // country channge...
   $('#country_id').on('change', function() {
     prepareRegistrationOrder();
+  });
+}
+
+if($('div#register-success-pop-up').length > 0) {
+  $('div#register-success-pop-up').insertAfter($('div.registration'));
+  $('div#register-success-pop-up').modal({
+    fadeDuration: 200
   });
 }
