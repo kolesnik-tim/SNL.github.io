@@ -231,7 +231,7 @@
       min-height: 265px
       border-radius: 10px
       width: 100%
-      padding: 30px 22px
+      padding: 30px 22px 10px
       display: flex
       flex-direction: column
       justify-content: flex-end
@@ -292,7 +292,7 @@
         font-weight: 600
         color: $white
         text-shadow: 0px 0.5px 0.5px #000000
-        margin-bottom: 20px
+        margin-bottom: 10px
       b
         font-size: 14px
         font-weight: 600
@@ -305,13 +305,26 @@
         bottom: -20px
         left: -20px
         right: -20px
-        padding: 20px
+        padding: 20px 0
         background-image: linear-gradient(159deg,#170472,#9c32ff 93%)
         opacity: 0
         visibility: hidden
         transform: scale(0.8)
         transition: all 0.3s
         border-radius: 10px
+        z-index: 9
+        div
+          height: 100%
+          overflow-x: hidden
+          padding: 0px 20px
+          &::-webkit-scrollbar-track
+            background-color: linear-gradient(330deg, #8f2794, #3d30f3 99%)
+          &::-webkit-scrollbar-thumb
+            border-radius: 2px 
+            background: #3d30f3
+          &::-webkit-scrollbar
+            width: 7px 
+            height: 7px
         h4
           font-size: 28px
           font-weight: normal
@@ -323,11 +336,14 @@
           display: block
           text-transform: uppercase
           opacity: 0
+          font-size: 14px
           transition: all 0.2s 0.2s
         p
           line-height: 1.6
           opacity: 0
+          font-size: 12px
           transition: all 0.2s 0.2s
+          margin-bottom: 10px
   &__statement
     min-height: 607px
     height: 100%
