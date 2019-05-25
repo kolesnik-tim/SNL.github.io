@@ -75,6 +75,7 @@ function prepareRegistrationOrder() {
   $('.delegate_fee').html(delegate_fee_total);
   $('.administration_fee').html((administration_fee).toFixed(2));
   $('.vat_fee').html((vat_amount).toFixed(2));
+  $('#vat_percentage_span').html(vat_percentage);
   $('.total_fee').html((total_amount).toFixed(2));
     
   
