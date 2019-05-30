@@ -697,3 +697,11 @@ function attachHandleToImageUpload() {
     });
   }
 };
+
+
+if($('.description_content_truncate').length > 0) {
+  $('.description_content_truncate').each(function() {
+    let text = $(this).contents().text();
+    $(this).html(((text.length > 20) ? text.substr(0, 20-1) + '...' : text)).show();
+  });
+}

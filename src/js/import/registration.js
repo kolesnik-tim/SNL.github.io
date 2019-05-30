@@ -63,7 +63,9 @@ function prepareRegistrationOrder() {
 
   var delegate_fee_total = parseFloat((delegate_fee * delegate_count).toFixed(2));
 
-  var sub_total = parseFloat((event_fee + delegate_fee_total + administration_fee).toFixed(2));
+  // var sub_total = parseFloat((event_fee + delegate_fee_total + administration_fee).toFixed(2));
+
+  var sub_total = parseFloat((delegate_fee_total + administration_fee).toFixed(2));
 
   var vat_amount = parseFloat((sub_total * vat_percentage / 100).toFixed(2)) ;
 
