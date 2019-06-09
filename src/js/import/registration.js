@@ -1,3 +1,10 @@
+/*
+
+CR LIST...
+  - CR2019JUNE09VAT --> COMMENTED ON 09-June-2019 as discussed with Vaishakh, since the vat should be applied for venue
+
+
+*/
 
 
 //add
@@ -47,15 +54,27 @@ function prepareRegistrationOrder() {
   $('.vat_fee').html('0.00');
   $('.total_fee').html('0.00');
 
+  /*
+  // CR2019JUNE09VAT
   if(!$('#country_id').val()) {
     return;
   }
+  */
 
 
   // calculate the vat...
   var countryVatMapping = window['countryVatMapping'] || [];
+
+  /*
+  // CR2019JUNE09VAT....START
   var vat_percentage = countryVatMapping[$('#country_id').val()] || 0;
-  
+  */
+
+  var vat_percentage = countryVatMapping[$('#venue_id').val()] || 0;
+  /*
+  // CR2019JUNE09VAT....END
+  */
+
   var event_fee = parseFloat($('#event_fee').val());
   var delegate_fee = parseFloat($('#delegate_fee').val());
   var delegate_count = $('.registration__form__delegate.open').length;
@@ -98,7 +117,10 @@ if($('form.registration__form').length > 0) {
   // prepare the registration order for below events...
   // country channge...
   $('#country_id').on('change', function() {
-    prepareRegistrationOrder();
+    /*
+    // CR2019JUNE09VAT
+    prepareRegistrationOrder(); 
+    */
   });
 }
 
