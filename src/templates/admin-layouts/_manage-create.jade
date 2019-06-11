@@ -1,0 +1,154 @@
+a(href="#warning" rel="modal:open").manage__create--bg
+.manage__create
+  .manage__create__header
+    a(href="#warning" rel="modal:open")
+      i.icon.icon-angle-pointing
+      | Create Event
+  form.manage__create__content
+    .manage__create__form.manage__form
+      .manage__form__title
+        h3 
+          span 01
+          | Event Details
+        p Mandatory Fields
+      .manage__form__input
+        input(type="text" id="event-name" name="event-name" required)
+        label(for="event-name") Event Name
+      .manage__form__input.manage__form__input--select
+        .select-country
+          span.point
+          select#select-country(required)
+            option(value="") Venue
+            option(value="1") Venue 2
+            option(value="2") Venue 3
+        .select-state
+          span.point
+          select#select-state(required)
+            option(value="") Select Country
+            option(value="1") Angola2
+            option(value="2") România
+            option(value="3") România3
+            option(value="4") România
+      .manage__form__datepicker
+        .manage__form__datepicker__block
+          input(type='text' id="event-start-date" class="datepicker-create_event" data-language='en')
+          label(for="event-start-date") Event Start Date
+          a(href="#")
+            img(src="img/manage/calendar.png", alt="")
+        .manage__form__datepicker__block
+          input(type='text' id="event-end-date" class="datepicker-create_event" data-language='en')
+          label(for="event-end-date") Event End Date
+          a(href="#")
+            img(src="img/manage/calendar.png", alt="")
+      .manage__form__image
+        .manage__form__image__block.manage__form__image__block--add
+          input(type="file" id="file" name="file").file-image
+          span
+            img(src="", alt="")
+          p
+            a(href="#")
+              i.icon.icon-plus
+              | Upload Image
+        .manage__form__image__block.manage__form__image__block--add
+          input(type="file" id="file-2" name="file-2").file-image
+          span
+            img(src="", alt="")
+          p
+            a(href="#") 
+              i.icon.icon-plus
+              | Upload Image
+        .manage__form__image__block.manage__form__image__block--add
+          input(type="file" id="file-3" name="file-3").file-image
+          span
+            img(src="", alt="")
+          p
+            a(href="#") 
+              i.icon.icon-plus
+              | Upload Image
+        .manage__form__image__block.manage__form__image__block--add
+          input(type="file" id="file-4" name="file-4").file-image
+          span
+            img(src="", alt="")
+          p
+            a(href="#") 
+              i.icon.icon-plus
+              | Upload Image
+      .manage__form__description
+        //- textarea(id="description-1" name="description-1" required)
+        //- label(for="description-1") Description
+        .text-manage__form__description
+      .manage__form__fee
+        input(type="text" placeholder="Event Fee")
+        input(type="text" placeholder="Delegate Fee")
+        input(type="text" placeholder="Administration Fee")
+      .manage__form__input.select-gear
+        select#select-gear
+          option(value="") Assign to a user
+          option(value="1") Vaishakh
+          option(value="2") Tim
+          option(value="3") Vaishakh
+
+
+
+
+    .manage__create__form.manage__form
+      .manage__form__title
+        h3
+          span 02
+          | Trainer Details
+          .manage__form__btn
+            a(href="#").manage__form__btn__add-more.add-triner
+              i.icon.icon-plus
+            a(href="#").manage__form__btn__delete.remove-triner
+              i.icon.icon-delete
+      .manage__form__input
+        input(type="text" id="name" name="name" required)
+        label(for="name") Name
+      .manage__form__description.about-trainer
+        //- textarea(id="about-trainer" name="about-trainer" required)
+        //- label(for="about-trainer") About Trainer
+        .text-about-trainer.text-about-trainer1
+      .manage__form__image
+        .manage__form__image__block.manage__form__image__block--add
+          input(type="file" id="file-5" name="file-5").file-image
+          span
+            img(src="", alt="")
+          p
+            a(href="#") 
+              i.icon.icon-plus
+              | Upload Image
+      .manage__form__testimonials
+        h4 Trainer Testimonials
+          .manage__form__btn
+            a(href="#").manage__form__btn__add-more
+              i.icon.icon-plus
+            a(href="#").manage__form__btn__delete
+              i.icon.icon-delete
+        .manage__form__input
+          input(type="text" id="name-trainer" name="name-trainer" required)
+          label(for="name-trainer") Name
+        .manage__form__input
+          input(type="text" id="designation" name="designation" required)
+          label(for="designation") Designation
+        .manage__form__description
+          //- textarea(id="testimonial" name="testimonial" required)
+          //- label(for="testimonial") Testimonial
+          .text-testimonial.text-testimonial1
+    .manage__form__footer
+      a(href="#warning" rel="modal:open").btn.btn-primary cancel
+      button(type="submit").btn.btn-primary
+        span create
+
+
+
+
+
+.read-message
+  .manage__create__header
+    a(href="#warning" rel="modal:open")
+      i.icon.icon-angle-pointing
+      | Read Message - Vaishakh
+  .read-message__content
+    .manage__form
+      p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      p It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
