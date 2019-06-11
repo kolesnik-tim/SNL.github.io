@@ -154,7 +154,7 @@ $('#select-state').selectize({
 });
 
 
-
+$('.select__arrow').selectize();
 
 
 

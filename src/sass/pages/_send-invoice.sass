@@ -1,0 +1,146 @@
+.send-invoice
+  .manage__form__title
+    +r(767)
+      flex-direction: column
+      align-items: flex-start
+      p
+        justify-content: flex-end
+        width: 100%
+  .manage__form__input
+    padding-top: 50px
+    +r(767)
+      padding-top: 35px
+    &.no-required
+      input
+        border-bottom: none
+      label:before
+        display: none
+    input, textarea
+      color: $dark
+      font-weight: 600
+      &:focus 
+        & + label
+          bottom: 32px
+          opacity: 1
+      &:valid
+        & + label
+          bottom: 32px
+          opacity: 1
+  &__logo
+    padding-top: 30px
+    img
+      width: 90px
+  &__input-btn
+    display: flex
+    align-items: flex-end
+    .manage__form__input
+      flex: 1
+    &__btn
+      width: 45px
+      margin-left: 10px
+      display: flex
+      .add
+        width: 20px
+        height: 20px
+        position: relative
+        border-radius: 100%
+        background: #3cc6f2
+        +center
+        margin-right: 5px
+        i
+          font-size: 10px
+          color: #fff
+      .remove
+        width: 20px
+        height: 20px
+        position: relative
+        border-radius: 100%
+        background: $orangey-red
+        display: block
+        &:before
+          content: ''
+          position: absolute
+          left: 50%
+          top: 50%
+          transform: translate(-50%, -50%)
+          width: 10px
+          height: 1px
+          background: #fff
+  &__row
+    display: flex
+    +r(767)
+      flex-direction: column
+    .manage__form__input
+      margin-right: 15px
+      flex: 4
+      &:last-child
+        margin-right: 0
+      &:first-child
+        flex: 5
+    label
+      font-size: 14px !important
+      bottom: auto
+      top: 14px
+    &-secondary
+      input
+        padding-top: 10px
+      .manage__form__input
+        flex: none !important
+        +r(767)
+          width: 100% !important
+        &:first-child
+          width: 130px
+        &:nth-child(2)
+          width: 85px
+        &:nth-child(3)
+          width: 120px
+        &:nth-child(4)
+          width: 70px
+        &:last-child
+          width: 80px
+      label
+        bottom: 40px !important
+        font-size: 12px !important
+    .selectize-input
+      height: auto
+    .selectize-input input
+      display: none !important
+    .selectize-input>*
+      color: $dark
+      font-weight: 600
+  .manage__form__datepicker
+    flex-wrap: nowrap
+    +r(767)
+      flex-direction: column
+      padding-top: 10px
+    .manage__form__input
+      width: 100%
+      padding-top: 0
+      margin-right: 15px
+      +r(767)
+        padding-top: 35px
+    .manage__form__datepicker__block
+      width: 100%
+      +r(767)
+        padding-top: 35px
+        margin-left: 0 !important
+      &:last-child
+        margin-left: 15px
+      input
+        color: $dark
+        font-weight: 600
+      label
+        top: -22px
+        +r(767)
+          top: 10px
+  .manage__form__fee
+    .manage__form__input
+      padding-top: 20px
+      &:first-child
+        margin-right: 15px
+    label
+      bottom: auto !important
+      top:  0px
+    .selectize-input>*
+      color: $dark
+      font-weight: 600
