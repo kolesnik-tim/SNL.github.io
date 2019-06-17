@@ -309,6 +309,24 @@ function formInitCallback() {
     sortField: 'text'
   });
 
+
+  if($('#select-currency').val()) {
+    $('.select-currency').find('.point').fadeIn();
+  } else {
+    $('.select-currency').find('.point').fadeOut();
+  }
+
+  $('#select-currency').selectize({
+    onChange: function(value) {
+      if(value === '') {
+        $('.select-currency').find('.point').fadeIn();
+      } else{
+        $('.select-currency').find('.point').fadeOut();
+      }
+    },
+  });
+
+
   $('.datepicker-create_event').on('focus', function() {
     $(this).next('label').fadeOut();
   });
