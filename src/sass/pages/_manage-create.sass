@@ -1,353 +1,5 @@
 .manage
-  background: rgb(244, 245, 249)
-  display: flex
-  &__content
-    width: calc(100% - 70px)
-    margin-left: 70px
-    +r(767)
-      width: calc(100% - 40px)
-      margin-left: 40px
-
-
-
-
-
-
-
-
-  &__title
-    display: flex
-    justify-content: space-between
-    padding-top: 35px
-    +r(767)
-      flex-direction: column
-      align-items: center
-      padding-top: 20px
-    h1
-      font-size: 30px
-      font-weight: normal
-      color: $dark
-      +r(767)
-        padding-bottom: 15px
-        font-size: 25px
-    a
-      +r(767)
-        margin-bottom: 15px
-      i
-        margin-right: 12px
-
-
-
-
-
-
-  &__statistics
-    padding: 30px 0
-    &__block
-      border-radius: 10px
-      box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.1)
-      background-color: $white
-      padding: 25px 30px
-      +r(1200)
-        padding: 25px 20px
-      +center-y
-      min-height: 106px
-      margin-bottom: 15px
-      &__img
-        margin-right: 25px
-        width: 43px
-        img
-          width: 100%
-      &__text
-        display: flex
-        flex-direction: column
-        p
-          font-size: 14px
-          font-weight: 600
-          color: $dark
-          margin-bottom: 5px
-        span
-          font-size: 30px
-          font-weight: bold
-          color: $charcoal-grey
-
-
-
-
-  &__table
-    border-radius: 10px
-    box-shadow: 0px 1px 4px 0 rgba(0, 0, 0, 0.1)
-    background-color: $white
-    margin-bottom: 50px
-    overflow-x: auto
-    position: relative
-    z-index: 2
-    &::-webkit-scrollbar-track
-      background-color: $very-light-pink
-    &::-webkit-scrollbar-thumb
-      border-radius: 2px 
-      background-image: linear-gradient(330deg, #8f2794, #3d30f3 99%)
-    &::-webkit-scrollbar
-      width: 7px 
-      height: 7px
-    +r(767)
-      margin-bottom: 30px
-    &__content
-      display: block
-      min-width: 1150px
-    table, tbody, thead
-      width: 100%
-      display: block
-    tr
-      display: flex
-      align-items: center
-      padding: 0 10px
-      border-bottom: 1px solid $very-light-pink
-      +tr
-      &:hover
-        background: rgba($very-light-pink, 0.2)
-    thead
-      position: sticky
-      top: 0
-      background: $white
-      z-index: 10
-    thead tr:hover
-      background: none
-    tbody tr:last-child
-      border-bottom: none
-      ul
-        +r(1260)
-          top: auto
-          bottom: 100px
-          &:before
-            content: ''
-            top: auto
-            bottom: -16px
-            border: 8px solid transparent
-            border-top: 8px solid $white
-    td, th
-      display: flex
-      position: relative
-      &:first-child
-        width: 4%
-      &:nth-child(2)
-        width: 10%
-      &:nth-child(3)
-        width: 11%
-      &:nth-child(4)
-        width: 11%
-      &:nth-child(5)
-        width: 9%
-      &:nth-child(6)
-        width: 10%
-      &:nth-child(7)
-        width: 11%
-      &:nth-child(8)
-        width: 10%
-      &:nth-child(9)
-        width: 11%
-      &:nth-child(10)
-        width: 8%
-      &:last-child
-        width: 3%
-    th
-      padding: 25px 9px
-      display: flex
-      align-items: center
-      ul
-        left: calc(50% + 18px)
-        &:before
-          left: calc(50% + 5px)
-        +r(1250)
-          left: calc(50% + 6px)
-          &:before
-            left: calc(50% + 18px)
-        +r(767)
-          left: calc(50% - 5px)
-          &:before
-            left: calc(50% + 31px)
-      img
-        width: 15px
-      a
-        &:hover
-          i
-            color: $bright-light-blue
-      i
-        font-size: 12px
-        color: $dark
-        +tr
-      span
-        font-size: 12px
-        font-weight: bold
-        color: $dark
-        text-transform: uppercase
-        margin-right: 10px
-        +r(767)
-          font-size: 10px
-      input
-        background: none
-        +placeholder-color($dark)
-        font-size: 12px
-        font-weight: bold
-        width: 100%
-        text-transform: uppercase
-        color: rgba(19, 28, 46, 0.4)
-        padding-left: 8px
-        &.is-active
-          +placeholder-color(rgba(19, 28, 46, 0.4))
-    ul
-      display: none
-      position: absolute
-      left: calc(50% - 3px)
-      top: 30%
-      transform: translate(-50%, 50%)
-      width: 105px
-      border-radius: 7px
-      box-shadow: 0px 1px 5px 0 rgba(0, 0, 0, 0.24)
-      background-color: $white
-      z-index: 10
-      +r(1250)
-        left: calc(50% - 15px)
-      +r(767)
-        left: calc(50% - 25px)
-      &:before
-        content: ''
-        position: absolute
-        left: calc(50% - 1px)
-        transform: translate(-50%) rotate(45deg)
-        background: $white
-        width: 10px
-        height: 10px
-        top: -6px
-        box-shadow: 0px 1px 5px 0 rgba(0, 0, 0, 0.24)
-        z-index: 3
-        +r(1250)
-          left: calc(50% + 12px)
-        +r(767)
-          left: calc(50% + 27px)
-      li
-        position: relative
-        z-index: 5
-        background: $white
-        border-radius: 10px
-        &:first-child
-          padding-top: 5px
-        &:last-child
-          padding-bottom: 5px
-      a
-        padding: 2px 13px
-        display: flex
-        align-items: center
-        font-size: 12px
-        font-weight: normal
-        font-style: normal
-        font-stretch: normal
-        line-height: 2.08
-        letter-spacing: normal
-        text-align: left
-        color: $dark
-        cursor: pointer
-        &.is-active
-          font-weight: 600
-        &:hover
-          font-weight: 600
-        i
-          +center
-          width: 20px
-          height: 20px
-          color: $bright-light-blue
-          border-radius: 100%
-          border: 1px solid $dark
-          font-size: 9px
-          margin-right: 10px
-          +tr
-    th.table__drop-down
-      li 
-        a
-          &:before
-            content: ''
-            width: 9px
-            height: 9px
-            background-color: $fresh-green
-            border-radius: 100%
-            margin-right: 7px
-        &:last-child
-          a
-            &:before
-              background-color: $strawberry
-    .table__datepicker
-      position: relative
-      input
-        position: absolute
-        left: 0
-        top: 0
-        width: 100%
-        height: 100%
-        opacity: 0
-        cursor: pointer
-    .table__gallery
-      display: flex
-      a
-        margin-right: 5px
-        position: relative
-        +center
-        cursor: default
-        &:nth-child(2)
-          cursor: pointer
-        &:nth-child(n+3)
-          display: none
-        img
-          +r(767)
-            width: 45px
-            height: 45px
-        i
-          position: absolute
-          left: 0
-          top: 0
-          width: 100%
-          height: 100%
-          +center
-          color: $white
-          background: rgba($charcoal-grey, 0.3)
-          font-size: 22px
-          +tr
-        &:hover
-          i
-            color: $bright-light-blue
-            background: rgba($charcoal-grey, 0.5)
-    .table__more
-      i
-        font-size: 24px
-        color: $dark
-        +tr
-      &:hover
-        i
-          color: $bright-light-blue
-    td
-      padding: 25px 12px
-      text-align: left
-      position: relative
-      p
-        font-size: 14px
-        font-weight: normal
-        color: $dark
-        +tr
-        +r(767)
-          font-size: 11px
-      a:hover
-        p
-          color: $bright-light-blue
-    tr.open
-      background-color: #f5fff1
-      p
-        font-weight: 600
-
-
-
-
-
-  
-  &__create, 
+  &__create
     position: fixed
     right: -100%
     top: 0
@@ -494,13 +146,7 @@
         color: #616161
         padding-bottom: 10px
         background: none
-        &.focused
-          & + label
-            opacity: 0
         &:focus 
-          & + label
-            opacity: 0
-        &:-webkit-autofill 
           & + label
             opacity: 0
         &:valid
@@ -594,18 +240,6 @@
         position: relative
         z-index: 3
         cursor: pointer
-        &.focused
-          & + label
-            opacity: 0
-        &:focus 
-          & + label
-            opacity: 0
-        &:-webkit-autofill 
-          & + label
-            opacity: 0
-        &:valid
-          & + label
-            opacity: 0
       label
         font-size: 14px
         font-weight: normal
@@ -797,3 +431,41 @@
   left: 0
   display: none
   z-index: 14
+
+
+
+.read-message
+  position: fixed
+  right: -100%
+  top: 0
+  max-width: 700px
+  width: 100%
+  height: 100vh
+  background-color: #f2f2f2
+  box-shadow: -1.5px 2px 16px 0 rgba(2, 23, 56, 0.19)
+  transition: all 0.9s
+  z-index: 15
+  +r(767)
+    max-width: 100%
+  &.is-active
+    right: 0
+  .manage__create__header
+    +r(767)
+      padding: 15px
+      a
+        font-size: 18px
+        display: flex
+        align-items: center
+      i
+        margin-right: 10px
+  &__content
+    padding: 30px
+    +r(767)
+      padding: 15px
+    p
+      font-size: 14px
+      font-weight: normal
+      line-height: 1.79
+      color: $charcoal-grey
+      display: block
+      padding-bottom: 20px

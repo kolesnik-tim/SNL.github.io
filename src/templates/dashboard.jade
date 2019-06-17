@@ -1,0 +1,86 @@
+---
+title: Dashboard
+---
+extends layouts/_layout
+block content
+  .dashboard
+    include ./admin-layouts/_aside
+    .dashboard__content
+      include ./admin-layouts/_header
+      .container
+        .manage__title
+          h1 Dashboard
+        ul.breadcrumbs
+          li
+            a(href="#") Dashboard
+        .row
+          .col-md-3.col-sm-6.col-xs-12
+            .dashboard__block.dashboard__block-primary
+              img(src="img/active-events.png", alt="")
+              .dashboard__block__text
+                strong Active Events
+                b 32
+          .col-md-3.col-sm-6.col-xs-12
+            .dashboard__block.dashboard__block-primary
+              img(src="img/speakers.png", alt="")
+              .dashboard__block__text
+                strong Speakers
+                b 8
+          .col-md-3.col-sm-6.col-xs-12
+            .dashboard__block.dashboard__block-primary
+              img(src="img/total-regrations.png", alt="")
+              .dashboard__block__text
+                strong Total Registrations
+                b 980
+          .col-md-3.col-sm-6.col-xs-12
+            .dashboard__block.dashboard__block-primary
+              img(src="img/total-inquiry.png", alt="")
+              .dashboard__block__text
+                strong Total Inquiry
+                b 280
+          .col-md-9.col-xs-12
+            .row
+              .col-sm-6.col-xs-12
+                .dashboard__block
+                  div
+                    h2 registrations
+                    ul
+                      li
+                        b 30
+                        | Advanced Shutdown, Turnaround and Outage Management 2019
+                      li
+                        b 32
+                        | HSE Leadership Excellence 2019 (The Alpha Level Masterclass)
+                      li
+                        b 20
+                        | Advanced Shutdown, Turnaround and Outage Management 2019
+                      li
+                        b 90
+                        | HSE Leadership Excellence 2019 (The Alpha Level Masterclass)
+                      li
+                        b 34
+                        | Advanced Shutdown, Turnaround and Outage Management 2019
+              .col-sm-6.col-xs-12
+                .dashboard__block
+                  div
+                    h2 Agenda Requests
+                    ul
+                      li
+                        b 13
+                        | Advanced Shutdown, Turnaround and Outage Management 2019
+                      li
+                        b 90
+                        | HSE Leadership Excellence 2019 (The Alpha Level Masterclass)
+                      li
+                        b 43
+                        | Advanced Shutdown, Turnaround and Outage Management 2019
+                      li
+                        b 66
+                        | HSE Leadership Excellence 2019 (The Alpha Level Masterclass)
+                      li
+                        b 34
+                        | Advanced Shutdown, Turnaround and Outage Management 2019
+          .col-md-3.col-sm-6.col-xs-12
+            .dashboard__block
+              div
+                h2 visitors

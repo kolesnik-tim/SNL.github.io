@@ -1,0 +1,155 @@
+a(href="#warning" rel="modal:open").manage__create--bg
+.manage__create.send-invoice
+  .manage__create__header
+    a(href="#warning" rel="modal:open")
+      i.icon.icon-angle-pointing
+      | Send Invoice
+  form.manage__create__content
+    .manage__create__form.manage__form
+      .manage__form__title
+        h3 
+          span 01
+          | Your Company Information
+        p Mandatory Fields
+      .manage__form__input
+        input(type="text" id="business-name" name="business-name" value="Sync & Link Events India Pvt. Ltd" required)
+        label(for="business-name") Business Name
+      .manage__form__input
+        input(type="text" id="business-address" name="business-address" value="No.25, 12 th B Main, HAL II Stage, Indiranagar, Bengaluru, Karnataka. 560038" required)
+        label(for="business-address") Business Address
+      .send-invoice__logo
+        img(src="img/logo-4.png", alt="")
+
+
+
+
+    .manage__create__form.manage__form
+      .manage__form__title
+        h3
+          span 02
+          | Customer and Information
+        p Mandatory Fields
+      .manage__form__datepicker
+        .manage__form__input
+          input(type="text" id="number" name="number" value="19K00012SG" required)
+          label(for="number") Invoice Number
+        .manage__form__datepicker__block
+          input(type='text' id="event-start-date" class="datepicker-create_event" value="03/03/2019" data-language='en')
+          label(for="event-start-date") Event Start Date
+        .manage__form__datepicker__block
+          input(type='text' id="event-end-date" class="datepicker-create_event" value="04/03/2019" data-language='en')
+          label(for="event-end-date") Event End Date
+      .manage__form__input
+        input(type="text" id="name" name="name" value="Muadh Al Sadi" required)
+        label(for="name") Name
+      .manage__form__input
+        input(type="text" id="address-1" name="address-1" value="#302, Omer Bin Haider Building, Kuwait Street, Al Karama" required)
+        label(for="address-1") Address 1
+      .manage__form__fee
+        .manage__form__input
+          input(type="text" id="city" name="city" value="Dubai" required)
+          label(for="city") City
+        .manage__form__input.manage__form__input.select-gear
+          select#select-gear
+            option(value="1") United Arab Emirates
+            option(value="2") Vaishakh
+            option(value="3") Tim
+            option(value="4") Vaishakh
+          label(for="select-gear") Country
+
+
+
+    .manage__create__form.manage__form
+      .manage__form__title
+        h3
+          span 03
+          | Trainer Details
+        p Mandatory Fields
+      .send-invoice__row
+        .manage__form__input.select-gear
+          select.select__arrow#select-1
+            option(value="1") Advanced Shutdown, Turnaround and Outage Management 2019
+            option(value="2") Vaishakh
+            option(value="3") Tim
+            option(value="4") Vaishakh
+          label(for="select-3") Select an Event
+      .send-invoice__row.send-invoice__row-secondary
+        .manage__form__input.select-gear
+          select.select__arrow#select-2
+            option(value="1") 1
+            option(value="2") 2
+            option(value="3") 3
+            option(value="4") 4
+          label(for="select-2") No. of Delegates
+        .manage__form__input.no-required
+          input(type="text" id="delegate-fee" name="delegate-fee" value="€2499")
+          label(for="delegate-fee") Delegate Fee
+        .manage__form__input.no-required
+          input(type="text" id="administration-fee" name="administration-fee" value="€34")
+          label(for="administration-fee") Administration Fee
+        .manage__form__input.no-required
+          input(type="text" id="vat" name="vat" value="€531.93")
+          label(for="vat") VAT (21%)
+        .manage__form__input.no-required
+          input(type="text" id="total" name="total" value="€ 3064.93")
+          label(for="total") Total
+      .send-invoice__input-block
+        .send-invoice__input-btn
+          .manage__form__input
+            input(type="text" value="Haifa Dahman Awadh Balfaqih" required)
+            label Participant 1
+          .send-invoice__input-btn__btn
+            a(href="#").add
+              i.icon.icon-plus
+            a(href="#").remove
+        .send-invoice__input-btn
+          .manage__form__input
+            input(type="text" value="Muna Ali Hassan Al- Lawati" required)
+            label Participant 2
+          .send-invoice__input-btn__btn
+            a(href="#").add
+              i.icon.icon-plus
+            a(href="#").remove
+        .send-invoice__input-btn
+          .manage__form__input
+            input(type="text" value="Muna Ali Hassan Al- Lawati" required)
+            label Participant 3
+          .send-invoice__input-btn__btn
+            a(href="#").add
+              i.icon.icon-plus
+            a(href="#").remove
+    .manage__create__form.manage__form
+      .manage__form__title
+        h3
+          span 04
+          | Bank Details
+        p Mandatory Fields
+      .manage__form__input.no-required
+        input(type="text" id="beneficiary-name" name="beneficiary-name" value="Sync & Link Events India Pvt. Ltd")
+        label(for="beneficiary-name") Beneficiary Name
+      .manage__form__input.no-required
+        input(type="text" id="bank" name="bank" value="United Overseas Bank Ltd, Singapore")
+        label(for="bank") Bank
+      .send-invoice__row
+        .manage__form__input.no-required
+          input(type="text" id="account-no" name="account-no" value="451-300-441-3")
+          label(for="account-no") Account No
+        .manage__form__input.no-required
+          input(type="text" id="currency" name="currency" value="Euro")
+          label(for="currency") Currency
+        .manage__form__input.no-required
+          input(type="number" id="bank-code" name="bank-code" value="7375")
+          label(for="bank-code") Bank Code
+        .manage__form__input.no-required
+          input(type="text" id="swift-code" name="swift-code" value="UOVBSGSG")
+          label(for="swift-code") SWIFT Code
+        .manage__form__input.no-required
+          input(type="text" id="branch-code" name="branch-code" value="001")
+          label(for="branch-code") Branch Code
+      .manage__form__input.no-required
+        input(type="text" id="bank-address" name="bank-address" value="80 Raffles Place UOB Plaza 1, 048624 Singapore")
+        label(for="bank-address") Bank Address
+    .manage__form__footer
+      a(href="#warning" rel="modal:open").btn.btn-primary cancel
+      button(type="submit").btn.btn-primary
+        span create

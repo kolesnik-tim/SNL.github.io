@@ -89,6 +89,22 @@ $('.manage__create__close').on('click', function(e) {
 
 
 
+//Read Message
+//open
+$('.read-message__open').on('click', function(e) {
+  e.preventDefault();
+  $('.read-message').addClass('is-active');
+  $('.manage__create--bg').fadeIn();
+});
+//close
+$('.manage__create__close').on('click', function(e) {
+  e.preventDefault();
+  $('.read-message').removeClass('is-active');
+  $('.manage__create--bg').fadeOut();
+});
+
+
+
 
 //Create Event
 //open
@@ -184,7 +200,7 @@ $('body').on('DOMSubtreeModified', '.output', function() {
 //   },
 // });
 
-
+$('.select__arrow').selectize();
 
 
 

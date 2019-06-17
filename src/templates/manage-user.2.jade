@@ -1,0 +1,192 @@
+---
+title: Manage User 2
+---
+extends layouts/_layout
+block content
+  .manage-user
+    include ./admin-layouts/_aside
+    .manage__content
+      include ./admin-layouts/_header
+      .container
+        .manage__title
+          h1 Manager User - 32
+          a(href="#").btn.btn-primary.create-event-add
+            span
+              i.icon.icon-plus
+              | Create User
+        ul.breadcrumbs
+          li
+            a(href="#") Dashboard
+          li
+            a(href="#") Manage User
+        .manage__table.manage-user__table
+          .manage__table__content
+            table.table
+              thead
+                tr
+                  th 
+                    span #
+                    a(href="#")
+                      i.icon.icon-sort-arrows
+                  th 
+                    a(href="#")
+                      i.icon.icon-search
+                    input(type="text" name="username" placeholder="username")
+                  th 
+                    a(href="#")
+                      i.icon.icon-search
+                    input(type="text" name="display-name" placeholder="display name")
+                  th 
+                    a(href="#")
+                      i.icon.icon-search
+                    input(type="email" name="email" placeholder="email")
+                  th 
+                    a(href="#")
+                      i.icon.icon-search
+                    input(type="text" name="message" placeholder="message")
+                  th
+              tbody
+                tr
+                  td 
+                    p 01
+                  td 
+                    p Vaishakh
+                  td 
+                    p Vaishakh Pilatholi
+                  td 
+                    a(href="mailto:vpilatholi@gmail.com") 
+                      p vpilatholi@gmail.com
+                  td 
+                    a(href="#").message-open
+                      p Event Details Event Details
+                  td.table__drop-down.drop-down--open
+                    a(href="#").table__more
+                      i.icon.icon-more
+                    ul
+                      li
+                        a(href="#") 
+                          i.icon.icon-edit
+                          | Edit
+                      li
+                        a(href="#") 
+                          i.icon.icon-delete
+                          | Delete
+                tr
+                  td 
+                    p 02
+                  td 
+                    p Vaishakh
+                  td 
+                    p Vaishakh Pilatholi
+                  td 
+                    a(href="mailto:vpilatholi@gmail.com") 
+                      p vpilatholi@gmail.com
+                  td 
+                    a(href="#").message-open
+                      p Event Details Event Details
+                  td.table__drop-down.drop-down--open
+                    a(href="#").table__more
+                      i.icon.icon-more
+                    ul
+                      li
+                        a(href="#") 
+                          i.icon.icon-edit
+                          | Edit
+                      li
+                        a(href="#") 
+                          i.icon.icon-delete
+                          | Delete
+                tr
+                  td 
+                    p 03
+                  td 
+                    p Vaishakh
+                  td 
+                    p Vaishakh Pilatholi
+                  td 
+                    a(href="mailto:vpilatholi@gmail.com") 
+                      p vpilatholi@gmail.com
+                  td 
+                    a(href="#").message-open
+                      p Event Details Event Details
+                  td.table__drop-down.drop-down--open
+                    a(href="#").table__more
+                      i.icon.icon-more
+                    ul
+                      li
+                        a(href="#") 
+                          i.icon.icon-edit
+                          | Edit
+                      li
+                        a(href="#") 
+                          i.icon.icon-delete
+                          | Delete
+                tr
+                  td 
+                    p 04
+                  td 
+                    p Vaishakh
+                  td 
+                    p Vaishakh Pilatholi
+                  td 
+                    a(href="mailto:vpilatholi@gmail.com") 
+                      p vpilatholi@gmail.com
+                  td 
+                    a(href="#").message-open
+                      p Event Details Event Details
+                  td.table__drop-down.drop-down--open
+                    a(href="#").table__more
+                      i.icon.icon-more
+                    ul
+                      li
+                        a(href="#") 
+                          i.icon.icon-edit
+                          | Edit
+                      li
+                        a(href="#") 
+                          i.icon.icon-delete
+                          | Delete
+                tr
+                  td 
+                    p 05
+                  td 
+                    p Vaishakh
+                  td 
+                    p Vaishakh Pilatholi
+                  td 
+                    a(href="mailto:vpilatholi@gmail.com") 
+                      p vpilatholi@gmail.com
+                  td 
+                    a(href="#").message-open
+                      p Event Details Event Details
+                  td.table__drop-down.drop-down--open
+                    a(href="#").table__more
+                      i.icon.icon-more
+                    ul
+                      li
+                        a(href="#") 
+                          i.icon.icon-edit
+                          | Edit
+                      li
+                        a(href="#") 
+                          i.icon.icon-delete
+                          | Delete
+
+
+
+
+
+    include ./admin-layouts/_send-invoice
+    
+      
+
+    .message-popup--bg
+    .message-popup
+      .manage__create__header
+        a(href="#").message-popup-close
+          i.icon.icon-angle-pointing
+          | Read Message - Vaishakh
+      .message-popup__content
+        .message-popup__block
+          p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+          p It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).

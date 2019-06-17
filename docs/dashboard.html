@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>All Pages</title>
+    <title>Dashboard</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
@@ -92,30 +92,109 @@
         </ul>
       </div>
       <!--END header-->
-      <div class="pages">
-        <div class="row">
-          <div class="col-xs-12 center-xs">
-            <h1>All pages</h1>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="contact.html">Contact</a></li>
-              <li><a href="our-events.html">Our Events</a></li>
-              <li><a href="events_details.html">Events Details</a></li>
-              <li><a href="our-services.html">Our Services</a></li>
-              <li><a href="registration.html">Registration</a></li>
+      <div class="dashboard">
+        <aside class="aside">
+          <div class="aside__content"><a href="index.html" class="aside__logo"><img src="img/logo-3.png" alt=""></a>
+            <ul class="aside__menu">
+              <li><a href="#" class="aside__menu__item"><img src="img/dashboard.png" alt="">Dashboard</a></li>
+              <li><a href="#" class="aside__menu__item"><img src="img/manage-users.png" alt="">Manage Users</a></li>
+              <li><a href="#" class="aside__menu__item"><img src="img/manage-events.png" alt="">Manage Events</a></li>
+              <li class="is-active"><a href="#" class="aside__menu__item"><img src="img/registered-users.png" alt="">Registered Users</a></li>
+              <li><a href="#" class="aside__menu__item"><img src="img/agenda-requests.png" alt="">Agenda Requests</a></li>
+              <li><a href="#" class="aside__menu__item"><img src="img/manage-invoices.png" alt="">Manage Invoices</a></li>
+              <li><a href="#" class="aside__menu__item"><img src="img/contact-form.png" alt="">Contact Form</a></li>
+              <li><a href="#" class="aside__menu__item"><img src="img/settings.png" alt="">Settings</a></li>
             </ul>
-            <h2>admin</h2>
-            <ul>
-              <li><a href="dashboard.html">Dashboard</a></li>
-              <li><a href="login.html">login</a></li>
-              <li><a href="reset-password.html">Reset Password</a></li>
-              <li><a href="manage.html">Manage event</a></li>
-              <li><a href="manage-user.html">Manage user</a></li>
-              <li><a href="manage-user.1.html">Manage user1</a></li>
-              <li><a href="manage-user.2.html">Manage user2</a></li>
-              <li><a href="registered-users.html">Registered Users</a></li>
+          </div>
+        </aside>
+        <div class="dashboard__content">
+          <div class="manage__header">
+            <div class="container">
+              <div class="manage__header__content">
+                <p>Thursday, 28 March 2019 10:47 am (IST)</p>
+                <div class="manage__header__notifications drop-down--open"><i class="icon icon-bell"><span></span></i><b>23</b>
+                  <ul>
+                    <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a></li>
+                  </ul>
+                </div>
+                <div class="manage__header__user drop-down--open"><span>Vaishakh<i class="icon icon-down-arrow"></i></span>
+                  <ul>
+                    <li><a href="#"> <i class="icon icon-settings"></i>Settings</a></li>
+                    <li><a href="#">Logout<i class="icon icon-logout"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="manage__title">
+              <h1>Dashboard</h1>
+            </div>
+            <ul class="breadcrumbs">
+              <li><a href="#">Dashboard</a></li>
             </ul>
+            <div class="row">
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="dashboard__block dashboard__block-primary"><img src="img/active-events.png" alt="">
+                  <div class="dashboard__block__text"><strong>Active Events</strong><b>32</b></div>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="dashboard__block dashboard__block-primary"><img src="img/speakers.png" alt="">
+                  <div class="dashboard__block__text"><strong>Speakers</strong><b>8</b></div>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="dashboard__block dashboard__block-primary"><img src="img/total-regrations.png" alt="">
+                  <div class="dashboard__block__text"><strong>Total Registrations</strong><b>980</b></div>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="dashboard__block dashboard__block-primary"><img src="img/total-inquiry.png" alt="">
+                  <div class="dashboard__block__text"><strong>Total Inquiry</strong><b>280</b></div>
+                </div>
+              </div>
+              <div class="col-md-9 col-xs-12">
+                <div class="row">
+                  <div class="col-sm-6 col-xs-12">
+                    <div class="dashboard__block">
+                      <div>
+                        <h2>registrations</h2>
+                        <ul>
+                          <li><b>30</b>Advanced Shutdown, Turnaround and Outage Management 2019</li>
+                          <li><b>32</b>HSE Leadership Excellence 2019 (The Alpha Level Masterclass)</li>
+                          <li><b>20</b>Advanced Shutdown, Turnaround and Outage Management 2019</li>
+                          <li><b>90</b>HSE Leadership Excellence 2019 (The Alpha Level Masterclass)</li>
+                          <li><b>34</b>Advanced Shutdown, Turnaround and Outage Management 2019</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 col-xs-12">
+                    <div class="dashboard__block">
+                      <div>
+                        <h2>Agenda Requests</h2>
+                        <ul>
+                          <li><b>13</b>Advanced Shutdown, Turnaround and Outage Management 2019</li>
+                          <li><b>90</b>HSE Leadership Excellence 2019 (The Alpha Level Masterclass)</li>
+                          <li><b>43</b>Advanced Shutdown, Turnaround and Outage Management 2019</li>
+                          <li><b>66</b>HSE Leadership Excellence 2019 (The Alpha Level Masterclass)</li>
+                          <li><b>34</b>Advanced Shutdown, Turnaround and Outage Management 2019</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="dashboard__block">
+                  <div>
+                    <h2>visitors</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
