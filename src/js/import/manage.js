@@ -200,7 +200,7 @@ $('body').on('DOMSubtreeModified', '.output', function() {
 //   },
 // });
 
-$('.select__arrow').selectize();
+// $('.select__arrow').selectize();
 
 
 
@@ -240,6 +240,7 @@ $('.select-privileges-edit').change(function() {
 
 $(document).on('click', '.create-event-add', function(e) {
   $('.manage__create.manage-user__create').html('');
+  $('.manage__create.send-invoice').html('');
   $.ajax({
     type: 'GET',
     url: $(this).attr('href'),
@@ -257,6 +258,7 @@ $(document).on('click', '.create-event-add', function(e) {
 $(document).on('click', '.drop-down--open li a.edit, .manage__table__content tbody a.edit', function(e) {
   e.preventDefault();
   $('.manage__create.manage-user__create').html('');
+  $('.manage__create.send-invoice').html('');
   $('.manage__create').addClass('is-active');
   $('.manage__create--bg').fadeIn();
   $.ajax({
@@ -298,6 +300,27 @@ $('.manage__delete__close').on('click', function(e) {
   });
 
   $('form#delete-form').submit();
+});
+
+
+$(document).on('click', '.send-invoice-trigger', function(e) {
+  e.preventDefault();
+  $('.manage__create.manage-user__create').html('');
+  $('.manage__create.send-invoice').html('');
+  $('.manage__create').addClass('is-active');
+  $('.manage__create--bg').fadeIn();
+  $.ajax({
+    type: 'GET',
+    url: $(this).attr('href'),
+    data: {_token:$('#manage__create___token').val()},
+    success: function(data) {
+      $('.manage__create.send-invoice').html(data);
+      formInitCallback();
+    },
+    failure: function(data) {
+      console.log('Error --> ', data);
+    }
+  });
 });
 
 
@@ -514,6 +537,38 @@ function formInitCallback() {
 
     // copy all the values from editor to hidden input fields...  
   });
+
+
+
+
+  // validation before form submit...
+  $('div.registered-users div.send-invoice form.manage__create__content').on('submit', function(ev) {
+    e.preventDefault();
+
+    var fields = [
+      {id: 'invoice_number', msg: 'Invoice Number is required'}, 
+    ];
+      
+    var errorMsg = '';
+
+    fields.forEach(function(f) {
+      if(!errorMsg && $('div.send-invoice form.manage__create__content #'+f.id).length > 0 && !$('div.send-invoice form.manage__create__content #'+f.id).val()) {
+        errorMsg = f.msg;
+      }
+    });
+    if(errorMsg) {
+      $.toast({
+        // heading: 'Success',
+        text: errorMsg,
+        showHideTransition: 'slide',
+        icon: 'info',
+        position: 'bottom-right'
+      });
+      return;
+    }
+  });
+
+  
 }
 
 
